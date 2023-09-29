@@ -1,13 +1,51 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
 /**
  *
- * @author Omar Tc
+ * @author Omar Tc,yosse
  */
-public class ProdMedicos {
+public class ProdMedicos extends Productos{
+    
+    private double contenido;
+    private String tipoFabricado;
+
+    public ProdMedicos(double contenido, String tipoFabricado, String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock, double result) {
+        super(nombre_producto, codigo, RucProveedor, tipo, precio, stock, result);
+        this.contenido = contenido;
+        this.tipoFabricado = tipoFabricado;
+    }
+
+    //Getters and Setters
+    public double getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(double contenido) {
+        this.contenido = contenido;
+    }
+
+    public String getTipoFabricado() {
+        
+        switch (tipoFabricado) {
+            case "Capsulas":
+                tipoFabricado="Capsulas";
+                break;
+            case "Liquidos":
+                tipoFabricado="Liquidos";
+                break;
+            case "Cremas":
+                tipoFabricado="Cremas";
+                break;
+            case "Parches":
+                tipoFabricado="Parcches";
+                break;
+        }
+        return tipoFabricado;
+    }
+
+    public void setTipoFabricado(String tipoFabricado) {
+        this.tipoFabricado = tipoFabricado;
+    }
+    
     
 }
