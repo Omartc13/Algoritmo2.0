@@ -34,5 +34,6 @@ public class SucursalesProvincia extends Sucursales{
         this.codigoProvincia = codigoProvincia;
     }
     
+    //"kjnajksdvnjkvasdnkj"
     
 }
