@@ -6,7 +6,7 @@ import modelo.ProdComestibles;
 
 /**
  *
- * @author Omar Tc
+ * @author Omar Tc, Yosse
  */
 public class AProdComestible {
     private ArrayList <ProdComestibles> comida;
