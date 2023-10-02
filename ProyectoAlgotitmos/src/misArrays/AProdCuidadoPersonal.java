@@ -6,36 +6,36 @@ import modelo.ProdCuidadoPersonal;
 
 /**
  *
- * @author Omar Tc
+ * @author Omar Tc, Yosse
  */
 public class AProdCuidadoPersonal {
     
-    private ArrayList <ProdCuidadoPersonal> makeup;
+    private ArrayList <ProdCuidadoPersonal> cuidpersonal;
 
     public AProdCuidadoPersonal() {
-        makeup=new ArrayList<ProdCuidadoPersonal>();
+        cuidpersonal=new ArrayList<ProdCuidadoPersonal>();
     }
 
     //agregar makeup
     public void agregarProductoM(ProdCuidadoPersonal mak){
-        makeup.add(mak);
+        cuidpersonal.add(mak);
     }
     
     //eliminar makeup
     public void eliminarProductoM(int nroMake){
-        makeup.remove(nroMake);
+        cuidpersonal.remove(nroMake);
     }
     
     public ProdCuidadoPersonal obtener (int posicion){
-        return makeup.get(posicion);
+        return cuidpersonal.get(posicion);
     }
     
     public int tamañoArreglo(){
-        return makeup.size();
+        return cuidpersonal.size();
     }
     
     public void mergeSortCod(){
-        mergeSortCod(0, makeup.size()-1);
+        mergeSortCod(0, tamañoArreglo()-1);
     }
     
     private void mergeSortCod(int izq, int der){
@@ -71,10 +71,10 @@ public class AProdCuidadoPersonal {
         int i=0, j=0, k=izquierda;
         while (i<listaIzquierda.size() && j<listaDerecha.size()) {
             if (listaIzquierda.get(i).getCodigo() <= listaDerecha.get(j).getCodigo()) {
-                makeup.set(k, listaIzquierda.get(i));
+                cuidpersonal.set(k, listaIzquierda.get(i));
                 i++;
             }else{
-                makeup.set(k, listaDerecha.get(j));
+                cuidpersonal.set(k, listaDerecha.get(j));
                 j++;
             }
             k++;
@@ -82,12 +82,12 @@ public class AProdCuidadoPersonal {
         //Copiar los elementos restantes de der o izq si hay
         
         while (i<n1) {            
-            makeup.set(k, listaIzquierda.get(i));
+            cuidpersonal.set(k, listaIzquierda.get(i));
             i++;
             k++;
         }
         while (j<n2) {            
-            makeup.set(k, listaDerecha.get(j));
+            cuidpersonal.set(k, listaDerecha.get(j));
             j++;
             k++;
         }
@@ -130,10 +130,10 @@ public class AProdCuidadoPersonal {
         int i=0, j=0, k=izquierda;
         while (i<listaIzquierda.size() && j<listaDerecha.size()) {
             if (listaIzquierda.get(i).getNombre_producto().compareToIgnoreCase(listaDerecha.get(j).getNombre_producto()) <= 0) {
-                makeup.set(k, listaIzquierda.get(i));
+                cuidpersonal.set(k, listaIzquierda.get(i));
                 i++;
             }else{
-                makeup.set(k, listaDerecha.get(j));
+                cuidpersonal.set(k, listaDerecha.get(j));
                 j++;
             }
             k++;
@@ -141,12 +141,12 @@ public class AProdCuidadoPersonal {
         //Copiar los elementos restantes de der o izq si hay
         
         while (i<n1) {            
-            makeup.set(k, listaIzquierda.get(i));
+            cuidpersonal.set(k, listaIzquierda.get(i));
             i++;
             k++;
         }
         while (j<n2) {            
-            makeup.set(k, listaDerecha.get(j));
+            cuidpersonal.set(k, listaDerecha.get(j));
             j++;
             k++;
         }

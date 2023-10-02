@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package misArrays;
 
 import java.util.ArrayList;
@@ -13,28 +9,28 @@ import modelo.ProdMedicos;
  * @author Omar Tc, Yosse
  */
 public class AProdMedicos {
-    private ArrayList <ProdMedicos> higiene;
+    private ArrayList <ProdMedicos> medicina;
 
     public AProdMedicos() {
-        higiene=new ArrayList<ProdMedicos>();
+        medicina=new ArrayList<ProdMedicos>();
     }
 
     //agregar producto higiene
     public void agregarProductoH(ProdMedicos hig){
-        higiene.add(hig);
+        medicina.add(hig);
     }
     
     //eliminar producto higiene
     public void eliminarProductoH(int nrohig){
-        higiene.remove(nrohig);
+        medicina.remove(nrohig);
     }
     
     public ProdMedicos obtener (int posicion){
-        return higiene.get(posicion);
+        return medicina.get(posicion);
     }
     
     public int tamañoArreglo(){
-        return higiene.size();
+        return medicina.size();
     }
     
     public void mergeSortCod(){
@@ -73,10 +69,10 @@ public class AProdMedicos {
         int i=0, j=0, k=izquierda;
         while (i<listaIzquierda.size() && j<listaDerecha.size()) {
             if (listaIzquierda.get(i).getCodigo() <= listaDerecha.get(j).getCodigo()) {
-                higiene.set(k, listaIzquierda.get(i));
+                medicina.set(k, listaIzquierda.get(i));
                 i++;
             }else{
-                higiene.set(k, listaDerecha.get(j));
+                medicina.set(k, listaDerecha.get(j));
                 j++;
             }
             k++;
@@ -84,12 +80,12 @@ public class AProdMedicos {
         //Copiar los elementos restantes de der o izq si hay
         
         while (i<n1) {            
-            higiene.set(k, listaIzquierda.get(i));
+            medicina.set(k, listaIzquierda.get(i));
             i++;
             k++;
         }
         while (j<n2) {            
-            higiene.set(k, listaDerecha.get(j));
+            medicina.set(k, listaDerecha.get(j));
             j++;
             k++;
         }
@@ -132,10 +128,10 @@ public class AProdMedicos {
         int i=0, j=0, k=izquierda;
         while (i<listaIzquierda.size() && j<listaDerecha.size()) {
             if (listaIzquierda.get(i).getNombre_producto().compareToIgnoreCase(listaDerecha.get(j).getNombre_producto()) <= 0) {
-                higiene.set(k, listaIzquierda.get(i));
+                medicina.set(k, listaIzquierda.get(i));
                 i++;
             }else{
-                higiene.set(k, listaDerecha.get(j));
+                medicina.set(k, listaDerecha.get(j));
                 j++;
             }
             k++;
@@ -143,12 +139,12 @@ public class AProdMedicos {
         //Copiar los elementos restantes de der o izq si hay
         
         while (i<n1) {            
-            higiene.set(k, listaIzquierda.get(i));
+            medicina.set(k, listaIzquierda.get(i));
             i++;
             k++;
         }
         while (j<n2) {            
-            higiene.set(k, listaDerecha.get(j));
+            medicina.set(k, listaDerecha.get(j));
             j++;
             k++;
         }
