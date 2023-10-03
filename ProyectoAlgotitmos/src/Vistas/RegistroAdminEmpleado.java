@@ -107,6 +107,12 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Sueldo:");
 
+        txtDNIAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDNIAdminActionPerformed(evt);
+            }
+        });
+
         btnAgregarAdmin.setBackground(new java.awt.Color(255, 102, 102));
         btnAgregarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnAgregarAdmin.setForeground(new java.awt.Color(255, 255, 255));
@@ -391,6 +397,10 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtDNIAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDNIAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDNIAdminActionPerformed
 
 
     public static void main(String args[]) {
