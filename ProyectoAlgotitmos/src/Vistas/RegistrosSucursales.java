@@ -38,18 +38,17 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         txtnumsuc = new javax.swing.JTextField();
-        txtApellidosAdmin = new javax.swing.JTextField();
-        txtDNIAdmin = new javax.swing.JTextField();
-        txtAñoAdmin = new javax.swing.JTextField();
-        btnAgregarAdmin = new javax.swing.JButton();
-        btnLimpiarAdmin = new javax.swing.JButton();
+        txtciudad = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtdire = new javax.swing.JTextField();
+        botonIngr = new javax.swing.JButton();
+        botonLim = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblprincipal = new javax.swing.JTable();
-        btnEliminarAdmin = new javax.swing.JButton();
-        OrdenarQuickAdmin = new javax.swing.JButton();
-        txtDNIAdmin1 = new javax.swing.JTextField();
+        btnEliminarAd = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        txtdni = new javax.swing.JTextField();
         txttelf = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
@@ -107,7 +106,7 @@ public class RegistrosSucursales extends javax.swing.JFrame {
 
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("DNI:");
+        jLabel9.setText("Nombre del encargado :");
 
         jLabel10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 0, 0));
@@ -115,68 +114,58 @@ public class RegistrosSucursales extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Año de ingreso:");
+        jLabel11.setText("Dirección :");
 
         jLabel12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("Sueldo:");
+        jLabel12.setText("DNI :");
 
-        txtDNIAdmin.addActionListener(new java.awt.event.ActionListener() {
+        txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDNIAdminActionPerformed(evt);
+                txtNombreActionPerformed(evt);
             }
         });
 
-        btnAgregarAdmin.setBackground(new java.awt.Color(255, 102, 102));
-        btnAgregarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnAgregarAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregarAdmin.setText("Agregar");
+        botonIngr.setBackground(new java.awt.Color(255, 102, 102));
+        botonIngr.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        botonIngr.setForeground(new java.awt.Color(255, 255, 255));
+        botonIngr.setText("Agregar");
 
-        btnLimpiarAdmin.setBackground(new java.awt.Color(102, 102, 102));
-        btnLimpiarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnLimpiarAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiarAdmin.setText("Limpiar");
+        botonLim.setBackground(new java.awt.Color(102, 102, 102));
+        botonLim.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        botonLim.setForeground(new java.awt.Color(255, 255, 255));
+        botonLim.setText("Limpiar");
 
         tblprincipal.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tblprincipal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null}
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Nombres", "Apellidos", "DNI", "Afiliación", "Año de ingreso", "Sueldo", "Sueldo bruto"
+                "Numero Sucursal", "Telefono", "Distrito", "Direccion", "Encargado", "DNI"
             }
         ));
         jScrollPane1.setViewportView(tblprincipal);
 
-        btnEliminarAdmin.setBackground(new java.awt.Color(102, 102, 102));
-        btnEliminarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnEliminarAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminarAdmin.setText("Eliminar");
+        btnEliminarAd.setBackground(new java.awt.Color(102, 102, 102));
+        btnEliminarAd.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnEliminarAd.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarAd.setText("Eliminar");
 
-        OrdenarQuickAdmin.setBackground(new java.awt.Color(255, 102, 102));
-        OrdenarQuickAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        OrdenarQuickAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        OrdenarQuickAdmin.setText("Ordenar");
+        jButton4.setBackground(new java.awt.Color(255, 102, 102));
+        jButton4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Or.DNI");
 
-        txtDNIAdmin1.addActionListener(new java.awt.event.ActionListener() {
+        txtdni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDNIAdmin1ActionPerformed(evt);
+                txtdniActionPerformed(evt);
             }
         });
 
         txttelf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txttelfActionPerformed(evt);
-            }
-        });
-
-        jButton3.setBackground(new java.awt.Color(255, 102, 102));
-        jButton3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Or.DNI");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
             }
         });
 
@@ -190,16 +179,14 @@ public class RegistrosSucursales extends javax.swing.JFrame {
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addComponent(btnEliminarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(256, 256, 256)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnEliminarAd, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(OrdenarQuickAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                                .addComponent(btnLimpiarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(botonLim, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnAgregarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(botonIngr, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(33, 33, 33))
                     .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,17 +196,17 @@ public class RegistrosSucursales extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtnumsuc)
-                            .addComponent(txtApellidosAdmin)
-                            .addComponent(txtDNIAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 136, Short.MAX_VALUE)
+                            .addComponent(txtciudad)
+                            .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
                             .addComponent(jLabel10)
                             .addComponent(jLabel12))
                         .addGap(15, 15, 15)
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAñoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDNIAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtdire, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtdni, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txttelf, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(53, 53, 53))))
             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -238,27 +225,26 @@ public class RegistrosSucursales extends javax.swing.JFrame {
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jLabel11)
-                    .addComponent(txtApellidosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAñoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtdire, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel12)
-                        .addComponent(txtDNIAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtdni, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel9)
-                        .addComponent(txtDNIAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregarAdmin)
-                    .addComponent(btnLimpiarAdmin))
+                    .addComponent(botonIngr)
+                    .addComponent(botonLim))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEliminarAdmin)
-                    .addComponent(OrdenarQuickAdmin)
-                    .addComponent(jButton3))
+                    .addComponent(btnEliminarAd)
+                    .addComponent(jButton4))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -441,21 +427,17 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtDNIAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDNIAdminActionPerformed
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDNIAdminActionPerformed
+    }//GEN-LAST:event_txtNombreActionPerformed
 
-    private void txtDNIAdmin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDNIAdmin1ActionPerformed
+    private void txtdniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdniActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDNIAdmin1ActionPerformed
+    }//GEN-LAST:event_txtdniActionPerformed
 
     private void txttelfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelfActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txttelfActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -493,16 +475,15 @@ public class RegistrosSucursales extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton OrdenarQuickAdmin;
     private javax.swing.JButton OrdenarQuickEmpleado;
-    private javax.swing.JButton btnAgregarAdmin;
+    private javax.swing.JButton botonIngr;
+    private javax.swing.JButton botonLim;
     private javax.swing.JButton btnAgregarEmpleado;
-    private javax.swing.JButton btnEliminarAdmin;
+    private javax.swing.JButton btnEliminarAd;
     private javax.swing.JButton btnEliminarEmpleado;
     private javax.swing.JButton btnLimpEmpleado;
-    private javax.swing.JButton btnLimpiarAdmin;
     private javax.swing.JComboBox<String> cmbTipoEmpleado;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -512,47 +493,27 @@ public class RegistrosSucursales extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTable tblEmpleado;
     private javax.swing.JTable tblprincipal;
-    private javax.swing.JTextField txtApellidosAdmin;
     private javax.swing.JTextField txtApellidosEmpleado;
-    private javax.swing.JTextField txtAñoAdmin;
     private javax.swing.JTextField txtDNI1;
-    private javax.swing.JTextField txtDNIAdmin;
-    private javax.swing.JTextField txtDNIAdmin1;
+    private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtNombreEmpleado;
+    private javax.swing.JTextField txtciudad;
+    private javax.swing.JTextField txtdire;
+    private javax.swing.JTextField txtdni;
     private javax.swing.JTextField txtnumsuc;
     private javax.swing.JTextField txttelf;
     // End of variables declaration//GEN-END:variables

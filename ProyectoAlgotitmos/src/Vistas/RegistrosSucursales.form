@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -78,17 +78,15 @@
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="btnEliminarAdmin" min="-2" pref="90" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="256" max="-2" attributes="0"/>
-                                          <Component id="jButton3" min="-2" pref="90" max="-2" attributes="0"/>
+                                          <Component id="btnEliminarAd" min="-2" pref="90" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="OrdenarQuickAdmin" min="-2" pref="90" max="-2" attributes="0"/>
+                                          <Component id="jButton4" min="-2" pref="90" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="btnLimpiarAdmin" min="-2" pref="100" max="-2" attributes="0"/>
+                                          <Component id="botonLim" min="-2" pref="100" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
-                                          <Component id="btnAgregarAdmin" min="-2" pref="100" max="-2" attributes="0"/>
+                                          <Component id="botonIngr" min="-2" pref="100" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
@@ -102,10 +100,10 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="txtnumsuc" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtApellidosAdmin" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="txtDNIAdmin" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="txtciudad" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtNombre" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="136" max="32767" attributes="0"/>
+                                  <EmptySpace pref="134" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel11" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -113,8 +111,8 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtAñoAdmin" min="-2" pref="200" max="-2" attributes="0"/>
-                                      <Component id="txtDNIAdmin1" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="txtdire" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <Component id="txtdni" min="-2" pref="200" max="-2" attributes="0"/>
                                       <Component id="txttelf" min="-2" pref="200" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
@@ -139,32 +137,31 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtApellidosAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtAñoAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtciudad" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtdire" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtDNIAdmin1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtdni" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" alignment="0" groupAlignment="3" attributes="0">
                                   <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtDNIAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnAgregarAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnLimpiarAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botonIngr" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="botonLim" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="250" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnEliminarAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrdenarQuickAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnEliminarAd" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="12" max="32767" attributes="0"/>
                       </Group>
@@ -244,7 +241,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="DNI:"/>
+                    <Property name="text" type="java.lang.String" value="Nombre del encargado :"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel10">
@@ -266,7 +263,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="A&#xf1;o de ingreso:"/>
+                    <Property name="text" type="java.lang.String" value="Direcci&#xf3;n :"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel12">
@@ -277,21 +274,21 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Sueldo:"/>
+                    <Property name="text" type="java.lang.String" value="DNI :"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtnumsuc">
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtApellidosAdmin">
+                <Component class="javax.swing.JTextField" name="txtciudad">
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtDNIAdmin">
+                <Component class="javax.swing.JTextField" name="txtNombre">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDNIAdminActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtA&#xf1;oAdmin">
+                <Component class="javax.swing.JTextField" name="txtdire">
                 </Component>
-                <Component class="javax.swing.JButton" name="btnAgregarAdmin">
+                <Component class="javax.swing.JButton" name="botonIngr">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -305,7 +302,7 @@
                     <Property name="text" type="java.lang.String" value="Agregar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnLimpiarAdmin">
+                <Component class="javax.swing.JButton" name="botonLim">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="66" type="rgb"/>
@@ -332,15 +329,48 @@
                           <Font name="Roboto" size="14" style="0"/>
                         </Property>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="7" rowCount="1">
-                            <Column editable="true" title="Nombres" type="java.lang.Object"/>
-                            <Column editable="true" title="Apellidos" type="java.lang.Object"/>
+                          <Table columnCount="6" rowCount="1">
+                            <Column editable="true" title="Numero Sucursal" type="java.lang.Object"/>
+                            <Column editable="true" title="Telefono" type="java.lang.Object"/>
+                            <Column editable="true" title="Distrito" type="java.lang.Object"/>
+                            <Column editable="true" title="Direccion" type="java.lang.Object"/>
+                            <Column editable="true" title="Encargado" type="java.lang.Object"/>
                             <Column editable="true" title="DNI" type="java.lang.Object"/>
-                            <Column editable="true" title="Afiliaci&#xf3;n" type="java.lang.Object"/>
-                            <Column editable="true" title="A&#xf1;o de ingreso" type="java.lang.Object"/>
-                            <Column editable="true" title="Sueldo" type="java.lang.Object"/>
-                            <Column editable="true" title="Sueldo bruto" type="java.lang.Object"/>
                           </Table>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="0">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                          </TableColumnModel>
                         </Property>
                         <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
@@ -349,7 +379,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="btnEliminarAdmin">
+                <Component class="javax.swing.JButton" name="btnEliminarAd">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="66" type="rgb"/>
@@ -363,31 +393,7 @@
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="OrdenarQuickAdmin">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="66" green="66" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Roboto" size="14" style="0"/>
-                    </Property>
-                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Ordenar"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtDNIAdmin1">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDNIAdmin1ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txttelf">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttelfActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="jButton4">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -400,8 +406,15 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Or.DNI"/>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txtdni">
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdniActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="txttelf">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttelfActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
