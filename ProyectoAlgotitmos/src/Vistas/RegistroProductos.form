@@ -217,10 +217,12 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jScrollPane2" min="-2" pref="250" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="OrdenarQuickMedNom" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="OrdenarQuickMedCod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="btnEliminarProdMed1" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="OrdenarQuickMedNom" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="OrdenarQuickMedCod" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace pref="28" max="32767" attributes="0"/>
                           </Group>
