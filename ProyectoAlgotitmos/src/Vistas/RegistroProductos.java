@@ -2,9 +2,9 @@ package Vistas;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import misArrays.AProdMedicos;
-import misArrays.AProdComestible;
-import misArrays.AProdCuidadoPersonal;
+import ArrayLists.AProdMedicos;
+import ArrayLists.AProdComestible;
+import ArrayLists.AProdCuidadoPersonal;
 import misCGenericas.Generico1;
 import modelo.ProdMedicos;
 import modelo.ProdComestibles;

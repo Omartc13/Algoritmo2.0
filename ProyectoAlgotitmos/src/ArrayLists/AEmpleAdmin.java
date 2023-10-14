@@ -1,31 +1,28 @@
-package misArrays;
+package ArrayLists;
 
 import java.util.ArrayList;
-import modelo.EmpleAdmin;
+import modelo.Admin;
 
-/**
- *
- * @author Omar Tc,yosse
- */
+
 public class AEmpleAdmin {
     
-    private ArrayList <EmpleAdmin> administrador;
+    private ArrayList <Admin> administrador;
     
     public AEmpleAdmin(){
-        administrador=new ArrayList<EmpleAdmin>();
+        administrador=new ArrayList<Admin>();
     }
     
-    //Agregar EmpleAdmin
-    public void agregarAdmin(EmpleAdmin admin){
+    //Agregar Admin
+    public void agregarAdmin(Admin admin){
         administrador.add(admin);
     }
     
-    //Eliminar EmpleAdmin
+    //Eliminar Admin
     public void eliminarAdmin(int nroadmin){
         administrador.remove(nroadmin);
     }
     
-    public EmpleAdmin obtener (int posicion){
+    public Admin obtener (int posicion){
         return administrador.get(posicion);
     }
     
@@ -39,7 +36,7 @@ public class AEmpleAdmin {
         for (int i = 0; i < n-1; i++) {
             for (int j = 0; j < n-1; j++) {
                 if (obtener(j).getDNI()> obtener(j+1).getDNI()) {
-                    EmpleAdmin temp=obtener(j);
+                    Admin temp=obtener(j);
                     administrador.set(j, obtener(j+1));
                     administrador.set(j+1, temp);
                 }
@@ -51,7 +48,7 @@ public class AEmpleAdmin {
         ordenarQuickSort(administrador, 0, tamañoArreglo()-1);
     }
     
-    public void ordenarQuickSort(ArrayList<EmpleAdmin> lista, int primero, int ultimo){
+    public void ordenarQuickSort(ArrayList<Admin> lista, int primero, int ultimo){
         double pivot,temp;
         int i,j;
         
