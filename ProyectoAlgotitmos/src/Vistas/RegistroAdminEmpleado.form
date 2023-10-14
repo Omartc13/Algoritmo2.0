@@ -213,7 +213,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Nombres:"/>
+                    <Property name="text" type="java.lang.String" value="Nombre:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel8">
@@ -224,7 +224,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Apellidos:"/>
+                    <Property name="text" type="java.lang.String" value="Apellido:"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel9">
@@ -276,15 +276,17 @@
                 <Component class="javax.swing.JTextField" name="txtApellidosAdmin">
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtDNIAdmin">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDNIAdminActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JComboBox" name="cmbAfilAdmin">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="0"/>
+                      <StringArray count="3">
+                        <StringItem index="0" value="- Seleccionar -"/>
+                        <StringItem index="1" value="AFP"/>
+                        <StringItem index="2" value="ONP"/>
+                      </StringArray>
                     </Property>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -293,7 +295,16 @@
                 <Component class="javax.swing.JComboBox" name="cmbSueldoAdmin">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="0"/>
+                      <StringArray count="8">
+                        <StringItem index="0" value="- Seleccionar -"/>
+                        <StringItem index="1" value="2000"/>
+                        <StringItem index="2" value="3000"/>
+                        <StringItem index="3" value="4000"/>
+                        <StringItem index="4" value="5000"/>
+                        <StringItem index="5" value="6000"/>
+                        <StringItem index="6" value="7000"/>
+                        <StringItem index="7" value="8000"/>
+                      </StringArray>
                     </Property>
                   </Properties>
                   <AuxValues>
@@ -315,6 +326,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Agregar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarAdminActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnLimpiarAdmin">
                   <Properties>
@@ -329,6 +343,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Limpiar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarAdminActionPerformed"/>
+                  </Events>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane1">
                   <AuxValues>

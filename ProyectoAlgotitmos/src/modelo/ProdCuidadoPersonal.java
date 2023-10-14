@@ -6,48 +6,29 @@ package modelo;
  */
 public class ProdCuidadoPersonal extends Productos{
     
-    private String tonos;
-    private String dirigidoPara;
-    private String fabricado;
+    private double contenido;
+    private String UnidadMed;
 
-    public ProdCuidadoPersonal(String tonos, String dirigidoPara, String fabricado, String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock, double result) {
+    public ProdCuidadoPersonal(double contenido, String UnidadMed, String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock, double result) {
         super(nombre_producto, codigo, RucProveedor, tipo, precio, stock, result);
-        this.tonos = tonos;
-        this.dirigidoPara = dirigidoPara;
-        this.fabricado = fabricado;
+        this.contenido = contenido;
+        this.UnidadMed = UnidadMed;
     }
 
-    //Getters and Setters
-    public String getTonos() {
-        return tonos;
+    public double getContenido() {
+        return contenido;
     }
 
-    public void setTonos(String tonos) {
-        this.tonos = tonos;
+    public void setContenido(double contenido) {
+        this.contenido = contenido;
     }
 
-    public String getDirigidoPara() {
-        return dirigidoPara;
+    public String getUnidadMed() {
+        return UnidadMed;
     }
 
-    public void setDirigidoPara(String dirigidoPara) {
-        this.dirigidoPara = dirigidoPara;
+    public void setUnidadMed(String UnidadMed) {
+        this.UnidadMed = UnidadMed;
     }
-
-    public String getFabricado() {
-        if (fabricado.equals("Cruelty free")) {
-            fabricado = "Cruelty free";
-        } else
-            if (fabricado.equals("NO CF")) {
-            fabricado = "NO CF";
-        }
-        
-        return fabricado;
-    }
-
-    public void setFabricado(String fabricado) {
-        this.fabricado = fabricado;
-    }
-    
     
 }

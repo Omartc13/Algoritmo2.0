@@ -7,12 +7,12 @@ package modelo;
 public class ProdMedicos extends Productos{
     
     private double contenido;
-    private String tipoFabricado;
+    private String UniMed;
 
-    public ProdMedicos(double contenido, String tipoFabricado, String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock, double result) {
+    public ProdMedicos(double contenido, String UniMed, String nombre_producto, int codigo, Long RucProveedor, String tipo, double precio, int stock, double result) {
         super(nombre_producto, codigo, RucProveedor, tipo, precio, stock, result);
         this.contenido = contenido;
-        this.tipoFabricado = tipoFabricado;
+        this.UniMed = UniMed;
     }
 
     //Getters and Setters
@@ -24,27 +24,27 @@ public class ProdMedicos extends Productos{
         this.contenido = contenido;
     }
 
-    public String getTipoFabricado() {
+    public String getUniMed() {
         
-        switch (tipoFabricado) {
+        switch (UniMed) {
             case "Capsulas":
-                tipoFabricado="Capsulas";
+                UniMed="Capsulas";
                 break;
             case "Liquidos":
-                tipoFabricado="Liquidos";
+                UniMed="Liquidos";
                 break;
             case "Cremas":
-                tipoFabricado="Cremas";
+                UniMed="Cremas";
                 break;
             case "Parches":
-                tipoFabricado="Parcches";
+                UniMed="Parches";
                 break;
         }
-        return tipoFabricado;
+        return UniMed;
     }
 
-    public void setTipoFabricado(String tipoFabricado) {
-        this.tipoFabricado = tipoFabricado;
+    public void setUniMed(String tipoFabricado) {
+        this.UniMed = tipoFabricado;
     }
     
     
