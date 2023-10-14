@@ -1,36 +1,36 @@
-package misArrays;
+package ArrayLists;
 
 import java.util.ArrayList;
 import java.util.List;
-import modelo.ProdComestibles;
+import modelo.ProdMedicos;
 
 /**
  *
  * @author Omar Tc, Yosse
  */
-public class AProdComestible {
-    private ArrayList <ProdComestibles> comida;
+public class AProdMedicos {
+    private ArrayList <ProdMedicos> medicina;
 
-    public AProdComestible() {
-        comida=new ArrayList<ProdComestibles>();
+    public AProdMedicos() {
+        medicina=new ArrayList<ProdMedicos>();
     }
 
-    //agregar ProductoComida
-    public void agregarProductoC(ProdComestibles com){
-        comida.add(com);
+    //agregar producto higiene
+    public void agregarProductoH(ProdMedicos hig){
+        medicina.add(hig);
     }
     
-    //eliminar ProductoComida
-    public void eliminarProductoC(int nrocom){
-        comida.remove(nrocom);
+    //eliminar producto higiene
+    public void eliminarProductoH(int nrohig){
+        medicina.remove(nrohig);
     }
     
-    public ProdComestibles obtener (int posicion){
-        return comida.get(posicion);
+    public ProdMedicos obtener (int posicion){
+        return medicina.get(posicion);
     }
     
     public int tamañoArreglo(){
-        return comida.size();
+        return medicina.size();
     }
     
     public void mergeSortCod(){
@@ -45,7 +45,6 @@ public class AProdComestible {
             mergeSortCod(medio+1, der);
             //Conbinar mitades ordenadas
             mergeCod(izq, medio, der);
-            
         }
     }
     
@@ -54,8 +53,8 @@ public class AProdComestible {
         int n2= derecho-medio;
         
         //Listas Temporales 
-        List<ProdComestibles> listaIzquierda= new ArrayList<>();
-        List<ProdComestibles> listaDerecha= new ArrayList<>();
+        List<ProdMedicos> listaIzquierda= new ArrayList<>();
+        List<ProdMedicos> listaDerecha= new ArrayList<>();
         
         //Copiar los datos a los Arrays nuevos
         
@@ -70,10 +69,10 @@ public class AProdComestible {
         int i=0, j=0, k=izquierda;
         while (i<listaIzquierda.size() && j<listaDerecha.size()) {
             if (listaIzquierda.get(i).getCodigo() <= listaDerecha.get(j).getCodigo()) {
-                comida.set(k, listaIzquierda.get(i));
+                medicina.set(k, listaIzquierda.get(i));
                 i++;
             }else{
-                comida.set(k, listaDerecha.get(j));
+                medicina.set(k, listaDerecha.get(j));
                 j++;
             }
             k++;
@@ -81,12 +80,12 @@ public class AProdComestible {
         //Copiar los elementos restantes de der o izq si hay
         
         while (i<n1) {            
-            comida.set(k, listaIzquierda.get(i));
+            medicina.set(k, listaIzquierda.get(i));
             i++;
             k++;
         }
         while (j<n2) {            
-            comida.set(k, listaDerecha.get(j));
+            medicina.set(k, listaDerecha.get(j));
             j++;
             k++;
         }
@@ -113,8 +112,8 @@ public class AProdComestible {
         int n2= derecho-medio;
         
         //Listas Temporales 
-        List<ProdComestibles> listaIzquierda= new ArrayList<>();
-        List<ProdComestibles> listaDerecha= new ArrayList<>();
+        List<ProdMedicos> listaIzquierda= new ArrayList<>();
+        List<ProdMedicos> listaDerecha= new ArrayList<>();
         
         //Copiar los datos a los Arrays nuevos
         
@@ -129,10 +128,10 @@ public class AProdComestible {
         int i=0, j=0, k=izquierda;
         while (i<listaIzquierda.size() && j<listaDerecha.size()) {
             if (listaIzquierda.get(i).getNombre_producto().compareToIgnoreCase(listaDerecha.get(j).getNombre_producto()) <= 0) {
-                comida.set(k, listaIzquierda.get(i));
+                medicina.set(k, listaIzquierda.get(i));
                 i++;
             }else{
-                comida.set(k, listaDerecha.get(j));
+                medicina.set(k, listaDerecha.get(j));
                 j++;
             }
             k++;
@@ -140,12 +139,12 @@ public class AProdComestible {
         //Copiar los elementos restantes de der o izq si hay
         
         while (i<n1) {            
-            comida.set(k, listaIzquierda.get(i));
+            medicina.set(k, listaIzquierda.get(i));
             i++;
             k++;
         }
         while (j<n2) {            
-            comida.set(k, listaDerecha.get(j));
+            medicina.set(k, listaDerecha.get(j));
             j++;
             k++;
         }

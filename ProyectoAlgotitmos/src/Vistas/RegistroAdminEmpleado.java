@@ -1,14 +1,43 @@
 
 package Vistas;
 
-
+import ArrayLists.AEmpleAdmin;
+import LinkedLists.AdminList;
+import modelo.Admin;
 public class RegistroAdminEmpleado extends javax.swing.JFrame {
+    private AdminList nuevoAdmin;
 
-  
+
     public RegistroAdminEmpleado() {
         initComponents();
+        nuevoAdmin = new AdminList();
+        
+    }
+    
+    // --------------------------------------------------------------------------------------------Métodos -----------------------------------------------------------------------------------------------------------------------------
+    
+    //Método para limpiar los campos de la pestaña Administradores (reutilizar y cambiar nombres para los demás frames)
+    public void limpiarCamposAdmin() {
+        txtApellidosAdmin.setText(null);
+        txtAñoAdmin.setText(null);
+        txtDNIAdmin.setText(null);
+        txtNombreAdmin.setText(null);
+        cmbAfilAdmin.setSelectedIndex(0);
+        cmbSueldoAdmin.setSelectedIndex(0);
     }
 
+    public static boolean validarLetras(String datos){
+        return datos.matches("[a-zA-Z ]+");
+    }
+    
+     //Método que devuelve el click del mouse al textfield NombreAdmin (reutilizar y cambiar nombre para los demás frames)
+    public void clickOnTextfield() {
+        txtNombreAdmin.requestFocusInWindow();
+    }
+    
+    
+    
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -85,11 +114,11 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Nombres:");
+        jLabel2.setText("Nombre:");
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("Apellidos:");
+        jLabel8.setText("Apellido:");
 
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 0, 0));
@@ -107,21 +136,30 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Sueldo:");
 
-        txtDNIAdmin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDNIAdminActionPerformed(evt);
-            }
-        });
+        cmbAfilAdmin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Seleccionar -", "AFP", "ONP" }));
+        cmbAfilAdmin.setToolTipText("");
+
+        cmbSueldoAdmin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Seleccionar -", "2000", "3000", "4000", "5000", "6000", "7000", "8000" }));
 
         btnAgregarAdmin.setBackground(new java.awt.Color(255, 102, 102));
         btnAgregarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnAgregarAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregarAdmin.setText("Agregar");
+        btnAgregarAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarAdminActionPerformed(evt);
+            }
+        });
 
         btnLimpiarAdmin.setBackground(new java.awt.Color(102, 102, 102));
         btnLimpiarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnLimpiarAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnLimpiarAdmin.setText("Limpiar");
+        btnLimpiarAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarAdminActionPerformed(evt);
+            }
+        });
 
         tblAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         tblAdmin.setModel(new javax.swing.table.DefaultTableModel(
@@ -398,9 +436,23 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtDNIAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDNIAdminActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDNIAdminActionPerformed
+    private void btnLimpiarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAdminActionPerformed
+        limpiarCamposAdmin();
+        clickOnTextfield();
+    }//GEN-LAST:event_btnLimpiarAdminActionPerformed
+
+    private void btnAgregarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAdminActionPerformed
+         String nombre = txtNombreAdmin.getText();
+         String apellido = txtApellidosAdmin.getText();
+         int dni = Integer.parseInt(txtDNIAdmin.getText());
+         int año =  Integer.parseInt(txtAñoAdmin.getText());
+         int sueldo = Integer.parseInt(cmbSueldoAdmin.getSelectedItem().toString());
+         String afiliacion = cmbAfilAdmin.getSelectedItem().toString();    
+        
+         
+         
+
+    }//GEN-LAST:event_btnAgregarAdminActionPerformed
 
 
     public static void main(String args[]) {

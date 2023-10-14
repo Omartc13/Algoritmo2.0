@@ -282,9 +282,6 @@
                 <Component class="javax.swing.JTextField" name="txtciudad">
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtNombre">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtdire">
                 </Component>
@@ -408,14 +405,8 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtdni">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtdniActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txttelf">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txttelfActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>

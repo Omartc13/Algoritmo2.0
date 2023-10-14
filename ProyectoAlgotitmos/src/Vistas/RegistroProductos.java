@@ -2,9 +2,9 @@ package Vistas;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import misArrays.AProdMedicos;
-import misArrays.AProdComestible;
-import misArrays.AProdCuidadoPersonal;
+import ArrayLists.AProdMedicos;
+import ArrayLists.AProdComestible;
+import ArrayLists.AProdCuidadoPersonal;
 import misCGenericas.Generico1;
 import modelo.ProdMedicos;
 import modelo.ProdComestibles;
@@ -371,10 +371,11 @@ public class RegistroProductos extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(OrdenarQuickMedNom)
-                    .addComponent(OrdenarQuickMedCod)
-                    .addComponent(btnEliminarProdMed1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnEliminarProdMed1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(OrdenarQuickMedNom)
+                        .addComponent(OrdenarQuickMedCod)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 

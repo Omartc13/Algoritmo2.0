@@ -128,12 +128,6 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("DNI :");
 
-        txtNombre.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombreActionPerformed(evt);
-            }
-        });
-
         botonIngr.setBackground(new java.awt.Color(255, 102, 102));
         botonIngr.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         botonIngr.setForeground(new java.awt.Color(255, 255, 255));
@@ -164,18 +158,6 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Or.DNI");
-
-        txtdni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdniActionPerformed(evt);
-            }
-        });
-
-        txttelf.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txttelfActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -490,18 +472,6 @@ public class RegistrosSucursales extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
-
-    private void txtdniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdniActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtdniActionPerformed
-
-    private void txttelfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txttelfActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txttelfActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
