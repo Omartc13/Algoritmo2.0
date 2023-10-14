@@ -1,6 +1,6 @@
 package Vistas;
-import misArrays.AProvInterno;
-import misArrays.AProvExterno;
+import ArrayLists.AProvInterno;
+import ArrayLists.AProvExterno;
 import modelo.ProvInterno;
 import modelo.ProvExterno;
 import java.util.regex.Matcher;
