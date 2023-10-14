@@ -60,7 +60,6 @@ public class RegistroProductos extends javax.swing.JFrame {
         tcuid.addColumn("RUC. Proveedor");
         tcuid.addColumn("COSTO TOTAL");
         tblCuidPer3.setModel(tcuid);
-        
     }
 
     
