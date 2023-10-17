@@ -5,6 +5,7 @@ import javax.swing.table.DefaultTableModel;
 import ArrayLists.AProdMedicos;
 import ArrayLists.AProdComestible;
 import ArrayLists.AProdCuidadoPersonal;
+import LinkedLists.ProdCuidadoPersonalList;
 import misCGenericas.Generico1;
 import modelo.ProdMedicos;
 import modelo.ProdComestibles;
@@ -22,8 +23,8 @@ public class RegistroProductos extends javax.swing.JFrame {
     DefaultTableModel tcomes= new DefaultTableModel();
     AProdComestible comesArray= new AProdComestible();
     
-    DefaultTableModel tcuid= new DefaultTableModel();
-    AProdCuidadoPersonal cuidArray= new AProdCuidadoPersonal();
+    DefaultTableModel tcuid;
+    ProdCuidadoPersonalList cuidList;
     
     public RegistroProductos() {
         initComponents();
@@ -49,6 +50,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         tcomes.addColumn("COSTO TOTAL");
         tblProdComida.setModel(tcomes);
         
+        tcuid=new DefaultTableModel();
         tcuid.addColumn("Código");
         tcuid.addColumn("Nombre");
         tcuid.addColumn("Tipo");
@@ -56,10 +58,10 @@ public class RegistroProductos extends javax.swing.JFrame {
         tcuid.addColumn("Contenido");
         tcuid.addColumn("Precio");
         tcuid.addColumn("Stock");
-        tcuid.addColumn("Dirigido para:");
         tcuid.addColumn("RUC. Proveedor");
         tcuid.addColumn("COSTO TOTAL");
         tblCuidPer3.setModel(tcuid);
+        cuidList= new ProdCuidadoPersonalList();
     }
 
     
@@ -149,6 +151,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         OrdenarQuickCuidNom = new javax.swing.JButton();
         jLabel27 = new javax.swing.JLabel();
         cmb3UMedida3 = new javax.swing.JComboBox<>();
+        btnAgregarProdCuid1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -393,7 +396,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 807, Short.MAX_VALUE)
+            .addGap(0, 809, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -541,7 +544,7 @@ public class RegistroProductos extends javax.swing.JFrame {
                         .addComponent(OrdenarQuickComesCod)
                         .addGap(18, 18, 18)
                         .addComponent(OrdenarQuickComesNom))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 755, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addComponent(btnLimpiarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -684,7 +687,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnAgregarProdCuid.setBackground(new java.awt.Color(255, 102, 102));
         btnAgregarProdCuid.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnAgregarProdCuid.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregarProdCuid.setText("Agregar");
+        btnAgregarProdCuid.setText("Agregar Inicio");
         btnAgregarProdCuid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarProdCuidActionPerformed(evt);
@@ -752,6 +755,16 @@ public class RegistroProductos extends javax.swing.JFrame {
 
         cmb3UMedida3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selc.", "Unidad", "Docena", "SixPack", "L", "ml", "Kg", "g", " " }));
 
+        btnAgregarProdCuid1.setBackground(new java.awt.Color(255, 102, 102));
+        btnAgregarProdCuid1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnAgregarProdCuid1.setForeground(new java.awt.Color(255, 255, 255));
+        btnAgregarProdCuid1.setText("Agregar Fin");
+        btnAgregarProdCuid1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarProdCuid1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -769,7 +782,7 @@ public class RegistroProductos extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                         .addComponent(btnLimpiarAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregarProdCuid, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnAgregarProdCuid))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -789,7 +802,7 @@ public class RegistroProductos extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel10Layout.createSequentialGroup()
-                                        .addComponent(txt3Precio)
+                                        .addComponent(txt3Precio, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(jLabel25)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -797,14 +810,19 @@ public class RegistroProductos extends javax.swing.JFrame {
                                     .addComponent(cmb3Tipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel10Layout.createSequentialGroup()
                                 .addGap(3, 3, 3)
-                                .addComponent(jLabel27)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cmb3UMedida3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel24)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt3contenido)))))
-                .addGap(33, 33, 33))
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addComponent(btnAgregarProdCuid1)
+                                        .addGap(0, 0, Short.MAX_VALUE))
+                                    .addGroup(jPanel10Layout.createSequentialGroup()
+                                        .addComponent(jLabel27)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(cmb3UMedida3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel24)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txt3contenido)))))))
+                .addGap(24, 24, 24))
             .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
@@ -837,9 +855,11 @@ public class RegistroProductos extends javax.swing.JFrame {
                         .addComponent(jLabel21)
                         .addComponent(txt3NamePro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregarProdCuid)
-                    .addComponent(btnLimpiarAdmin2))
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnAgregarProdCuid)
+                        .addComponent(btnLimpiarAdmin2))
+                    .addComponent(btnAgregarProdCuid1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -854,9 +874,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 4, Short.MAX_VALUE))
+            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -867,19 +885,15 @@ public class RegistroProductos extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 807, Short.MAX_VALUE)
+            .addGap(0, 809, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 571, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
@@ -1200,157 +1214,6 @@ public class RegistroProductos extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEliminarAdminActionPerformed
 
-    private void btnAgregarProdCuidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProdCuidActionPerformed
-        
-        int codigo = 0;
-        Long RUCProv = 0L;
-        double precio = 0;
-        int stock = 0;
-        double contenido = 0;
-        
-        boolean valdat=true;
-        if (valdatoscuid(valdat)==false) {
-            JOptionPane.showMessageDialog(rootPane, "Complete todos los campos");
-        }else{
-            String cmbtipo=cmb3Tipo.getSelectedItem().toString();
-            String nombreproducto=txt3NamePro.getText();
-            String UniMed=cmb3UMedida3.getSelectedItem().toString();
-            //Condicional para validar letras de nombre producto
-            if (!validarLetras(txt3NamePro.getText())) {
-                JOptionPane.showMessageDialog(rootPane, "Error al ingresar Nombre producto");
-                valdat=false;
-            }
-            
-            //Controla Si el usuario digita 6 digitos 
-            try{
-                codigo=Integer.parseInt(txt3Cod.getText());
-                if (String.valueOf(codigo).length()!=6) {
-                    JOptionPane.showMessageDialog(rootPane, "El codigo debe tener 6 digitos");
-                    valdat=false;
-                }
-                //Asegura que el valor ingresado en cod sea un numero
-            }catch(NumberFormatException e){
-                JOptionPane.showMessageDialog(rootPane, "Solo se permiten numeros para el código");
-                valdat=false;
-            }
-            
-            //Asegura que el codigo de RucProv tenga 11 digitos
-            try {
-                RUCProv=Long.parseLong(txt3RUCPro.getText());
-                if (String.valueOf(RUCProv).length()!=11) {
-                    JOptionPane.showMessageDialog(rootPane, "El RUC del Proveedor debe tener 11 digitos");
-                    valdat=false;
-                }
-            } catch (NumberFormatException e) {
-                //Asegura que el RUCProv solo contenga numeros
-                JOptionPane.showMessageDialog(rootPane, "Ingrese un numero valido para el codigo de proveedor");
-                valdat=false;
-            }
-            
-            //No es necesario limitar cantidad de digitos
-            try {
-                precio=Double.parseDouble(txt3Precio.getText());
-              //Asegura que el precio contenga solo valores numericos  
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
-                valdat=false;
-            }
-            
-            //No es necesario limitar cantidad de digitos
-            try {
-                stock=(int) SpinnerStock3.getValue();
-              //Asegura que el precio contenga solo valores numericos  
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
-                valdat=false;
-            }
-            
-            //No es necesario limirar cantidad de digitos
-            try {
-                contenido=Double.parseDouble(txt3contenido.getText());
-              //Asegura que los datos sean solo numericos  
-            } catch (NumberFormatException e) {
-                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
-            }
-            
-            //Usamos la calse generica
-            Generico1<Double, Integer> generico1 = new Generico1(precio,stock);
-            double resultado=generico1.multiplicar();
-            
-            if (valdat) {
-                tcuid.setRowCount(0);
-                ProdCuidadoPersonal cui= new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
-                cuidArray.agregarProductoM(cui);
-                for (int o = 0; o < cuidArray.tamañoArreglo(); o++) {
-                    Object[] fila={
-                      cuidArray.obtener(o).getCodigo(),
-                      cuidArray.obtener(o).getNombre_producto(),
-                      cuidArray.obtener(o).getTipo(),
-                      cuidArray.obtener(o).getUnidadMed(),
-                      cuidArray.obtener(o).getContenido(),
-                      cuidArray.obtener(o).getPrecio(),
-                      cuidArray.obtener(o).getStock(),
-                      cuidArray.obtener(o).getRucProveedor(),
-                      cuidArray.obtener(o).getResult()                   
-                    };
-                    tcuid.addRow(fila);
-                }tblCuidPer3.setModel(tcuid);
-            }
-        }
-    }//GEN-LAST:event_btnAgregarProdCuidActionPerformed
-
-    private void OrdenarQuickCuidCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickCuidCodActionPerformed
-        
-        tcuid.setRowCount(0);
-        cuidArray.mergeSortCod();
-        for (int o = 0; o < cuidArray.tamañoArreglo(); o++) {
-                    Object[] fila={
-                      cuidArray.obtener(o).getCodigo(),
-                      cuidArray.obtener(o).getNombre_producto(),
-                      cuidArray.obtener(o).getTipo(),
-                      cuidArray.obtener(o).getUnidadMed(),
-                      cuidArray.obtener(o).getContenido(),
-                      cuidArray.obtener(o).getPrecio(),
-                      cuidArray.obtener(o).getStock(),
-                      cuidArray.obtener(o).getRucProveedor(),
-                      cuidArray.obtener(o).getResult()                   
-                    };
-                    tcuid.addRow(fila);
-                }tblCuidPer3.setModel(tcuid);
-        
-    }//GEN-LAST:event_OrdenarQuickCuidCodActionPerformed
-
-    private void OrdenarQuickCuidNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickCuidNomActionPerformed
-        
-        tcuid.setRowCount(0);
-        cuidArray.mergeSortCod();
-        for (int o = 0; o < cuidArray.tamañoArreglo(); o++) {
-                    Object[] fila={
-                      cuidArray.obtener(o).getCodigo(),
-                      cuidArray.obtener(o).getNombre_producto(),
-                      cuidArray.obtener(o).getTipo(),
-                      cuidArray.obtener(o).getUnidadMed(),
-                      cuidArray.obtener(o).getContenido(),
-                      cuidArray.obtener(o).getPrecio(),
-                      cuidArray.obtener(o).getStock(),
-                      cuidArray.obtener(o).getRucProveedor(),
-                      cuidArray.obtener(o).getResult()                   
-                    };
-                    tcuid.addRow(fila);
-                }tblCuidPer3.setModel(tcuid);
-    }//GEN-LAST:event_OrdenarQuickCuidNomActionPerformed
-
-    private void btnEliminarCuid3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCuid3ActionPerformed
-        
-        int filaseleccionada=tblCuidPer3.getSelectedRow();
-        if (filaseleccionada>=0) {
-            tcuid.removeRow(filaseleccionada);
-            cuidArray.eliminarProductoM(filaseleccionada);
-        }else{
-            JOptionPane.showMessageDialog(rootPane, "Selecciona una fila para eliminar ");
-        }
-    }//GEN-LAST:event_btnEliminarCuid3ActionPerformed
-
     private void btnLimpiarProdMed1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarProdMed1ActionPerformed
         txt1Cod.setText("");
         txt1RUCPro.setText("");
@@ -1372,6 +1235,155 @@ public class RegistroProductos extends javax.swing.JFrame {
         txt2Caducidad.setText("");
     }//GEN-LAST:event_btnLimpiarAdminActionPerformed
 
+    private void btnAgregarProdCuid1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProdCuid1ActionPerformed
+
+        int codigo = 0;
+        Long RUCProv = 0L;
+        double precio = 0;
+        int stock = 0;
+        double contenido = 0;
+
+        boolean valdat=true;
+        if (valdatoscuid(valdat)==false) {
+            JOptionPane.showMessageDialog(rootPane, "Complete todos los campos");
+        }else{
+            String cmbtipo=cmb3Tipo.getSelectedItem().toString();
+            String nombreproducto=txt3NamePro.getText();
+            String UniMed=cmb3UMedida3.getSelectedItem().toString();
+            //Condicional para validar letras de nombre producto
+            if (!validarLetras(txt3NamePro.getText())) {
+                JOptionPane.showMessageDialog(rootPane, "Error al ingresar Nombre producto");
+                valdat=false;
+            }
+
+            //Controla Si el usuario digita 6 digitos
+            try{
+                codigo=Integer.parseInt(txt3Cod.getText());
+                if (String.valueOf(codigo).length()!=6) {
+                    JOptionPane.showMessageDialog(rootPane, "El codigo debe tener 6 digitos");
+                    valdat=false;
+                }
+                //Asegura que el valor ingresado en cod sea un numero
+            }catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(rootPane, "Solo se permiten numeros para el código");
+                valdat=false;
+            }
+
+            //Asegura que el codigo de RucProv tenga 11 digitos
+            try {
+                RUCProv=Long.parseLong(txt3RUCPro.getText());
+                if (String.valueOf(RUCProv).length()!=11) {
+                    JOptionPane.showMessageDialog(rootPane, "El RUC del Proveedor debe tener 11 digitos");
+                    valdat=false;
+                }
+            } catch (NumberFormatException e) {
+                //Asegura que el RUCProv solo contenga numeros
+                JOptionPane.showMessageDialog(rootPane, "Ingrese un numero valido para el codigo de proveedor");
+                valdat=false;
+            }
+
+            //No es necesario limitar cantidad de digitos
+            try {
+                precio=Double.parseDouble(txt3Precio.getText());
+                //Asegura que el precio contenga solo valores numericos
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
+                valdat=false;
+            }
+
+            //No es necesario limitar cantidad de digitos
+            try {
+                stock=(int) SpinnerStock3.getValue();
+                //Asegura que el precio contenga solo valores numericos
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
+                valdat=false;
+            }
+
+            //No es necesario limirar cantidad de digitos
+            try {
+                contenido=Double.parseDouble(txt3contenido.getText());
+                //Asegura que los datos sean solo numericos
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
+            }
+
+            //Usamos la calse generica
+            Generico1<Double, Integer> generico1 = new Generico1(precio,stock);
+            double resultado=generico1.multiplicar();
+
+            if (valdat) {
+
+                ProdCuidadoPersonal cui= new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
+                cuidList.agregarFinal(cui);
+                Object[] rowData={
+                    cui.getCodigo(),
+                    cui.getNombre_producto(),
+                    cui.getTipo(),
+                    cui.getUnidadMed(),
+                    cui.getContenido(),
+                    cui.getPrecio(),
+                    cui.getStock(),
+                    cui.getRucProveedor(),
+                    cui.getResult()
+                };
+                tcuid.addRow(rowData);
+            }
+        }
+    }//GEN-LAST:event_btnAgregarProdCuid1ActionPerformed
+
+    private void OrdenarQuickCuidNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickCuidNomActionPerformed
+
+        //        tcuid.setRowCount(0);
+        //        cuidArray.mergeSortCod();
+        //        for (int o = 0; o < cuidArray.tamañoArreglo(); o++) {
+            //                    Object[] fila={
+                //                      cuidArray.obtener(o).getCodigo(),
+                //                      cuidArray.obtener(o).getNombre_producto(),
+                //                      cuidArray.obtener(o).getTipo(),
+                //                      cuidArray.obtener(o).getUnidadMed(),
+                //                      cuidArray.obtener(o).getContenido(),
+                //                      cuidArray.obtener(o).getPrecio(),
+                //                      cuidArray.obtener(o).getStock(),
+                //                      cuidArray.obtener(o).getRucProveedor(),
+                //                      cuidArray.obtener(o).getResult()
+                //                    };
+            //                    tcuid.addRow(fila);
+            //                }tblCuidPer3.setModel(tcuid);
+    }//GEN-LAST:event_OrdenarQuickCuidNomActionPerformed
+
+    private void OrdenarQuickCuidCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickCuidCodActionPerformed
+
+        //        tcuid.setRowCount(0);
+        //        cuidArray.mergeSortCod();
+        //        for (int o = 0; o < cuidArray.tamañoArreglo(); o++) {
+            //                    Object[] fila={
+                //                      cuidArray.obtener(o).getCodigo(),
+                //                      cuidArray.obtener(o).getNombre_producto(),
+                //                      cuidArray.obtener(o).getTipo(),
+                //                      cuidArray.obtener(o).getUnidadMed(),
+                //                      cuidArray.obtener(o).getContenido(),
+                //                      cuidArray.obtener(o).getPrecio(),
+                //                      cuidArray.obtener(o).getStock(),
+                //                      cuidArray.obtener(o).getRucProveedor(),
+                //                      cuidArray.obtener(o).getResult()
+                //                    };
+            //                    tcuid.addRow(fila);
+            //                }tblCuidPer3.setModel(tcuid);
+        //
+    }//GEN-LAST:event_OrdenarQuickCuidCodActionPerformed
+
+    private void btnEliminarCuid3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCuid3ActionPerformed
+
+        //        int filaseleccionada=tblCuidPer3.getSelectedRow();
+        //        if (filaseleccionada>=0) {
+            //            tcuid.removeRow(filaseleccionada);
+            //            cuidArray.eliminarProductoM(filaseleccionada);
+            //        }else{
+            //            JOptionPane.showMessageDialog(rootPane, "Selecciona una fila para eliminar ");
+            //        }
+    }//GEN-LAST:event_btnEliminarCuid3ActionPerformed
+
     private void btnLimpiarAdmin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAdmin2ActionPerformed
         txt3Cod.setText("");
         txt3RUCPro.setText("");
@@ -1382,6 +1394,103 @@ public class RegistroProductos extends javax.swing.JFrame {
         cmb3UMedida3.setSelectedIndex(0);
         txt3contenido.setText("");
     }//GEN-LAST:event_btnLimpiarAdmin2ActionPerformed
+
+    private void btnAgregarProdCuidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProdCuidActionPerformed
+        int codigo = 0;
+        Long RUCProv = 0L;
+        double precio = 0;
+        int stock = 0;
+        double contenido = 0;
+
+        boolean valdat=true;
+        if (valdatoscuid(valdat)==false) {
+            JOptionPane.showMessageDialog(rootPane, "Complete todos los campos");
+        }else{
+            String cmbtipo=cmb3Tipo.getSelectedItem().toString();
+            String nombreproducto=txt3NamePro.getText();
+            String UniMed=cmb3UMedida3.getSelectedItem().toString();
+            //Condicional para validar letras de nombre producto
+            if (!validarLetras(txt3NamePro.getText())) {
+                JOptionPane.showMessageDialog(rootPane, "Error al ingresar Nombre producto");
+                valdat=false;
+            }
+
+            //Controla Si el usuario digita 6 digitos
+            try{
+                codigo=Integer.parseInt(txt3Cod.getText());
+                if (String.valueOf(codigo).length()!=6) {
+                    JOptionPane.showMessageDialog(rootPane, "El codigo debe tener 6 digitos");
+                    valdat=false;
+                }
+                //Asegura que el valor ingresado en cod sea un numero
+            }catch(NumberFormatException e){
+                JOptionPane.showMessageDialog(rootPane, "Solo se permiten numeros para el código");
+                valdat=false;
+            }
+
+            //Asegura que el codigo de RucProv tenga 11 digitos
+            try {
+                RUCProv=Long.parseLong(txt3RUCPro.getText());
+                if (String.valueOf(RUCProv).length()!=11) {
+                    JOptionPane.showMessageDialog(rootPane, "El RUC del Proveedor debe tener 11 digitos");
+                    valdat=false;
+                }
+            } catch (NumberFormatException e) {
+                //Asegura que el RUCProv solo contenga numeros
+                JOptionPane.showMessageDialog(rootPane, "Ingrese un numero valido para el codigo de proveedor");
+                valdat=false;
+            }
+
+            //No es necesario limitar cantidad de digitos
+            try {
+                precio=Double.parseDouble(txt3Precio.getText());
+                //Asegura que el precio contenga solo valores numericos
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
+                valdat=false;
+            }
+
+            //No es necesario limitar cantidad de digitos
+            try {
+                stock=(int) SpinnerStock3.getValue();
+                //Asegura que el precio contenga solo valores numericos
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
+                valdat=false;
+            }
+
+            //No es necesario limirar cantidad de digitos
+            try {
+                contenido=Double.parseDouble(txt3contenido.getText());
+                //Asegura que los datos sean solo numericos
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(rootPane, "Ingrese solo datos numericos");
+            }
+
+            //Usamos la calse generica
+            Generico1<Double, Integer> generico1 = new Generico1(precio,stock);
+            double resultado=generico1.multiplicar();
+
+            if (valdat) {
+
+                ProdCuidadoPersonal cui= new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
+                cuidList.agregarInicio(cui);
+                Object[] rowData={
+                    cui.getCodigo(),
+                    cui.getNombre_producto(),
+                    cui.getTipo(),
+                    cui.getUnidadMed(),
+                    cui.getContenido(),
+                    cui.getPrecio(),
+                    cui.getStock(),
+                    cui.getRucProveedor(),
+                    cui.getResult()
+                };
+                tcuid.insertRow(0, rowData);
+
+            }
+        }
+    }//GEN-LAST:event_btnAgregarProdCuidActionPerformed
     
     public boolean valdatosmed(boolean valdat){
         
@@ -1438,6 +1547,7 @@ public class RegistroProductos extends javax.swing.JFrame {
     private javax.swing.JSpinner SpinnerStock3;
     private javax.swing.JButton btnAgregarComes;
     private javax.swing.JButton btnAgregarProdCuid;
+    private javax.swing.JButton btnAgregarProdCuid1;
     private javax.swing.JButton btnAgregarProdMed;
     private javax.swing.JButton btnEliminarAdmin;
     private javax.swing.JButton btnEliminarCuid3;

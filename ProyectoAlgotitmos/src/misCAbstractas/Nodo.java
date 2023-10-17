@@ -32,5 +32,8 @@ public class Nodo {
         this.nextNodo = nextNodo;
     }
     
+    public void enlazarNextNodo(Nodo n){
+        nextNodo=n;
+    }
     
 }
