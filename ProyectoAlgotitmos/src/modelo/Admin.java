@@ -115,4 +115,13 @@ public class Admin implements Sueldo{
     public void setSueldob(double sueldob) {
         this.sueldob = sueldob;
     }
+
+    @Override
+    public String toString() {
+        return "Nombre: "+ getNombre()+ " - "+ "DNI: "+ getDNI()+" ----> ";
+    }
+
+
+    
+    
 }

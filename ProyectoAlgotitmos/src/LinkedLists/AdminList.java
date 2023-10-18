@@ -34,7 +34,7 @@ public class AdminList {
         Nodo elemento = inicio;
         System.out.println();
         while (elemento!=null) {
-                System.out.println("-->"+ elemento.getDato());
+                System.out.println(elemento.getDato().toString());
             elemento = elemento.getNextNodo();
         }
         System.out.println();

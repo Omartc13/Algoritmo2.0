@@ -74,11 +74,11 @@ private final AdminList nuevoAdmin;
         btnLimpiarAdmin = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAdmin = new javax.swing.JTable();
-        btnEliminarAdmin = new javax.swing.JButton();
+        btnEliminarInicioAdmin = new javax.swing.JButton();
         OrdenarQuickAdmin = new javax.swing.JButton();
-        btnAgregarAdmin1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
         btnAgregarAlInicioAdmin = new javax.swing.JButton();
+        btnMostrarElementos = new javax.swing.JButton();
+        btnEliminarFinalAdmin = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -185,20 +185,15 @@ private final AdminList nuevoAdmin;
         ));
         jScrollPane1.setViewportView(tblAdmin);
 
-        btnEliminarAdmin.setBackground(new java.awt.Color(102, 102, 102));
-        btnEliminarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnEliminarAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminarAdmin.setText("Eliminar");
+        btnEliminarInicioAdmin.setBackground(new java.awt.Color(102, 102, 102));
+        btnEliminarInicioAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnEliminarInicioAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarInicioAdmin.setText("Eliminar al inicio");
 
         OrdenarQuickAdmin.setBackground(new java.awt.Color(255, 102, 102));
         OrdenarQuickAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         OrdenarQuickAdmin.setForeground(new java.awt.Color(255, 255, 255));
         OrdenarQuickAdmin.setText("Ordenar");
-
-        btnAgregarAdmin1.setBackground(new java.awt.Color(255, 102, 102));
-        btnAgregarAdmin1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnAgregarAdmin1.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregarAdmin1.setText("Definir tamaño de Lista");
 
         btnAgregarAlInicioAdmin.setBackground(new java.awt.Color(255, 102, 102));
         btnAgregarAlInicioAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -210,6 +205,21 @@ private final AdminList nuevoAdmin;
             }
         });
 
+        btnMostrarElementos.setBackground(new java.awt.Color(255, 102, 102));
+        btnMostrarElementos.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnMostrarElementos.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarElementos.setText("Mostrar Elementos");
+        btnMostrarElementos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarElementosActionPerformed(evt);
+            }
+        });
+
+        btnEliminarFinalAdmin.setBackground(new java.awt.Color(102, 102, 102));
+        btnEliminarFinalAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnEliminarFinalAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarFinalAdmin.setText("Eliminar al final");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -219,47 +229,45 @@ private final AdminList nuevoAdmin;
                 .addGap(19, 19, 19)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(btnEliminarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(OrdenarQuickAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(btnLimpiarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregarAlInicioAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnAgregarAlFinalAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel9)
-                            .addComponent(jTextField1))
-                        .addGap(39, 39, 39)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(btnAgregarAdmin1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(104, 104, 104))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9))
+                                .addGap(38, 38, 38)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtNombreAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                                    .addComponent(txtApellidosAdmin, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtDNIAdmin, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addGap(65, 65, 65))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addGap(18, 18, 18))
+                                    .addComponent(txtApellidosAdmin)
+                                    .addComponent(txtDNIAdmin)))
+                            .addComponent(btnLimpiarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(btnAgregarAlInicioAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(37, 37, 37)
+                                .addComponent(btnAgregarAlFinalAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cmbAfilAdmin, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cmbSueldoAdmin, 0, 200, Short.MAX_VALUE)
-                            .addComponent(txtAñoAdmin))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cmbAfilAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel12))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cmbSueldoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtAñoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnMostrarElementos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(btnEliminarInicioAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEliminarFinalAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(OrdenarQuickAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(33, 33, 33))
         );
         jPanel3Layout.setVerticalGroup(
@@ -268,39 +276,37 @@ private final AdminList nuevoAdmin;
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregarAdmin1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(cmbAfilAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2)
-                    .addComponent(txtNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombreAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10)
+                    .addComponent(cmbAfilAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(txtAñoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
-                    .addComponent(txtApellidosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtApellidosAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11)
+                    .addComponent(txtAñoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel9)
-                        .addComponent(jLabel12)
-                        .addComponent(cmbSueldoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(cmbSueldoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9)
                     .addComponent(txtDNIAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregarAlFinalAdmin)
                     .addComponent(btnLimpiarAdmin)
+                    .addComponent(btnAgregarAlFinalAdmin)
                     .addComponent(btnAgregarAlInicioAdmin))
+                .addGap(18, 18, 18)
+                .addComponent(btnMostrarElementos)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(OrdenarQuickAdmin)
-                    .addComponent(btnEliminarAdmin))
-                .addContainerGap(16, Short.MAX_VALUE))
+                    .addComponent(btnEliminarInicioAdmin)
+                    .addComponent(btnEliminarFinalAdmin))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -449,7 +455,7 @@ private final AdminList nuevoAdmin;
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEliminarEmpleado)
                     .addComponent(OrdenarQuickEmpleado))
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -497,7 +503,7 @@ private final AdminList nuevoAdmin;
          String afiliacion = cmbAfilAdmin.getSelectedItem().toString();
          
          Admin sueldoAdmin = new Admin(sueldo, afiliacion);
-         double sueldoBruto = sueldoAdmin.getSueldob();
+         double sueldoBruto = sueldoAdmin.sueldoBruto();
          
          Admin admin = new Admin(nombre, apellido, dni, año, sueldo, afiliacion, sueldoBruto);
          nuevoAdmin.agregarFinal(admin);
@@ -506,16 +512,16 @@ private final AdminList nuevoAdmin;
          datos[0] = nombre;
          datos[1] = apellido;
          datos[2] = dni;
-         datos[3] = año;
-         datos[4] = sueldo;
-         datos[5] = afiliacion;
+         datos[3] = afiliacion;
+         datos[4] = año;
+         datos[5] = sueldo;
          datos[6] = sueldoBruto;
          model.addRow(datos);
          
          limpiarCamposAdmin();
          clickOnTextfield();
           
-         System.out.println("-->"+admin.getNombre());
+         System.out.println("Objeto añadido al final ----> "+admin.getNombre()+" - "+admin.getDNI());
          
     }//GEN-LAST:event_btnAgregarAlFinalAdminActionPerformed
 
@@ -529,7 +535,7 @@ private final AdminList nuevoAdmin;
          String afiliacion = cmbAfilAdmin.getSelectedItem().toString();
          
          Admin sueldoAdmin = new Admin(sueldo, afiliacion);
-         double sueldoBruto = sueldoAdmin.getSueldob();
+         double sueldoBruto = sueldoAdmin.sueldoBruto();
          
          Admin admin = new Admin(nombre, apellido, dni, año, sueldo, afiliacion, sueldoBruto);
          nuevoAdmin.agregarInicio(admin);
@@ -538,17 +544,21 @@ private final AdminList nuevoAdmin;
          datos[0] = nombre;
          datos[1] = apellido;
          datos[2] = dni;
-         datos[3] = año;
-         datos[4] = sueldo;
-         datos[5] = afiliacion;
+         datos[3] = afiliacion;
+         datos[4] = año;
+         datos[5] = sueldo;
          datos[6] = sueldoBruto;
-         model.addRow(datos);
+         model.insertRow(0, datos);
          
          limpiarCamposAdmin();
          clickOnTextfield();
     
-         System.out.println("-->"+admin.getNombre());
+         System.out.println("Objeto añadido al inicio ----> "+admin.getNombre()+" - "+admin.getDNI());
     }//GEN-LAST:event_btnAgregarAlInicioAdminActionPerformed
+
+    private void btnMostrarElementosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarElementosActionPerformed
+        nuevoAdmin.mostrarElementos();
+    }//GEN-LAST:event_btnMostrarElementosActionPerformed
 
 
     public static void main(String args[]) {
@@ -586,14 +596,15 @@ private final AdminList nuevoAdmin;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton OrdenarQuickAdmin;
     private javax.swing.JButton OrdenarQuickEmpleado;
-    private javax.swing.JButton btnAgregarAdmin1;
     private javax.swing.JButton btnAgregarAlFinalAdmin;
     private javax.swing.JButton btnAgregarAlInicioAdmin;
     private javax.swing.JButton btnAgregarEmpleado;
-    private javax.swing.JButton btnEliminarAdmin;
     private javax.swing.JButton btnEliminarEmpleado;
+    private javax.swing.JButton btnEliminarFinalAdmin;
+    private javax.swing.JButton btnEliminarInicioAdmin;
     private javax.swing.JButton btnLimpEmpleado;
     private javax.swing.JButton btnLimpiarAdmin;
+    private javax.swing.JButton btnMostrarElementos;
     private javax.swing.JComboBox<String> cmbAfilAdmin;
     private javax.swing.JComboBox<String> cmbSueldoAdmin;
     private javax.swing.JComboBox<String> cmbTipoEmpleado;
@@ -618,7 +629,6 @@ private final AdminList nuevoAdmin;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTable tblAdmin;
     private javax.swing.JTable tblEmpleado;
     private javax.swing.JTextField txtApellidosAdmin;
