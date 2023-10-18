@@ -33,10 +33,7 @@ public class ProdCuidadoPersonal extends Productos{
     
     @Override
     public String toString(){
-        return "\nNombre prod: "+getNombre_producto()+"\n"
-                + "Codigo: "+getCodigo()+"\nTipo: "+getTipo()+
-                "\nPrecio: "+getPrecio()+"\nStock: "+getStock()+
-                "\nU. Med: "+getUnidadMed()+"\nContedino: "+getContenido()+"\nRUC: "+getRucProveedor()+"\n";
+        return "\nNombre: "+getNombre_producto()+" - "+ "Codigo: "+getCodigo();
     }
     
 }

@@ -22,11 +22,6 @@ public class ProdCuidadoPersonalList {
         inicio = new Nodo(dato, inicio);
         if (fin==null){
             fin=inicio;
-        }else{
-            Nodo temp=inicio;
-            Nodo nuevo = new Nodo(dato);
-            nuevo.enlazarNextNodo(temp);
-            inicio=nuevo;
         }
         System.out.println("Elemento agregado al inicio de la lista: " + dato);
     }
@@ -54,8 +49,28 @@ public class ProdCuidadoPersonalList {
             System.out.println("Elemento eliminado ---> "+c);
         }else{
             if (estaVacio()==true) {
-                System.out.println("Lista vacia JAAAA");
+                System.out.println("Lista vacia");
             }
+        }
+    }
+    
+    public void eliminarFin(){
+        if (!estaVacio()) {
+            if (inicio==fin) {
+                inicio=fin=null;
+            }else{
+                Nodo temp= inicio;
+                Nodo prev=null;
+                while (temp.getNextNodo()!=null) {
+                    prev=temp;
+                    temp=temp.getNextNodo();
+                }
+                prev.setNextNodo(null);
+            fin = prev;
+            }
+            System.out.println("Elemento eliminado al final de la lista");
+        }else{
+            System.out.println("La lista está vacia");
         }
     }
     
@@ -78,16 +93,11 @@ public class ProdCuidadoPersonalList {
             System.out.println(actual.getDato().toString());
             actual=actual.getNextNodo();
         }
-        
+        System.out.println("");
     }
     
     //Verifica si la lista esta vacia;
     public boolean estaVacio() {
         return (inicio == null);
     }
-    
-    public String toString(){
-        return "Nombre Prod: ";
-    }
-    
 }
