@@ -118,7 +118,7 @@ public class Admin implements Sueldo{
 
     @Override
     public String toString() {
-        return "Nombre: "+ getNombre()+ " - "+ "DNI: "+ getDNI()+" ----> ";
+        return " --> "+" Nombre: "+ getNombre()+ " - "+ "DNI: "+ getDNI();
     }
 
 

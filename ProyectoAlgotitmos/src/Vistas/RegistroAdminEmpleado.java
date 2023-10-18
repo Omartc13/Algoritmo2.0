@@ -75,7 +75,6 @@ private final AdminList nuevoAdmin;
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAdmin = new javax.swing.JTable();
         btnEliminarInicioAdmin = new javax.swing.JButton();
-        OrdenarQuickAdmin = new javax.swing.JButton();
         btnAgregarAlInicioAdmin = new javax.swing.JButton();
         btnMostrarElementos = new javax.swing.JButton();
         btnEliminarFinalAdmin = new javax.swing.JButton();
@@ -190,11 +189,6 @@ private final AdminList nuevoAdmin;
         btnEliminarInicioAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminarInicioAdmin.setText("Eliminar al inicio");
 
-        OrdenarQuickAdmin.setBackground(new java.awt.Color(255, 102, 102));
-        OrdenarQuickAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        OrdenarQuickAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        OrdenarQuickAdmin.setText("Ordenar");
-
         btnAgregarAlInicioAdmin.setBackground(new java.awt.Color(255, 102, 102));
         btnAgregarAlInicioAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnAgregarAlInicioAdmin.setForeground(new java.awt.Color(255, 255, 255));
@@ -266,8 +260,7 @@ private final AdminList nuevoAdmin;
                         .addComponent(btnEliminarInicioAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnEliminarFinalAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(OrdenarQuickAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(33, 33, 33))
         );
         jPanel3Layout.setVerticalGroup(
@@ -303,10 +296,9 @@ private final AdminList nuevoAdmin;
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(OrdenarQuickAdmin)
                     .addComponent(btnEliminarInicioAdmin)
                     .addComponent(btnEliminarFinalAdmin))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -594,7 +586,6 @@ private final AdminList nuevoAdmin;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton OrdenarQuickAdmin;
     private javax.swing.JButton OrdenarQuickEmpleado;
     private javax.swing.JButton btnAgregarAlFinalAdmin;
     private javax.swing.JButton btnAgregarAlInicioAdmin;
