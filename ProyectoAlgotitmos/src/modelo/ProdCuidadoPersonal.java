@@ -31,6 +31,7 @@ public class ProdCuidadoPersonal extends Productos{
         this.UnidadMed = UnidadMed;
     }
     
+    @Override
     public String toString(){
         return "\nNombre prod: "+getNombre_producto()+"\n"
                 + "Codigo: "+getCodigo()+"\nTipo: "+getTipo()+

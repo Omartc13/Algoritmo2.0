@@ -1461,21 +1461,15 @@ public class RegistroProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAgregarProdCuidActionPerformed
 
     private void btnVolver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver3ActionPerformed
-        Registros reg= new Registros();
-        reg.setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_btnVolver3ActionPerformed
 
     private void btnVolver2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver2ActionPerformed
-        Registros reg= new Registros();
-        reg.setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_btnVolver2ActionPerformed
 
     private void btnVolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver1ActionPerformed
-        Registros reg= new Registros();
-        reg.setVisible(true);
-        this.setVisible(false);
+        
     }//GEN-LAST:event_btnVolver1ActionPerformed
     
     public boolean valdatosmed(boolean valdat){
