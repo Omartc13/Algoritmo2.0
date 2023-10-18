@@ -11,6 +11,8 @@ public class ProdCuidadoPersonalList {
     private Nodo inicio,fin;
     private ProdCuidadoPersonal cuid;
     
+    Nodo nodoCui= new Nodo(cuid);
+    
     public ProdCuidadoPersonalList() {
         inicio=null;
         fin=null;
@@ -41,7 +43,20 @@ public class ProdCuidadoPersonalList {
     }
     
     public void eliminarPrimero(){
-        inicio=inicio.getNextNodo();
+        if (inicio!=null) {
+            Object c = inicio.getDato();
+            if (inicio==fin) {
+                inicio=null;
+                fin=null;
+            }else{
+                inicio=inicio.getNextNodo();
+            }
+            System.out.println("Elemento eliminado ---> "+c);
+        }else{
+            if (estaVacio()==true) {
+                System.out.println("Lista vacia JAAAA");
+            }
+        }
     }
     
     public ProdCuidadoPersonal obtener(int index){
@@ -55,9 +70,24 @@ public class ProdCuidadoPersonalList {
         return (ProdCuidadoPersonal) temporal.getDato();
     }
     
+    
+    public void mostrar(){
+        Nodo actual=inicio;
+        System.out.println("Elementitos");
+        while (actual!=null) {
+            System.out.println(actual.getDato().toString());
+            actual=actual.getNextNodo();
+        }
+        
+    }
+    
     //Verifica si la lista esta vacia;
     public boolean estaVacio() {
         return (inicio == null);
+    }
+    
+    public String toString(){
+        return "Nombre Prod: ";
     }
     
 }

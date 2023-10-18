@@ -31,4 +31,11 @@ public class ProdCuidadoPersonal extends Productos{
         this.UnidadMed = UnidadMed;
     }
     
+    public String toString(){
+        return "\nNombre prod: "+getNombre_producto()+"\n"
+                + "Codigo: "+getCodigo()+"\nTipo: "+getTipo()+
+                "\nPrecio: "+getPrecio()+"\nStock: "+getStock()+
+                "\nU. Med: "+getUnidadMed()+"\nContedino: "+getContenido()+"\nRUC: "+getRucProveedor()+"\n";
+    }
+    
 }
