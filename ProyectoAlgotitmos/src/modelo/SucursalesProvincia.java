@@ -11,7 +11,7 @@ public class SucursalesProvincia extends Sucursales{
     private int codigoProvincia;
 
     public SucursalesProvincia(String provincia, int codigoProvincia, int numSucursal, String encargado, int DNI, int telefono, String ciudad, String dirección) {
-        super(numSucursal, encargado, DNI, telefono, ciudad, dirección);
+        super(numSucursal, dirección, encargado, telefono, dirección, DNI);
         this.provincia = provincia;
         this.codigoProvincia = codigoProvincia;
     }
