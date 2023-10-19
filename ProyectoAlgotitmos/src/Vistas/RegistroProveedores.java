@@ -866,7 +866,7 @@ public class RegistroProveedores extends javax.swing.JFrame {
 
     private void btnEliminarINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarINActionPerformed
         if (tinterno.getRowCount()>0) {
-            tinterno.removeRow(tinterno.getRowCount()-1);
+            tinterno.removeRow(0);
             intList.QuitardelaCola();
         }else
             JOptionPane.showMessageDialog(null, "Cola Vacia");

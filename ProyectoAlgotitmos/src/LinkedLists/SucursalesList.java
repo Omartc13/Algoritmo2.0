@@ -33,6 +33,7 @@ public class SucursalesList {
         nuevoNodo.setNextNodo(inicio);
         inicio = nuevoNodo;
         numElementos++;
+        JOptionPane.showMessageDialog(null, "Objeto añadido a la Pila");
     }
     
     public void eliminarPila() {

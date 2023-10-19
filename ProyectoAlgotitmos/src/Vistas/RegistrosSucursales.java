@@ -40,7 +40,7 @@ public class RegistrosSucursales extends javax.swing.JFrame {
     }
     
     public void habilitarBotones() {
-        if (txtNumPrincipal.getText().isEmpty() || txtTlfPrincipal.getText().length() <9 || txtEncargadoPrincipal.getText().isEmpty() || txtDireccionPrincipal.getText().isEmpty() || txtDniPrincipal.getText().length()<8) {
+        if (txtNumPrincipal.getText().isEmpty() || txtTlfPrincipal.getText().length() <9 || txtEncargadoPrincipal.getText().isEmpty() || txtDireccionPrincipal.getText().isEmpty() || txtDniPrincipal.getText().length()<8 || txtDistritoPrincipal.getText().isEmpty()) {
             btnPush.setEnabled(false);
         } else {
             btnPush.setEnabled(true);
