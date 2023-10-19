@@ -422,6 +422,8 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Tipo de trabajador");
 
+        cmbTipoEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cajero", "Limpieza", "Seguridad", "Asistente" }));
+
         btnAgregarEmpleado.setBackground(new java.awt.Color(255, 102, 102));
         btnAgregarEmpleado.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnAgregarEmpleado.setForeground(new java.awt.Color(255, 255, 255));
