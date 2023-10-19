@@ -19,6 +19,7 @@ public class AdminList {
         if (fin==null){
             fin=inicio;
         }
+        JOptionPane.showMessageDialog(null, "Objeto añadido al inicio.");
     }
     
     public void agregarFinal(Admin dato) {
@@ -29,6 +30,7 @@ public class AdminList {
             fin.setNextNodo(new Nodo(dato));
             fin = fin.getNextNodo();
         }
+        JOptionPane.showMessageDialog(null, "Objeto añadido al final.");
     }
     
     public void mostrarElementos () {
@@ -41,7 +43,7 @@ public class AdminList {
         System.out.println();
         
         if(estaVacio()==true) {
-            System.out.println("Lista vacía");
+            System.out.println("Lista vacia");
             JOptionPane.showMessageDialog(null, "Lista vacía.");
         }
     }
