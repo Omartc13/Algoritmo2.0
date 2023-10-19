@@ -1,14 +1,15 @@
-
 package Vistas;
 
 import ArrayLists.AEmpleAdmin;
 import LinkedLists.AdminList;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Admin;
-public class RegistroAdminEmpleado extends javax.swing.JFrame {
-private final AdminList nuevoAdmin;
-    DefaultTableModel model;
 
+public class RegistroAdminEmpleado extends javax.swing.JFrame {
+
+    private final AdminList nuevoAdmin;
+    DefaultTableModel model;
 
     public RegistroAdminEmpleado() {
         initComponents();
@@ -23,9 +24,14 @@ private final AdminList nuevoAdmin;
         model.addColumn("Sueldo");
         model.addColumn("Sueldo Bruto");
         tblAdmin.setModel(model);
+        
+        //Deshabilitamos los botones hasta que los campos estén completos
+        btnAgregarAlFinalAdmin.setEnabled(false);
+        btnAgregarAlInicioAdmin.setEnabled(false);
+                
 
     }
-    
+
     // --------------------------------------------------------------------------------------------Métodos -----------------------------------------------------------------------------------------------------------------------------
     
     //Método para limpiar los campos de la pestaña Administradores (reutilizar y cambiar nombres para los demás frames)
@@ -38,16 +44,21 @@ private final AdminList nuevoAdmin;
         cmbSueldoAdmin.setSelectedIndex(0);
     }
 
-    public static boolean validarLetras(String datos){
-        return datos.matches("[a-zA-Z ]+");
-    }
-    
-     //Método que devuelve el click del mouse al textfield NombreAdmin (reutilizar y cambiar nombre para los demás frames)
+    //Método que devuelve el click del mouse al textfield NombreAdmin (reutilizar y cambiar nombre para los demás frames)
     public void clickOnTextfield() {
         txtNombreAdmin.requestFocusInWindow();
     }
-    
-  
+
+    //Método que habilita los botones si los campos están completos
+    public void habilitarBotones() {
+        if (txtNombreAdmin.getText().isEmpty() || txtApellidosAdmin.getText().isEmpty() || txtDNIAdmin.getText().length() <8 || cmbAfilAdmin.getSelectedItem().equals("- Seleccionar -") || txtAñoAdmin.getText().length()<4 || cmbSueldoAdmin.getSelectedItem().equals("- Seleccionar -")) {
+            btnAgregarAlFinalAdmin.setEnabled(false);
+            btnAgregarAlInicioAdmin.setEnabled(false);
+        } else {
+            btnAgregarAlFinalAdmin.setEnabled(true);
+            btnAgregarAlInicioAdmin.setEnabled(true);
+        }
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -148,10 +159,56 @@ private final AdminList nuevoAdmin;
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Sueldo:");
 
+        txtNombreAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNombreAdminKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreAdminKeyTyped(evt);
+            }
+        });
+
+        txtApellidosAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtApellidosAdminKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidosAdminKeyTyped(evt);
+            }
+        });
+
+        txtDNIAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtDNIAdminKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDNIAdminKeyTyped(evt);
+            }
+        });
+
         cmbAfilAdmin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Seleccionar -", "AFP", "ONP" }));
         cmbAfilAdmin.setToolTipText("");
+        cmbAfilAdmin.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbAfilAdminItemStateChanged(evt);
+            }
+        });
 
         cmbSueldoAdmin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "- Seleccionar -", "2000", "3000", "4000", "5000", "6000", "7000", "8000" }));
+        cmbSueldoAdmin.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cmbSueldoAdminItemStateChanged(evt);
+            }
+        });
+
+        txtAñoAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtAñoAdminKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAñoAdminKeyTyped(evt);
+            }
+        });
 
         btnAgregarAlFinalAdmin.setBackground(new java.awt.Color(255, 102, 102));
         btnAgregarAlFinalAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -188,6 +245,11 @@ private final AdminList nuevoAdmin;
         btnEliminarInicioAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnEliminarInicioAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminarInicioAdmin.setText("Eliminar al inicio");
+        btnEliminarInicioAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarInicioAdminActionPerformed(evt);
+            }
+        });
 
         btnAgregarAlInicioAdmin.setBackground(new java.awt.Color(255, 102, 102));
         btnAgregarAlInicioAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -213,6 +275,11 @@ private final AdminList nuevoAdmin;
         btnEliminarFinalAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnEliminarFinalAdmin.setForeground(new java.awt.Color(255, 255, 255));
         btnEliminarFinalAdmin.setText("Eliminar al final");
+        btnEliminarFinalAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarFinalAdminActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -479,82 +546,178 @@ private final AdminList nuevoAdmin;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+
     private void btnLimpiarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAdminActionPerformed
         limpiarCamposAdmin();
         clickOnTextfield();
     }//GEN-LAST:event_btnLimpiarAdminActionPerformed
 
     private void btnAgregarAlFinalAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAlFinalAdminActionPerformed
-         
-         String nombre = txtNombreAdmin.getText();
-         String apellido = txtApellidosAdmin.getText();
-         int dni = Integer.parseInt(txtDNIAdmin.getText());
-         int año =  Integer.parseInt(txtAñoAdmin.getText());
-         int sueldo = Integer.parseInt(cmbSueldoAdmin.getSelectedItem().toString());
-         String afiliacion = cmbAfilAdmin.getSelectedItem().toString();
-         
-         Admin sueldoAdmin = new Admin(sueldo, afiliacion);
-         double sueldoBruto = sueldoAdmin.sueldoBruto();
-         
-         Admin admin = new Admin(nombre, apellido, dni, año, sueldo, afiliacion, sueldoBruto);
-         nuevoAdmin.agregarFinal(admin);
-         
-         Object [] datos = new Object[7];
-         datos[0] = nombre;
-         datos[1] = apellido;
-         datos[2] = dni;
-         datos[3] = afiliacion;
-         datos[4] = año;
-         datos[5] = sueldo;
-         datos[6] = sueldoBruto;
-         model.addRow(datos);
-         
-         limpiarCamposAdmin();
-         clickOnTextfield();
-          
-         System.out.println("Objeto añadido al final ----> "+admin.getNombre()+" - "+admin.getDNI());
-         
+
+        String nombre = txtNombreAdmin.getText();
+        String apellido = txtApellidosAdmin.getText();
+        int dni = Integer.parseInt(txtDNIAdmin.getText());
+        int año = Integer.parseInt(txtAñoAdmin.getText());
+        int sueldo = Integer.parseInt(cmbSueldoAdmin.getSelectedItem().toString());
+        String afiliacion = cmbAfilAdmin.getSelectedItem().toString();
+
+        Admin sueldoAdmin = new Admin(sueldo, afiliacion);
+        double sueldoBruto = sueldoAdmin.sueldoBruto();
+
+        Admin admin = new Admin(nombre, apellido, dni, año, sueldo, afiliacion, sueldoBruto);
+        nuevoAdmin.agregarFinal(admin);
+
+        Object[] datos = new Object[7];
+        datos[0] = nombre;
+        datos[1] = apellido;
+        datos[2] = dni;
+        datos[3] = afiliacion;
+        datos[4] = año;
+        datos[5] = sueldo;
+        datos[6] = sueldoBruto;
+        model.addRow(datos);
+
+        limpiarCamposAdmin();
+        clickOnTextfield();
+
+        System.out.println("Objeto añadido al final ----> " + admin.getNombre() + " - " + admin.getDNI());
+
     }//GEN-LAST:event_btnAgregarAlFinalAdminActionPerformed
 
     private void btnAgregarAlInicioAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarAlInicioAdminActionPerformed
-        
+
         String nombre = txtNombreAdmin.getText();
-         String apellido = txtApellidosAdmin.getText();
-         int dni = Integer.parseInt(txtDNIAdmin.getText());
-         int año =  Integer.parseInt(txtAñoAdmin.getText());
-         int sueldo = Integer.parseInt(cmbSueldoAdmin.getSelectedItem().toString());
-         String afiliacion = cmbAfilAdmin.getSelectedItem().toString();
-         
-         Admin sueldoAdmin = new Admin(sueldo, afiliacion);
-         double sueldoBruto = sueldoAdmin.sueldoBruto();
-         
-         Admin admin = new Admin(nombre, apellido, dni, año, sueldo, afiliacion, sueldoBruto);
-         nuevoAdmin.agregarInicio(admin);
-         
-         Object [] datos = new Object[7];
-         datos[0] = nombre;
-         datos[1] = apellido;
-         datos[2] = dni;
-         datos[3] = afiliacion;
-         datos[4] = año;
-         datos[5] = sueldo;
-         datos[6] = sueldoBruto;
-         model.insertRow(0, datos);
-         
-         limpiarCamposAdmin();
-         clickOnTextfield();
-    
-         System.out.println("Objeto añadido al inicio ----> "+admin.getNombre()+" - "+admin.getDNI());
+        String apellido = txtApellidosAdmin.getText();
+        int dni = Integer.parseInt(txtDNIAdmin.getText());
+        int año = Integer.parseInt(txtAñoAdmin.getText());
+        int sueldo = Integer.parseInt(cmbSueldoAdmin.getSelectedItem().toString());
+        String afiliacion = cmbAfilAdmin.getSelectedItem().toString();
+
+        Admin sueldoAdmin = new Admin(sueldo, afiliacion);
+        double sueldoBruto = sueldoAdmin.sueldoBruto();
+
+        Admin admin = new Admin(nombre, apellido, dni, año, sueldo, afiliacion, sueldoBruto);
+        nuevoAdmin.agregarInicio(admin);
+
+        Object[] datos = new Object[7];
+        datos[0] = nombre;
+        datos[1] = apellido;
+        datos[2] = dni;
+        datos[3] = afiliacion;
+        datos[4] = año;
+        datos[5] = sueldo;
+        datos[6] = sueldoBruto;
+        model.insertRow(0, datos);
+
+        limpiarCamposAdmin();
+        clickOnTextfield();
+
+        System.out.println("Objeto añadido al inicio ----> " + admin.getNombre() + " - " + admin.getDNI());
     }//GEN-LAST:event_btnAgregarAlInicioAdminActionPerformed
 
     private void btnMostrarElementosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarElementosActionPerformed
         nuevoAdmin.mostrarElementos();
     }//GEN-LAST:event_btnMostrarElementosActionPerformed
 
+    private void btnEliminarInicioAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarInicioAdminActionPerformed
+        nuevoAdmin.eliminarPrimero();
+
+        if (model.getRowCount() > 0) {
+            model.removeRow(0);
+        } else {
+            JOptionPane.showMessageDialog(null, "No existen filas para eliminar");
+        }
+    }//GEN-LAST:event_btnEliminarInicioAdminActionPerformed
+
+    private void txtDNIAdminKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDNIAdminKeyTyped
+        //Método para solo permitir el ingreso de números
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //Permitir un máximo de 8 números
+        if (txtDNIAdmin.getText().length() >= 8) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtDNIAdminKeyTyped
+
+    private void txtAñoAdminKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAñoAdminKeyTyped
+        //Método para solo permitir el ingreso de números
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //Permitir un máximo de 4 números
+        if (txtAñoAdmin.getText().length() >= 4) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtAñoAdminKeyTyped
+
+    private void btnEliminarFinalAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarFinalAdminActionPerformed
+        nuevoAdmin.eliminarFin();
+        if (model.getRowCount() > 0) {
+            model.removeRow(model.getRowCount() - 1);
+        } else
+            JOptionPane.showMessageDialog(null, "No hay filas para eliminar");
+    }//GEN-LAST:event_btnEliminarFinalAdminActionPerformed
+
+   
+    // Activación de botones
+    
+    private void txtNombreAdminKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreAdminKeyReleased
+        habilitarBotones();
+    }//GEN-LAST:event_txtNombreAdminKeyReleased
+
+    private void txtApellidosAdminKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidosAdminKeyReleased
+        habilitarBotones();
+    }//GEN-LAST:event_txtApellidosAdminKeyReleased
+
+    private void txtAñoAdminKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAñoAdminKeyReleased
+        habilitarBotones();
+    }//GEN-LAST:event_txtAñoAdminKeyReleased
+
+    private void txtDNIAdminKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDNIAdminKeyReleased
+        habilitarBotones();
+    }//GEN-LAST:event_txtDNIAdminKeyReleased
+
+    private void cmbAfilAdminItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbAfilAdminItemStateChanged
+       habilitarBotones();
+    }//GEN-LAST:event_cmbAfilAdminItemStateChanged
+
+    private void cmbSueldoAdminItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbSueldoAdminItemStateChanged
+        habilitarBotones();
+    }//GEN-LAST:event_cmbSueldoAdminItemStateChanged
+
+    private void txtNombreAdminKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreAdminKeyTyped
+        //Método para solo permitir el ingreso de letras
+        int key = evt.getKeyChar();
+        boolean minusculas = key >= 97 && key <= 122;
+        boolean mayusculas  = key >= 65 && key <= 90;
+
+        if (!(minusculas || mayusculas)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtNombreAdminKeyTyped
+
+    private void txtApellidosAdminKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidosAdminKeyTyped
+        //Método para solo permitir el ingreso de letras
+        int key = evt.getKeyChar();
+        boolean minusculas = key >= 97 && key <= 122;
+        boolean mayusculas  = key >= 65 && key <= 90;
+
+        if (!(minusculas || mayusculas)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtApellidosAdminKeyTyped
 
     public static void main(String args[]) {
-        
+
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
