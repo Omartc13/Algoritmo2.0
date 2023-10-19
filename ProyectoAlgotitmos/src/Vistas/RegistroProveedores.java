@@ -1,6 +1,7 @@
 package Vistas;
 import ArrayLists.AProvInterno;
 import ArrayLists.AProvExterno;
+import LinkedLists.ProvInternoList;
 import modelo.ProvInterno;
 import modelo.ProvExterno;
 import java.util.regex.Matcher;
@@ -12,22 +13,23 @@ import javax.swing.table.DefaultTableModel;
  * @author User
  */
 public class RegistroProveedores extends javax.swing.JFrame {
-    DefaultTableModel tinterno = new DefaultTableModel();
+    DefaultTableModel tinterno;
+    ProvInternoList intList;
+    
     DefaultTableModel texterno = new DefaultTableModel();
     AProvExterno capea = new AProvExterno();
-    AProvInterno capia= new AProvInterno();
-    /**
-     * Creates new form RegistroProveedores
-     */
+    
+    
     public RegistroProveedores() {
         initComponents();
         setLocationRelativeTo(null);
-        
+        tinterno=new DefaultTableModel();
         tinterno.addColumn("Nombre");
         tinterno.addColumn("DNI");
         tinterno.addColumn("Area");
         tinterno.addColumn("Sueldo");
         tblinternaPrincipal.setModel(tinterno);
+        intList= new ProvInternoList();
         
         texterno.addColumn("Nombre Empresa");
         texterno.addColumn("RUC");
@@ -39,8 +41,7 @@ public class RegistroProveedores extends javax.swing.JFrame {
         texterno.addColumn("Demora");
         tblExternaPrincipal.setModel(texterno);
         
-        AProvExterno capea = new AProvExterno();
-        AProvInterno capia = new AProvInterno();
+        
     }
 
     /**
@@ -65,11 +66,11 @@ public class RegistroProveedores extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblinternaPrincipal = new javax.swing.JTable();
         btnEliminarIN = new javax.swing.JButton();
-        btnOrdenDniMejorado = new javax.swing.JButton();
         txtDNIin = new javax.swing.JTextField();
         CMBarea = new javax.swing.JComboBox<>();
         jLabel23 = new javax.swing.JLabel();
         volverIN = new javax.swing.JButton();
+        volverIN1 = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
@@ -97,6 +98,7 @@ public class RegistroProveedores extends javax.swing.JFrame {
         TXTañoEX = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         btnEliminarEX = new javax.swing.JButton();
+        btnOrdenDniMejorado1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -179,16 +181,6 @@ public class RegistroProveedores extends javax.swing.JFrame {
             }
         });
 
-        btnOrdenDniMejorado.setBackground(new java.awt.Color(255, 102, 102));
-        btnOrdenDniMejorado.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnOrdenDniMejorado.setForeground(new java.awt.Color(255, 255, 255));
-        btnOrdenDniMejorado.setText("Or.DNI");
-        btnOrdenDniMejorado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOrdenDniMejoradoActionPerformed(evt);
-            }
-        });
-
         txtDNIin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDNIinActionPerformed(evt);
@@ -220,6 +212,16 @@ public class RegistroProveedores extends javax.swing.JFrame {
             }
         });
 
+        volverIN1.setBackground(new java.awt.Color(255, 102, 102));
+        volverIN1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        volverIN1.setForeground(new java.awt.Color(255, 255, 255));
+        volverIN1.setText("Mostrar Elementos");
+        volverIN1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverIN1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
@@ -230,13 +232,15 @@ public class RegistroProveedores extends javax.swing.JFrame {
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addComponent(BTNagregarIN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(volverIN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEliminarIN, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonLimIN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
                         .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel15Layout.createSequentialGroup()
-                                .addComponent(BTNagregarIN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(volverIN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(btnEliminarIN, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addComponent(jLabel9)
                                 .addGap(8, 8, 8)
@@ -250,12 +254,9 @@ public class RegistroProveedores extends javax.swing.JFrame {
                                     .addGroup(jPanel15Layout.createSequentialGroup()
                                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CMBarea, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 113, Short.MAX_VALUE))
-                    .addGroup(jPanel15Layout.createSequentialGroup()
-                        .addComponent(btnOrdenDniMejorado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botonLimIN, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(CMBarea, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(volverIN1))
+                        .addGap(0, 113, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel15Layout.setVerticalGroup(
@@ -272,16 +273,16 @@ public class RegistroProveedores extends javax.swing.JFrame {
                 .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CMBarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel23))
+                .addGap(12, 12, 12)
+                .addComponent(volverIN1)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTNagregarIN)
-                    .addComponent(btnEliminarIN)
-                    .addComponent(volverIN))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnOrdenDniMejorado)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(BTNagregarIN)
+                        .addComponent(btnEliminarIN)
+                        .addComponent(volverIN))
                     .addComponent(botonLimIN))
                 .addContainerGap(16, Short.MAX_VALUE))
         );
@@ -467,6 +468,16 @@ public class RegistroProveedores extends javax.swing.JFrame {
             }
         });
 
+        btnOrdenDniMejorado1.setBackground(new java.awt.Color(255, 102, 102));
+        btnOrdenDniMejorado1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnOrdenDniMejorado1.setForeground(new java.awt.Color(255, 255, 255));
+        btnOrdenDniMejorado1.setText("Or.RUC");
+        btnOrdenDniMejorado1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOrdenDniMejorado1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
         jPanel18Layout.setHorizontalGroup(
@@ -514,6 +525,8 @@ public class RegistroProveedores extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(btnEliminarEX, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnOrdenDniMejorado1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
                                 .addComponent(jButton3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(botonLimProv, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -564,7 +577,8 @@ public class RegistroProveedores extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(BTNguardarEX)
                     .addComponent(botonLimProv)
-                    .addComponent(btnEliminarEX))
+                    .addComponent(btnEliminarEX)
+                    .addComponent(btnOrdenDniMejorado1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -794,26 +808,23 @@ public class RegistroProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_TXTbuRUCKeyTyped
 
     private void volverINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverINActionPerformed
-        // TODO add your handling code here:
-//      FramePrincipal abrir = new FramePrincipal();
-//      abrir.setVisible(true);
-//      this.setVisible(false); 
+        
     }//GEN-LAST:event_volverINActionPerformed
 
     private void BTNagregarINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNagregarINActionPerformed
-        // TODO add your handling code here:
-        int dni=0;
-        int anio=0;
+        int dni = 0;
+        int anio = 0;
         boolean datosValidos = true;
 
-        if(txtDNIin.getText().trim().isEmpty() || txtNombreIN.getText().trim().trim().isEmpty()|| CMBarea.getSelectedIndex()==0)     {
+        if (txtDNIin.getText().trim().isEmpty() || txtNombreIN.getText().trim().trim().isEmpty() || CMBarea.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(null, "Complete los campos");
-            datosValidos = false;}
-        else{
+            datosValidos = false;
+        } else {
             String nom = txtNombreIN.getText();
-            if (!validarLetras(txtNombreIN.getText()))
-            {JOptionPane.showMessageDialog(null, "Error al ingresar dato NOMBRE");
-                datosValidos = false;}
+            if (!validarLetras(txtNombreIN.getText())) {
+                JOptionPane.showMessageDialog(null, "Error al ingresar dato NOMBRE");
+                datosValidos = false;
+            }
 
             String area = CMBarea.getSelectedItem().toString();
 
@@ -827,24 +838,22 @@ public class RegistroProveedores extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Ingrese un número válido para el DNI");
                 datosValidos = false; // Marcar los datos como no válidos
             }
-            ProvInterno insa= new ProvInterno(area);
-            double suel= insa.calcsueldo(area);
+            ProvInterno insa = new ProvInterno(area);
+            double suel = insa.calcsueldo(area);
             // Creacion del objeto en un array para la tabla
             if (datosValidos) {
-                tinterno.setRowCount(0);
-              ProvInterno inte = new ProvInterno(area, dni, suel, nom);
-              capia.agregarProvInterno(inte);
-                for (int i = 0; i < capia.tamañoArreglo(); i++) {
-                     Object[] fila={
-                    capia.obtener(i).getNombreProveedor(),
-                    capia.obtener(i).getDni(),
-                    capia.obtener(i).getArea(),
-                    capia.obtener(i).getSuel(),
-            };
-            tinterno.addRow(fila);
-                }tblinternaPrincipal.setModel(tinterno);
-                }
+                
+                ProvInterno pint = new ProvInterno(area, dni, suel, nom);
+                intList.insertarCola(pint);
+                Object[] rowData={
+                    pint.getNombreProveedor(),
+                    pint.getDni(),
+                    pint.getArea(),
+                    pint.getSuel(),
+                };
+                tinterno.addRow(rowData);
             }
+        }
     }//GEN-LAST:event_BTNagregarINActionPerformed
 
     private void txtDNIinKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDNIinKeyTyped
@@ -856,16 +865,14 @@ public class RegistroProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDNIinKeyTyped
 
     private void btnEliminarINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarINActionPerformed
-        // TODO add your handling code here:
-        int filaSeleccionada = tblinternaPrincipal.getSelectedRow();
-
-        if (filaSeleccionada >= 0) {
-            // Elimina la fila seleccionada del modelo de tabla Higiene
-            tinterno.removeRow(filaSeleccionada);
-            capia.eliminarProvinterno(filaSeleccionada);
-        } else {
-            JOptionPane.showMessageDialog(null, "Selecciona una fila para eliminar.");
-        }
+        
+        if (tinterno.getRowCount()>0) {
+            tinterno.removeRow(tinterno.getRowCount()-1);
+            intList.QuitardelaCola();
+        }else
+            JOptionPane.showMessageDialog(null, "Cola Vacia");
+        
+        
     }//GEN-LAST:event_btnEliminarINActionPerformed
 
     private void btnEliminarEXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEXActionPerformed
@@ -880,20 +887,28 @@ public class RegistroProveedores extends javax.swing.JFrame {
         }              
     }//GEN-LAST:event_btnEliminarEXActionPerformed
 
-    private void btnOrdenDniMejoradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdenDniMejoradoActionPerformed
-        tinterno.setRowCount(0);
-        capia.ordenarDniBurbujaMejorado();
-            for (int i = 0; i < capia.tamañoArreglo(); i++) {
-                Object[] fila={
-                capia.obtener(i).getNombreProveedor(),
-                capia.obtener(i).getDni(),
-                capia.obtener(i).getArea(),
-                capia.obtener(i).getSuel(),
-            };
-            tinterno.addRow(fila);
-            }
-            tblinternaPrincipal.setModel(tinterno);
-    }//GEN-LAST:event_btnOrdenDniMejoradoActionPerformed
+    private void btnOrdenDniMejorado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrdenDniMejorado1ActionPerformed
+        texterno.setRowCount(0);
+        capea.ordenarRucBurbujaMejorado();
+        for (int i = 0; i < capea.tamañoArreglo(); i++) {
+                 Object[] fila={
+            capea.obtener(i).getNombreProveedor(),
+            capea.obtener(i).getRUC(),
+            capea.obtener(i).getTelefono(),
+            capea.obtener(i).getDireccion(),
+            capea.obtener(i).getCorreo(),
+            capea.obtener(i).getAñoIngreso(),
+            capea.obtener(i).getEncargado(),
+            capea.obtener(i).getDemo()
+               };
+            texterno.addRow(fila);
+            }tblExternaPrincipal.setModel(texterno);
+            
+    }//GEN-LAST:event_btnOrdenDniMejorado1ActionPerformed
+
+    private void volverIN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverIN1ActionPerformed
+        intList.mostar();
+    }//GEN-LAST:event_volverIN1ActionPerformed
     public boolean verificar_email(String correo){
         Pattern patron = Pattern.compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
         +"[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{3,})$");
@@ -952,7 +967,7 @@ public class RegistroProveedores extends javax.swing.JFrame {
     private javax.swing.JButton botonLimProv;
     private javax.swing.JButton btnEliminarEX;
     private javax.swing.JButton btnEliminarIN;
-    private javax.swing.JButton btnOrdenDniMejorado;
+    private javax.swing.JButton btnOrdenDniMejorado1;
     private javax.swing.JButton btnVolver;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
@@ -982,5 +997,6 @@ public class RegistroProveedores extends javax.swing.JFrame {
     private javax.swing.JTextField txtDNIin;
     private javax.swing.JTextField txtNombreIN;
     private javax.swing.JButton volverIN;
+    private javax.swing.JButton volverIN1;
     // End of variables declaration//GEN-END:variables
 }

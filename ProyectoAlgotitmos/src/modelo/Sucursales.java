@@ -20,7 +20,12 @@ public class Sucursales {
         this.telefono = telefono;
         this.ciudad = ciudad;
         this.dirección = dirección;
+    }   
+
+    public Sucursales() {
     }
+    
+    
 
     public int getNumSucursal() {
         return numSucursal;

@@ -63,6 +63,26 @@ public class AProvExterno {
         }
     }
     
+    public void ordenarRucBurbujaMejorado(){
+        int n= tamañoArreglo();
+        boolean ICambio;
+        
+        for (int i = 0; i < n-1; i++) {
+            ICambio=false;
+            for (int j = 0; j < n-1; j++) {
+                if (obtener(i).getRUC()>obtener(j+1).getRUC()) {
+                    ProvExterno temp= obtener(j);
+                    externo.set(j, obtener(j+1));
+                    externo.set(j+1, temp);
+                    ICambio=true;
+                }
+            }
+            if (!ICambio) {
+                break;
+            }
+        }        
+    }   
+    
     public ProvExterno busquedaB(int telf){
         ProvExterno refc=null;
         int izq,der,cen;

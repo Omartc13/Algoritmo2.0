@@ -88,7 +88,7 @@ public class ProdCuidadoPersonalList {
     
     public void mostrar(){
         Nodo actual=inicio;
-        System.out.println("Elementitos");
+        System.out.println("Elementos");
         while (actual!=null) {
             System.out.println(actual.getDato().toString());
             actual=actual.getNextNodo();

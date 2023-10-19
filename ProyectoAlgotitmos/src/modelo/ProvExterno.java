@@ -46,8 +46,6 @@ public class ProvExterno extends DatosEncargado{
         
     }
     
-    
-    
     public long getRUC() {
         return RUC;
     }
@@ -103,5 +101,7 @@ public class ProvExterno extends DatosEncargado{
     public void setDemo(String demo) {
         this.demo = demo;
     }
+    
+    
     
 }

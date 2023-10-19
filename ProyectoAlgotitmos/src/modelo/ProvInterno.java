@@ -23,6 +23,11 @@ public class ProvInterno extends DatosEncargado{
     public ProvInterno(String area) {
         this.area = area;
     }
+
+    public ProvInterno() {
+    }
+    
+    
     
     public double calcsueldo(String ar){
         double sueldoas=0;
@@ -74,5 +79,10 @@ public class ProvInterno extends DatosEncargado{
     @Override
     public String tiempoProvedor(){
         return "";
+    }
+    
+    @Override
+    public String toString(){
+        return "Nombre: "+getNombreProveedor()+"\nDni: "+getDni();
     }
 }
