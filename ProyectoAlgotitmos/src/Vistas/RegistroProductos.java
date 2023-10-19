@@ -153,6 +153,8 @@ public class RegistroProductos extends javax.swing.JFrame {
         cmb3UMedida3 = new javax.swing.JComboBox<>();
         btnAgregarProdCuid1 = new javax.swing.JButton();
         btnVolver3 = new javax.swing.JButton();
+        btnEliminarFin3 = new javax.swing.JButton();
+        btnMostrarElementos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -282,11 +284,6 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnVolver1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnVolver1.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver1.setText("Volver");
-        btnVolver1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolver1ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -552,11 +549,6 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnVolver2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnVolver2.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver2.setText("Volver");
-        btnVolver2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolver2ActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -748,7 +740,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnEliminarCuid3.setBackground(new java.awt.Color(102, 102, 102));
         btnEliminarCuid3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnEliminarCuid3.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminarCuid3.setText("Eliminar");
+        btnEliminarCuid3.setText("Eliminar Inicio");
         btnEliminarCuid3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarCuid3ActionPerformed(evt);
@@ -779,9 +771,24 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnVolver3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnVolver3.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver3.setText("Volver");
-        btnVolver3.addActionListener(new java.awt.event.ActionListener() {
+
+        btnEliminarFin3.setBackground(new java.awt.Color(102, 102, 102));
+        btnEliminarFin3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnEliminarFin3.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarFin3.setText("Eliminar Final");
+        btnEliminarFin3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVolver3ActionPerformed(evt);
+                btnEliminarFin3ActionPerformed(evt);
+            }
+        });
+
+        btnMostrarElementos.setBackground(new java.awt.Color(255, 102, 102));
+        btnMostrarElementos.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnMostrarElementos.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarElementos.setText("Mostrar Elementos");
+        btnMostrarElementos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarElementosActionPerformed(evt);
             }
         });
 
@@ -793,15 +800,19 @@ public class RegistroProductos extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(btnEliminarCuid3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEliminarCuid3)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEliminarFin3)
                         .addGap(18, 18, 18)
                         .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregarProdCuid1))
+                        .addComponent(btnMostrarElementos, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                         .addComponent(btnLimpiarAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnAgregarProdCuid1)
+                        .addGap(18, 18, 18)
                         .addComponent(btnAgregarProdCuid))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -874,14 +885,16 @@ public class RegistroProductos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAgregarProdCuid)
-                    .addComponent(btnLimpiarAdmin2))
+                    .addComponent(btnLimpiarAdmin2)
+                    .addComponent(btnAgregarProdCuid1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEliminarCuid3)
                     .addComponent(btnVolver3)
-                    .addComponent(btnAgregarProdCuid1))
+                    .addComponent(btnEliminarFin3)
+                    .addComponent(btnMostrarElementos))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -1460,23 +1473,14 @@ public class RegistroProductos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnAgregarProdCuidActionPerformed
 
-    private void btnVolver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver3ActionPerformed
-        Registros reg= new Registros();
-        reg.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnVolver3ActionPerformed
+    private void btnEliminarFin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarFin3ActionPerformed
+        cuidList.eliminarFin();
+        
+    }//GEN-LAST:event_btnEliminarFin3ActionPerformed
 
-    private void btnVolver2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver2ActionPerformed
-        Registros reg= new Registros();
-        reg.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnVolver2ActionPerformed
-
-    private void btnVolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver1ActionPerformed
-        Registros reg= new Registros();
-        reg.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_btnVolver1ActionPerformed
+    private void btnMostrarElementosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarElementosActionPerformed
+        cuidList.mostrar();
+    }//GEN-LAST:event_btnMostrarElementosActionPerformed
     
     public boolean valdatosmed(boolean valdat){
         
@@ -1535,10 +1539,12 @@ public class RegistroProductos extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregarProdMed;
     private javax.swing.JButton btnEliminarAdmin;
     private javax.swing.JButton btnEliminarCuid3;
+    private javax.swing.JButton btnEliminarFin3;
     private javax.swing.JButton btnEliminarProdMed1;
     private javax.swing.JButton btnLimpiarAdmin;
     private javax.swing.JButton btnLimpiarAdmin2;
     private javax.swing.JButton btnLimpiarProdMed1;
+    private javax.swing.JButton btnMostrarElementos;
     private javax.swing.JButton btnVolver1;
     private javax.swing.JButton btnVolver2;
     private javax.swing.JButton btnVolver3;

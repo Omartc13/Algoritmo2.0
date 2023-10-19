@@ -583,9 +583,6 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Volver"/>
                       </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVolver1ActionPerformed"/>
-                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1056,9 +1053,6 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Volver"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVolver2ActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -1124,16 +1118,20 @@
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnEliminarCuid3" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="btnEliminarCuid3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnEliminarFin3" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnVolver3" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnAgregarProdCuid1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnMostrarElementos" min="-2" pref="238" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane3" alignment="1" max="32767" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="btnLimpiarAdmin2" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="btnAgregarProdCuid1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnAgregarProdCuid" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
@@ -1226,6 +1224,7 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="btnAgregarProdCuid" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnLimpiarAdmin2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnAgregarProdCuid1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" pref="250" max="-2" attributes="0"/>
@@ -1233,7 +1232,8 @@
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="btnEliminarCuid3" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnVolver3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnAgregarProdCuid1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEliminarFin3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnMostrarElementos" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="28" max="32767" attributes="0"/>
                           </Group>
@@ -1482,7 +1482,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Eliminar"/>
+                        <Property name="text" type="java.lang.String" value="Eliminar Inicio"/>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarCuid3ActionPerformed"/>
@@ -1564,8 +1564,39 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Volver"/>
                       </Properties>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnEliminarFin3">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="66" green="66" red="66" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Roboto" size="14" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Eliminar Final"/>
+                      </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVolver3ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarFin3ActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JButton" name="btnMostrarElementos">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="66" green="66" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Roboto" size="14" style="0"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Mostrar Elementos"/>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarElementosActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>
