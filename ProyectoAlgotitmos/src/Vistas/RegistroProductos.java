@@ -1580,7 +1580,7 @@ public class RegistroProductos extends javax.swing.JFrame {
     
     public void habilitarBotones(){
         int nroSpin=(int) SpinnerStock3.getValue();
-        if (txt3NamePro.getText().isEmpty() ) {
+        if (txt3RUCPro.getText().length()<11 ) {
             btn3AgregarProdCuidFin.setEnabled(false);
             btn3AgregarProdCuidIni.setEnabled(false);
         }else{
