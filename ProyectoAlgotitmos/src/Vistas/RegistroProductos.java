@@ -1549,7 +1549,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txt3contenidoKeyTyped
     
-    public boolean valdatosmed(boolean valdat){
+    /*public boolean valdatosmed(boolean valdat){
         
         int nroSpin=(int) SpinnerStock1.getValue();
         if(cmb1Tipo.getSelectedIndex()==0||txt1Cod.getText().trim().isEmpty()||txt1RUCPro.getText().trim().isEmpty()||txt1NamePro.getText().trim().isEmpty()||
@@ -1567,20 +1567,10 @@ public class RegistroProductos extends javax.swing.JFrame {
         }
         return valdat;
     }
-    
-    public boolean valdatoscuid(boolean valdat){
-        
-        int nroSpin=(int) SpinnerStock3.getValue();
-        if(cmb3Tipo.getSelectedIndex()==0||txt3Cod.getText().trim().isEmpty()||txt3RUCPro.getText().trim().isEmpty()||txt3NamePro.getText().trim().isEmpty()||
-                txt3contenido.getText().trim().isEmpty()||txt3Precio.getText().trim().isEmpty()||nroSpin==0||cmb3UMedida3.getSelectedIndex()==0){
-            valdat=false;
-        }
-        return valdat;
-    }
+ */
     
     public void habilitarBotones(){
-        int nroSpin=(int) SpinnerStock3.getValue();
-        if (txt3RUCPro.getText().length()<11 ) {
+        if (txt3Cod.getText().length()<6) {
             btn3AgregarProdCuidFin.setEnabled(false);
             btn3AgregarProdCuidIni.setEnabled(false);
         }else{
