@@ -1,26 +1,24 @@
 package modelo;
 
-/**
- *
- * @author yosse,Omar Tc
- */
+
 public class Sucursales {
     
     private int numSucursal;
+    private String distrito;
     private String encargado;
-    private int DNI;
     private int telefono;
-    private String ciudad;
     private String dirección;
+    private int DNI;
 
-    public Sucursales(int numSucursal, String encargado, int DNI, int telefono, String ciudad, String dirección) {
+    public Sucursales(int numSucursal, String distrito, String encargado, int telefono, String dirección, int DNI) {
         this.numSucursal = numSucursal;
+        this.distrito = distrito;
         this.encargado = encargado;
-        this.DNI = DNI;
         this.telefono = telefono;
-        this.ciudad = ciudad;
         this.dirección = dirección;
+        this.DNI = DNI;
     }
+
 
     public int getNumSucursal() {
         return numSucursal;
@@ -54,12 +52,12 @@ public class Sucursales {
         this.telefono = telefono;
     }
 
-    public String getCiudad() {
-        return ciudad;
+    public String getDistrito() {
+        return distrito;
     }
 
-    public void setCiudad(String ciudad) {
-        this.ciudad = ciudad;
+    public void setDistrito(String distrito) {
+        this.distrito = distrito;
     }
 
     public String getDirección() {
@@ -69,8 +67,6 @@ public class Sucursales {
     public void setDirección(String dirección) {
         this.dirección = dirección;
     }
-    
-    
-    
+      
     
 }
