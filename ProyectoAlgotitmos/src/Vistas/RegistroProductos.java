@@ -62,6 +62,10 @@ public class RegistroProductos extends javax.swing.JFrame {
         tcuid.addColumn("COSTO TOTAL");
         tblCuidPer3.setModel(tcuid);
         cuidList= new ProdCuidadoPersonalList();
+        
+        //Deshabilitamos los botones hata que los campos esten completos
+        btn3AgregarProdCuidFin.setEnabled(false);
+        btn3AgregarProdCuidIni.setEnabled(false);
     }
 
     
@@ -86,19 +90,19 @@ public class RegistroProductos extends javax.swing.JFrame {
         txt1NamePro = new javax.swing.JTextField();
         cmb1Tipo = new javax.swing.JComboBox<>();
         txt1Precio = new javax.swing.JTextField();
-        btnAgregarProdMed = new javax.swing.JButton();
-        btnLimpiarProdMed1 = new javax.swing.JButton();
+        btn1AgregarProdMed = new javax.swing.JButton();
+        btn1LimpiarProdMed = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblProdMedicos = new javax.swing.JTable();
-        btnEliminarProdMed1 = new javax.swing.JButton();
-        OrdenarQuickMedNom = new javax.swing.JButton();
+        btn1EliminarProdMed = new javax.swing.JButton();
+        btn1OrdenarQuickMedNom = new javax.swing.JButton();
         SpinnerStock1 = new javax.swing.JSpinner();
         jLabel19 = new javax.swing.JLabel();
         txt1contenido = new javax.swing.JTextField();
         jLabel26 = new javax.swing.JLabel();
         cmb1UMedida = new javax.swing.JComboBox<>();
-        OrdenarQuickMedCod = new javax.swing.JButton();
-        btnVolver1 = new javax.swing.JButton();
+        btn1OrdenarQuickMedCod = new javax.swing.JButton();
+        btn1Volver = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -114,16 +118,16 @@ public class RegistroProductos extends javax.swing.JFrame {
         txt2NamePro = new javax.swing.JTextField();
         cmb2Tipocomes = new javax.swing.JComboBox<>();
         txt2Precio = new javax.swing.JTextField();
-        btnAgregarComesIni = new javax.swing.JButton();
-        btnLimpiarAdmin = new javax.swing.JButton();
+        btn2AgregarComes = new javax.swing.JButton();
+        btn2LimpiarComes = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblProdComida = new javax.swing.JTable();
-        btnEliminarAdmin = new javax.swing.JButton();
-        OrdenarQuickComesNom = new javax.swing.JButton();
+        btn2EliminarComes = new javax.swing.JButton();
+        btn2OrdenarQuickComesNom = new javax.swing.JButton();
         SpinnerStock2 = new javax.swing.JSpinner();
         jLabel13 = new javax.swing.JLabel();
         txt2Caducidad = new javax.swing.JTextField();
-        OrdenarQuickComesCod = new javax.swing.JButton();
+        btn2OrdenarQuickComesCod = new javax.swing.JButton();
         btnVolver2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
@@ -141,20 +145,20 @@ public class RegistroProductos extends javax.swing.JFrame {
         txt3NamePro = new javax.swing.JTextField();
         cmb3Tipo = new javax.swing.JComboBox<>();
         txt3Precio = new javax.swing.JTextField();
-        btnAgregarProdCuid = new javax.swing.JButton();
-        btnLimpiarAdmin2 = new javax.swing.JButton();
+        btn3AgregarProdCuidIni = new javax.swing.JButton();
+        btn3LimpiarCuidPer = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         tblCuidPer3 = new javax.swing.JTable();
-        btnEliminarCuid3 = new javax.swing.JButton();
+        btn3EliminarCuidIni = new javax.swing.JButton();
         SpinnerStock3 = new javax.swing.JSpinner();
         jLabel25 = new javax.swing.JLabel();
         txt3contenido = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         cmb3UMedida3 = new javax.swing.JComboBox<>();
-        btnAgregarProdCuid1 = new javax.swing.JButton();
+        btn3AgregarProdCuidFin = new javax.swing.JButton();
         btnVolver3 = new javax.swing.JButton();
-        btnEliminarFin3 = new javax.swing.JButton();
-        btnMostrarElementos = new javax.swing.JButton();
+        btn3EliminarFin = new javax.swing.JButton();
+        btn3MostrarElementos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -207,23 +211,23 @@ public class RegistroProductos extends javax.swing.JFrame {
 
         cmb1Tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Comprimidos", "Capsulas", "Liquidos", "Cremas", "Parches" }));
 
-        btnAgregarProdMed.setBackground(new java.awt.Color(255, 102, 102));
-        btnAgregarProdMed.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnAgregarProdMed.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregarProdMed.setText("Agregar");
-        btnAgregarProdMed.addActionListener(new java.awt.event.ActionListener() {
+        btn1AgregarProdMed.setBackground(new java.awt.Color(255, 102, 102));
+        btn1AgregarProdMed.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn1AgregarProdMed.setForeground(new java.awt.Color(255, 255, 255));
+        btn1AgregarProdMed.setText("Agregar");
+        btn1AgregarProdMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarProdMedActionPerformed(evt);
+                btn1AgregarProdMedActionPerformed(evt);
             }
         });
 
-        btnLimpiarProdMed1.setBackground(new java.awt.Color(102, 102, 102));
-        btnLimpiarProdMed1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnLimpiarProdMed1.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiarProdMed1.setText("Limpiar");
-        btnLimpiarProdMed1.addActionListener(new java.awt.event.ActionListener() {
+        btn1LimpiarProdMed.setBackground(new java.awt.Color(102, 102, 102));
+        btn1LimpiarProdMed.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn1LimpiarProdMed.setForeground(new java.awt.Color(255, 255, 255));
+        btn1LimpiarProdMed.setText("Limpiar");
+        btn1LimpiarProdMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarProdMed1ActionPerformed(evt);
+                btn1LimpiarProdMedActionPerformed(evt);
             }
         });
 
@@ -238,23 +242,23 @@ public class RegistroProductos extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(tblProdMedicos);
 
-        btnEliminarProdMed1.setBackground(new java.awt.Color(102, 102, 102));
-        btnEliminarProdMed1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnEliminarProdMed1.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminarProdMed1.setText("Eliminar");
-        btnEliminarProdMed1.addActionListener(new java.awt.event.ActionListener() {
+        btn1EliminarProdMed.setBackground(new java.awt.Color(102, 102, 102));
+        btn1EliminarProdMed.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn1EliminarProdMed.setForeground(new java.awt.Color(255, 255, 255));
+        btn1EliminarProdMed.setText("Eliminar");
+        btn1EliminarProdMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarProdMed1ActionPerformed(evt);
+                btn1EliminarProdMedActionPerformed(evt);
             }
         });
 
-        OrdenarQuickMedNom.setBackground(new java.awt.Color(255, 102, 102));
-        OrdenarQuickMedNom.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        OrdenarQuickMedNom.setForeground(new java.awt.Color(255, 255, 255));
-        OrdenarQuickMedNom.setText("Ordenar Nom.");
-        OrdenarQuickMedNom.addActionListener(new java.awt.event.ActionListener() {
+        btn1OrdenarQuickMedNom.setBackground(new java.awt.Color(255, 102, 102));
+        btn1OrdenarQuickMedNom.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn1OrdenarQuickMedNom.setForeground(new java.awt.Color(255, 255, 255));
+        btn1OrdenarQuickMedNom.setText("Ordenar Nom.");
+        btn1OrdenarQuickMedNom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrdenarQuickMedNomActionPerformed(evt);
+                btn1OrdenarQuickMedNomActionPerformed(evt);
             }
         });
 
@@ -270,20 +274,20 @@ public class RegistroProductos extends javax.swing.JFrame {
 
         cmb1UMedida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selc.", "L", "ml", "Kg", "g", " " }));
 
-        OrdenarQuickMedCod.setBackground(new java.awt.Color(255, 102, 102));
-        OrdenarQuickMedCod.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        OrdenarQuickMedCod.setForeground(new java.awt.Color(255, 255, 255));
-        OrdenarQuickMedCod.setText("Ordenar Cod.");
-        OrdenarQuickMedCod.addActionListener(new java.awt.event.ActionListener() {
+        btn1OrdenarQuickMedCod.setBackground(new java.awt.Color(255, 102, 102));
+        btn1OrdenarQuickMedCod.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn1OrdenarQuickMedCod.setForeground(new java.awt.Color(255, 255, 255));
+        btn1OrdenarQuickMedCod.setText("Ordenar Cod.");
+        btn1OrdenarQuickMedCod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrdenarQuickMedCodActionPerformed(evt);
+                btn1OrdenarQuickMedCodActionPerformed(evt);
             }
         });
 
-        btnVolver1.setBackground(new java.awt.Color(102, 102, 102));
-        btnVolver1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnVolver1.setForeground(new java.awt.Color(255, 255, 255));
-        btnVolver1.setText("Volver");
+        btn1Volver.setBackground(new java.awt.Color(102, 102, 102));
+        btn1Volver.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn1Volver.setForeground(new java.awt.Color(255, 255, 255));
+        btn1Volver.setText("Volver");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -293,16 +297,16 @@ public class RegistroProductos extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(btnEliminarProdMed1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn1EliminarProdMed, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnVolver1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn1Volver, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(OrdenarQuickMedCod)
+                        .addComponent(btn1OrdenarQuickMedCod)
                         .addGap(36, 36, 36)
-                        .addComponent(OrdenarQuickMedNom))
+                        .addComponent(btn1OrdenarQuickMedNom))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addComponent(btnLimpiarProdMed1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn1LimpiarProdMed, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -343,7 +347,7 @@ public class RegistroProductos extends javax.swing.JFrame {
                                                 .addComponent(jLabel18)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addComponent(txt1contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                            .addComponent(btnAgregarProdMed, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(btn1AgregarProdMed, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGap(33, 33, 33))
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -380,18 +384,18 @@ public class RegistroProductos extends javax.swing.JFrame {
                         .addComponent(txt1NamePro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregarProdMed)
-                    .addComponent(btnLimpiarProdMed1))
+                    .addComponent(btn1AgregarProdMed)
+                    .addComponent(btn1LimpiarProdMed))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnEliminarProdMed1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnVolver1))
+                        .addComponent(btn1EliminarProdMed, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn1Volver))
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(OrdenarQuickMedNom)
-                        .addComponent(OrdenarQuickMedCod)))
+                        .addComponent(btn1OrdenarQuickMedNom)
+                        .addComponent(btn1OrdenarQuickMedCod)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -478,23 +482,23 @@ public class RegistroProductos extends javax.swing.JFrame {
 
         cmb2Tipocomes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Fruta/Verdura", "Embutidos", "Otros", "Bebida", "Proteina" }));
 
-        btnAgregarComesIni.setBackground(new java.awt.Color(255, 102, 102));
-        btnAgregarComesIni.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnAgregarComesIni.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregarComesIni.setText("Agregar");
-        btnAgregarComesIni.addActionListener(new java.awt.event.ActionListener() {
+        btn2AgregarComes.setBackground(new java.awt.Color(255, 102, 102));
+        btn2AgregarComes.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn2AgregarComes.setForeground(new java.awt.Color(255, 255, 255));
+        btn2AgregarComes.setText("Agregar");
+        btn2AgregarComes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarComesIniActionPerformed(evt);
+                btn2AgregarComesActionPerformed(evt);
             }
         });
 
-        btnLimpiarAdmin.setBackground(new java.awt.Color(102, 102, 102));
-        btnLimpiarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnLimpiarAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiarAdmin.setText("Limpiar");
-        btnLimpiarAdmin.addActionListener(new java.awt.event.ActionListener() {
+        btn2LimpiarComes.setBackground(new java.awt.Color(102, 102, 102));
+        btn2LimpiarComes.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn2LimpiarComes.setForeground(new java.awt.Color(255, 255, 255));
+        btn2LimpiarComes.setText("Limpiar");
+        btn2LimpiarComes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarAdminActionPerformed(evt);
+                btn2LimpiarComesActionPerformed(evt);
             }
         });
 
@@ -509,23 +513,23 @@ public class RegistroProductos extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblProdComida);
 
-        btnEliminarAdmin.setBackground(new java.awt.Color(102, 102, 102));
-        btnEliminarAdmin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnEliminarAdmin.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminarAdmin.setText("Eliminar");
-        btnEliminarAdmin.addActionListener(new java.awt.event.ActionListener() {
+        btn2EliminarComes.setBackground(new java.awt.Color(102, 102, 102));
+        btn2EliminarComes.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn2EliminarComes.setForeground(new java.awt.Color(255, 255, 255));
+        btn2EliminarComes.setText("Eliminar");
+        btn2EliminarComes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarAdminActionPerformed(evt);
+                btn2EliminarComesActionPerformed(evt);
             }
         });
 
-        OrdenarQuickComesNom.setBackground(new java.awt.Color(255, 102, 102));
-        OrdenarQuickComesNom.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        OrdenarQuickComesNom.setForeground(new java.awt.Color(255, 255, 255));
-        OrdenarQuickComesNom.setText("Ordenar Nom.");
-        OrdenarQuickComesNom.addActionListener(new java.awt.event.ActionListener() {
+        btn2OrdenarQuickComesNom.setBackground(new java.awt.Color(255, 102, 102));
+        btn2OrdenarQuickComesNom.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn2OrdenarQuickComesNom.setForeground(new java.awt.Color(255, 255, 255));
+        btn2OrdenarQuickComesNom.setText("Ordenar Nom.");
+        btn2OrdenarQuickComesNom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrdenarQuickComesNomActionPerformed(evt);
+                btn2OrdenarQuickComesNomActionPerformed(evt);
             }
         });
 
@@ -535,13 +539,13 @@ public class RegistroProductos extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Stock:");
 
-        OrdenarQuickComesCod.setBackground(new java.awt.Color(255, 102, 102));
-        OrdenarQuickComesCod.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        OrdenarQuickComesCod.setForeground(new java.awt.Color(255, 255, 255));
-        OrdenarQuickComesCod.setText("Ordenar Cod.");
-        OrdenarQuickComesCod.addActionListener(new java.awt.event.ActionListener() {
+        btn2OrdenarQuickComesCod.setBackground(new java.awt.Color(255, 102, 102));
+        btn2OrdenarQuickComesCod.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn2OrdenarQuickComesCod.setForeground(new java.awt.Color(255, 255, 255));
+        btn2OrdenarQuickComesCod.setText("Ordenar Cod.");
+        btn2OrdenarQuickComesCod.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OrdenarQuickComesCodActionPerformed(evt);
+                btn2OrdenarQuickComesCodActionPerformed(evt);
             }
         });
 
@@ -558,18 +562,18 @@ public class RegistroProductos extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(btnEliminarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn2EliminarComes, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnVolver2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(OrdenarQuickComesCod)
+                        .addComponent(btn2OrdenarQuickComesCod)
                         .addGap(18, 18, 18)
-                        .addComponent(OrdenarQuickComesNom))
+                        .addComponent(btn2OrdenarQuickComesNom))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(btnLimpiarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn2LimpiarComes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregarComesIni))
+                        .addComponent(btn2AgregarComes))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -631,15 +635,15 @@ public class RegistroProductos extends javax.swing.JFrame {
                         .addComponent(txt2NamePro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregarComesIni)
-                    .addComponent(btnLimpiarAdmin))
+                    .addComponent(btn2AgregarComes)
+                    .addComponent(btn2LimpiarComes))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEliminarAdmin)
-                    .addComponent(OrdenarQuickComesNom)
-                    .addComponent(OrdenarQuickComesCod)
+                    .addComponent(btn2EliminarComes)
+                    .addComponent(btn2OrdenarQuickComesNom)
+                    .addComponent(btn2OrdenarQuickComesCod)
                     .addComponent(btnVolver2))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
@@ -704,25 +708,37 @@ public class RegistroProductos extends javax.swing.JFrame {
         jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setText("Cont:");
 
-        cmb3Tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cabello", "Piel", "Higiene Bucal" }));
-
-        btnAgregarProdCuid.setBackground(new java.awt.Color(255, 102, 102));
-        btnAgregarProdCuid.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnAgregarProdCuid.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregarProdCuid.setText("Agregar Inicio");
-        btnAgregarProdCuid.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarProdCuidActionPerformed(evt);
+        txt3Cod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt3CodKeyTyped(evt);
             }
         });
 
-        btnLimpiarAdmin2.setBackground(new java.awt.Color(102, 102, 102));
-        btnLimpiarAdmin2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnLimpiarAdmin2.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpiarAdmin2.setText("Limpiar");
-        btnLimpiarAdmin2.addActionListener(new java.awt.event.ActionListener() {
+        txt3RUCPro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt3RUCProKeyTyped(evt);
+            }
+        });
+
+        cmb3Tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cabello", "Piel", "Higiene Bucal" }));
+
+        btn3AgregarProdCuidIni.setBackground(new java.awt.Color(255, 102, 102));
+        btn3AgregarProdCuidIni.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn3AgregarProdCuidIni.setForeground(new java.awt.Color(255, 255, 255));
+        btn3AgregarProdCuidIni.setText("Agregar Inicio");
+        btn3AgregarProdCuidIni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarAdmin2ActionPerformed(evt);
+                btn3AgregarProdCuidIniActionPerformed(evt);
+            }
+        });
+
+        btn3LimpiarCuidPer.setBackground(new java.awt.Color(102, 102, 102));
+        btn3LimpiarCuidPer.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn3LimpiarCuidPer.setForeground(new java.awt.Color(255, 255, 255));
+        btn3LimpiarCuidPer.setText("Limpiar");
+        btn3LimpiarCuidPer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3LimpiarCuidPerActionPerformed(evt);
             }
         });
 
@@ -737,13 +753,13 @@ public class RegistroProductos extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tblCuidPer3);
 
-        btnEliminarCuid3.setBackground(new java.awt.Color(102, 102, 102));
-        btnEliminarCuid3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnEliminarCuid3.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminarCuid3.setText("Eliminar Inicio");
-        btnEliminarCuid3.addActionListener(new java.awt.event.ActionListener() {
+        btn3EliminarCuidIni.setBackground(new java.awt.Color(102, 102, 102));
+        btn3EliminarCuidIni.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn3EliminarCuidIni.setForeground(new java.awt.Color(255, 255, 255));
+        btn3EliminarCuidIni.setText("Eliminar Inicio");
+        btn3EliminarCuidIni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarCuid3ActionPerformed(evt);
+                btn3EliminarCuidIniActionPerformed(evt);
             }
         });
 
@@ -751,19 +767,25 @@ public class RegistroProductos extends javax.swing.JFrame {
         jLabel25.setForeground(new java.awt.Color(0, 0, 0));
         jLabel25.setText("Stock:");
 
+        txt3contenido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt3contenidoKeyTyped(evt);
+            }
+        });
+
         jLabel27.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(0, 0, 0));
         jLabel27.setText("U.Med:");
 
         cmb3UMedida3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selc.", "Unidad", "Docena", "SixPack", "L", "ml", "Kg", "g", " " }));
 
-        btnAgregarProdCuid1.setBackground(new java.awt.Color(255, 102, 102));
-        btnAgregarProdCuid1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnAgregarProdCuid1.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregarProdCuid1.setText("Agregar Fin");
-        btnAgregarProdCuid1.addActionListener(new java.awt.event.ActionListener() {
+        btn3AgregarProdCuidFin.setBackground(new java.awt.Color(255, 102, 102));
+        btn3AgregarProdCuidFin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn3AgregarProdCuidFin.setForeground(new java.awt.Color(255, 255, 255));
+        btn3AgregarProdCuidFin.setText("Agregar Fin");
+        btn3AgregarProdCuidFin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarProdCuid1ActionPerformed(evt);
+                btn3AgregarProdCuidFinActionPerformed(evt);
             }
         });
 
@@ -772,23 +794,23 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnVolver3.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver3.setText("Volver");
 
-        btnEliminarFin3.setBackground(new java.awt.Color(102, 102, 102));
-        btnEliminarFin3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnEliminarFin3.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminarFin3.setText("Eliminar Final");
-        btnEliminarFin3.addActionListener(new java.awt.event.ActionListener() {
+        btn3EliminarFin.setBackground(new java.awt.Color(102, 102, 102));
+        btn3EliminarFin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn3EliminarFin.setForeground(new java.awt.Color(255, 255, 255));
+        btn3EliminarFin.setText("Eliminar Final");
+        btn3EliminarFin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarFin3ActionPerformed(evt);
+                btn3EliminarFinActionPerformed(evt);
             }
         });
 
-        btnMostrarElementos.setBackground(new java.awt.Color(255, 102, 102));
-        btnMostrarElementos.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btnMostrarElementos.setForeground(new java.awt.Color(255, 255, 255));
-        btnMostrarElementos.setText("Mostrar Elementos");
-        btnMostrarElementos.addActionListener(new java.awt.event.ActionListener() {
+        btn3MostrarElementos.setBackground(new java.awt.Color(255, 102, 102));
+        btn3MostrarElementos.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn3MostrarElementos.setForeground(new java.awt.Color(255, 255, 255));
+        btn3MostrarElementos.setText("Mostrar Elementos");
+        btn3MostrarElementos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMostrarElementosActionPerformed(evt);
+                btn3MostrarElementosActionPerformed(evt);
             }
         });
 
@@ -800,20 +822,20 @@ public class RegistroProductos extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(btnEliminarCuid3)
+                        .addComponent(btn3EliminarCuidIni)
                         .addGap(18, 18, 18)
-                        .addComponent(btnEliminarFin3)
+                        .addComponent(btn3EliminarFin)
                         .addGap(18, 18, 18)
                         .addComponent(btnVolver3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnMostrarElementos, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btn3MostrarElementos, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                        .addComponent(btnLimpiarAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn3LimpiarCuidPer, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnAgregarProdCuid1)
+                        .addComponent(btn3AgregarProdCuidFin)
                         .addGap(18, 18, 18)
-                        .addComponent(btnAgregarProdCuid))
+                        .addComponent(btn3AgregarProdCuidIni))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -884,17 +906,17 @@ public class RegistroProductos extends javax.swing.JFrame {
                         .addComponent(txt3NamePro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAgregarProdCuid)
-                    .addComponent(btnLimpiarAdmin2)
-                    .addComponent(btnAgregarProdCuid1))
+                    .addComponent(btn3AgregarProdCuidIni)
+                    .addComponent(btn3LimpiarCuidPer)
+                    .addComponent(btn3AgregarProdCuidFin))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEliminarCuid3)
+                    .addComponent(btn3EliminarCuidIni)
                     .addComponent(btnVolver3)
-                    .addComponent(btnEliminarFin3)
-                    .addComponent(btnMostrarElementos))
+                    .addComponent(btn3EliminarFin)
+                    .addComponent(btn3MostrarElementos))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -942,7 +964,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAgregarProdMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProdMedActionPerformed
+    private void btn1AgregarProdMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1AgregarProdMedActionPerformed
         int codigo = 0;
         Long RUCProv = 0L;
         double precio = 0;
@@ -1038,9 +1060,9 @@ public class RegistroProductos extends javax.swing.JFrame {
                 }tblProdMedicos.setModel(tmedico);
             }
         }
-    }//GEN-LAST:event_btnAgregarProdMedActionPerformed
+    }//GEN-LAST:event_btn1AgregarProdMedActionPerformed
     
-    private void btnEliminarProdMed1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarProdMed1ActionPerformed
+    private void btn1EliminarProdMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1EliminarProdMedActionPerformed
         int filaSeleccionada= tblProdMedicos.getSelectedRow();
         
         if (filaSeleccionada>=0) {
@@ -1050,9 +1072,9 @@ public class RegistroProductos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Selecciona una fila para eliminar.");
         }
         
-    }//GEN-LAST:event_btnEliminarProdMed1ActionPerformed
+    }//GEN-LAST:event_btn1EliminarProdMedActionPerformed
 
-    private void OrdenarQuickMedNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickMedNomActionPerformed
+    private void btn1OrdenarQuickMedNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1OrdenarQuickMedNomActionPerformed
         tmedico.setRowCount(0);
         medicoArray.mergeSortNom();
         for (int o = 0; o < medicoArray.tamañoArreglo(); o++) {
@@ -1069,9 +1091,9 @@ public class RegistroProductos extends javax.swing.JFrame {
                     };
                     tmedico.addRow(fila);
                 }tblProdMedicos.setModel(tmedico);
-    }//GEN-LAST:event_OrdenarQuickMedNomActionPerformed
+    }//GEN-LAST:event_btn1OrdenarQuickMedNomActionPerformed
 
-    private void OrdenarQuickMedCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickMedCodActionPerformed
+    private void btn1OrdenarQuickMedCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1OrdenarQuickMedCodActionPerformed
         
         tmedico.setRowCount(0);
         medicoArray.mergeSortCod();
@@ -1089,9 +1111,9 @@ public class RegistroProductos extends javax.swing.JFrame {
                     };
                     tmedico.addRow(fila);
                 }tblProdMedicos.setModel(tmedico);
-    }//GEN-LAST:event_OrdenarQuickMedCodActionPerformed
+    }//GEN-LAST:event_btn1OrdenarQuickMedCodActionPerformed
 
-    private void btnAgregarComesIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarComesIniActionPerformed
+    private void btn2AgregarComesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2AgregarComesActionPerformed
         int codigo = 0;
         Long RUCProv = 0L;
         double precio = 0;
@@ -1188,9 +1210,9 @@ public class RegistroProductos extends javax.swing.JFrame {
         
         
         
-    }//GEN-LAST:event_btnAgregarComesIniActionPerformed
+    }//GEN-LAST:event_btn2AgregarComesActionPerformed
 
-    private void OrdenarQuickComesNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickComesNomActionPerformed
+    private void btn2OrdenarQuickComesNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2OrdenarQuickComesNomActionPerformed
         
         tcomes.setRowCount(0);
         comesArray.mergeSortNom();
@@ -1208,9 +1230,9 @@ public class RegistroProductos extends javax.swing.JFrame {
             tcomes.addRow(fila);
         }tblProdComida.setModel(tcomes);
         
-    }//GEN-LAST:event_OrdenarQuickComesNomActionPerformed
+    }//GEN-LAST:event_btn2OrdenarQuickComesNomActionPerformed
 
-    private void OrdenarQuickComesCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickComesCodActionPerformed
+    private void btn2OrdenarQuickComesCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2OrdenarQuickComesCodActionPerformed
         
         tcomes.setRowCount(0);
         comesArray.mergeSortCod();
@@ -1228,9 +1250,9 @@ public class RegistroProductos extends javax.swing.JFrame {
             tcomes.addRow(fila);
         }tblProdComida.setModel(tcomes);
         
-    }//GEN-LAST:event_OrdenarQuickComesCodActionPerformed
+    }//GEN-LAST:event_btn2OrdenarQuickComesCodActionPerformed
 
-    private void btnEliminarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarAdminActionPerformed
+    private void btn2EliminarComesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2EliminarComesActionPerformed
         
         int filaseleccionada= tblProdComida.getSelectedRow();
         if (filaseleccionada>=0) {
@@ -1240,9 +1262,9 @@ public class RegistroProductos extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Seleccionar una fila para eliminar");
         }
         
-    }//GEN-LAST:event_btnEliminarAdminActionPerformed
+    }//GEN-LAST:event_btn2EliminarComesActionPerformed
 
-    private void btnLimpiarProdMed1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarProdMed1ActionPerformed
+    private void btn1LimpiarProdMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1LimpiarProdMedActionPerformed
         txt1Cod.setText("");
         txt1RUCPro.setText("");
         txt1NamePro.setText("");
@@ -1251,9 +1273,9 @@ public class RegistroProductos extends javax.swing.JFrame {
         SpinnerStock1.setValue(0);
         cmb1UMedida.setSelectedIndex(0);
         txt1contenido.setText("");
-    }//GEN-LAST:event_btnLimpiarProdMed1ActionPerformed
+    }//GEN-LAST:event_btn1LimpiarProdMedActionPerformed
 
-    private void btnLimpiarAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAdminActionPerformed
+    private void btn2LimpiarComesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2LimpiarComesActionPerformed
         txt2Cod.setText("");
         txt2RUCPro.setText("");
         txt2NamePro.setText("");
@@ -1261,9 +1283,9 @@ public class RegistroProductos extends javax.swing.JFrame {
         txt2Precio.setText("");
         SpinnerStock2.setValue(0);
         txt2Caducidad.setText("");
-    }//GEN-LAST:event_btnLimpiarAdminActionPerformed
+    }//GEN-LAST:event_btn2LimpiarComesActionPerformed
 
-    private void btnAgregarProdCuid1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProdCuid1ActionPerformed
+    private void btn3AgregarProdCuidFinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3AgregarProdCuidFinActionPerformed
 
         int codigo = 0;
         Long RUCProv = 0L;
@@ -1358,15 +1380,15 @@ public class RegistroProductos extends javax.swing.JFrame {
                 tcuid.addRow(rowData);
             }
         }
-    }//GEN-LAST:event_btnAgregarProdCuid1ActionPerformed
+    }//GEN-LAST:event_btn3AgregarProdCuidFinActionPerformed
 
-    private void btnEliminarCuid3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarCuid3ActionPerformed
+    private void btn3EliminarCuidIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3EliminarCuidIniActionPerformed
         cuidList.eliminarPrimero();
         tcuid.removeRow(0);
         
-    }//GEN-LAST:event_btnEliminarCuid3ActionPerformed
+    }//GEN-LAST:event_btn3EliminarCuidIniActionPerformed
 
-    private void btnLimpiarAdmin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarAdmin2ActionPerformed
+    private void btn3LimpiarCuidPerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3LimpiarCuidPerActionPerformed
         txt3Cod.setText("");
         txt3RUCPro.setText("");
         txt3NamePro.setText("");
@@ -1375,9 +1397,9 @@ public class RegistroProductos extends javax.swing.JFrame {
         SpinnerStock3.setValue(0);
         cmb3UMedida3.setSelectedIndex(0);
         txt3contenido.setText("");
-    }//GEN-LAST:event_btnLimpiarAdmin2ActionPerformed
+    }//GEN-LAST:event_btn3LimpiarCuidPerActionPerformed
 
-    private void btnAgregarProdCuidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProdCuidActionPerformed
+    private void btn3AgregarProdCuidIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3AgregarProdCuidIniActionPerformed
         int codigo = 0;
         Long RUCProv = 0L;
         double precio = 0;
@@ -1471,16 +1493,61 @@ public class RegistroProductos extends javax.swing.JFrame {
                 tcuid.insertRow(0, rowData);
             }
         }
-    }//GEN-LAST:event_btnAgregarProdCuidActionPerformed
+    }//GEN-LAST:event_btn3AgregarProdCuidIniActionPerformed
 
-    private void btnEliminarFin3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarFin3ActionPerformed
+    private void btn3EliminarFinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3EliminarFinActionPerformed
         cuidList.eliminarFin();
         
-    }//GEN-LAST:event_btnEliminarFin3ActionPerformed
+    }//GEN-LAST:event_btn3EliminarFinActionPerformed
 
-    private void btnMostrarElementosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarElementosActionPerformed
+    private void btn3MostrarElementosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3MostrarElementosActionPerformed
         cuidList.mostrar();
-    }//GEN-LAST:event_btnMostrarElementosActionPerformed
+    }//GEN-LAST:event_btn3MostrarElementosActionPerformed
+
+    private void txt3CodKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt3CodKeyTyped
+        //Método para solo permitir el ingreso de números
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //Permitir un máximo de 6 números
+        if (txt3Cod.getText().length() >= 6) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt3CodKeyTyped
+
+    private void txt3RUCProKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt3RUCProKeyTyped
+        //Método para solo permitir el ingreso de números
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //Permitir un máximo de 11 números
+        if (txt3RUCPro.getText().length() >= 11) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt3RUCProKeyTyped
+
+    private void txt3contenidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt3contenidoKeyTyped
+        //Método para solo permitir el ingreso de números
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //Permitir un máximo de 3 números
+        if (txt3contenido.getText().length() >= 3) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt3contenidoKeyTyped
     
     public boolean valdatosmed(boolean valdat){
         
@@ -1510,7 +1577,18 @@ public class RegistroProductos extends javax.swing.JFrame {
         }
         return valdat;
     }
-     
+    
+    public void habilitarBotones(){
+        int nroSpin=(int) SpinnerStock3.getValue();
+        if (txt3NamePro.getText().isEmpty() ) {
+            btn3AgregarProdCuidFin.setEnabled(false);
+            btn3AgregarProdCuidIni.setEnabled(false);
+        }else{
+            btn3AgregarProdCuidIni.setEnabled(true);
+            btn3AgregarProdCuidFin.setEnabled(true);
+        }
+    }
+    
     public static boolean validarLetras(String datos){
         return datos.matches("[a-zA-Z ]*");
     }
@@ -1526,26 +1604,26 @@ public class RegistroProductos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton OrdenarQuickComesCod;
-    private javax.swing.JButton OrdenarQuickComesNom;
-    private javax.swing.JButton OrdenarQuickMedCod;
-    private javax.swing.JButton OrdenarQuickMedNom;
     private javax.swing.JSpinner SpinnerStock1;
     private javax.swing.JSpinner SpinnerStock2;
     private javax.swing.JSpinner SpinnerStock3;
-    private javax.swing.JButton btnAgregarComesIni;
-    private javax.swing.JButton btnAgregarProdCuid;
-    private javax.swing.JButton btnAgregarProdCuid1;
-    private javax.swing.JButton btnAgregarProdMed;
-    private javax.swing.JButton btnEliminarAdmin;
-    private javax.swing.JButton btnEliminarCuid3;
-    private javax.swing.JButton btnEliminarFin3;
-    private javax.swing.JButton btnEliminarProdMed1;
-    private javax.swing.JButton btnLimpiarAdmin;
-    private javax.swing.JButton btnLimpiarAdmin2;
-    private javax.swing.JButton btnLimpiarProdMed1;
-    private javax.swing.JButton btnMostrarElementos;
-    private javax.swing.JButton btnVolver1;
+    private javax.swing.JButton btn1AgregarProdMed;
+    private javax.swing.JButton btn1EliminarProdMed;
+    private javax.swing.JButton btn1LimpiarProdMed;
+    private javax.swing.JButton btn1OrdenarQuickMedCod;
+    private javax.swing.JButton btn1OrdenarQuickMedNom;
+    private javax.swing.JButton btn1Volver;
+    private javax.swing.JButton btn2AgregarComes;
+    private javax.swing.JButton btn2EliminarComes;
+    private javax.swing.JButton btn2LimpiarComes;
+    private javax.swing.JButton btn2OrdenarQuickComesCod;
+    private javax.swing.JButton btn2OrdenarQuickComesNom;
+    private javax.swing.JButton btn3AgregarProdCuidFin;
+    private javax.swing.JButton btn3AgregarProdCuidIni;
+    private javax.swing.JButton btn3EliminarCuidIni;
+    private javax.swing.JButton btn3EliminarFin;
+    private javax.swing.JButton btn3LimpiarCuidPer;
+    private javax.swing.JButton btn3MostrarElementos;
     private javax.swing.JButton btnVolver2;
     private javax.swing.JButton btnVolver3;
     private javax.swing.JComboBox<String> cmb1Tipo;

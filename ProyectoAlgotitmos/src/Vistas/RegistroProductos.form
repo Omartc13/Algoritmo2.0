@@ -102,17 +102,17 @@
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnEliminarProdMed1" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="btn1EliminarProdMed" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnVolver1" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="btn1Volver" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="OrdenarQuickMedCod" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn1OrdenarQuickMedCod" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                      <Component id="OrdenarQuickMedNom" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn1OrdenarQuickMedNom" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane2" alignment="1" max="32767" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="btnLimpiarProdMed1" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="btn1LimpiarProdMed" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
@@ -167,7 +167,7 @@
                                                   </Group>
                                               </Group>
                                           </Group>
-                                          <Component id="btnAgregarProdMed" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="btn1AgregarProdMed" alignment="1" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -217,20 +217,20 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btnAgregarProdMed" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnLimpiarProdMed1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn1AgregarProdMed" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn1LimpiarProdMed" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jScrollPane2" min="-2" pref="250" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                      <Component id="btnEliminarProdMed1" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
-                                      <Component id="btnVolver1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn1EliminarProdMed" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="btn1Volver" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="OrdenarQuickMedNom" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="OrdenarQuickMedCod" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn1OrdenarQuickMedNom" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn1OrdenarQuickMedCod" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace pref="28" max="32767" attributes="0"/>
@@ -368,7 +368,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt1Precio">
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnAgregarProdMed">
+                    <Component class="javax.swing.JButton" name="btn1AgregarProdMed">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -382,10 +382,10 @@
                         <Property name="text" type="java.lang.String" value="Agregar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarProdMedActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1AgregarProdMedActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnLimpiarProdMed1">
+                    <Component class="javax.swing.JButton" name="btn1LimpiarProdMed">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -399,7 +399,7 @@
                         <Property name="text" type="java.lang.String" value="Limpiar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarProdMed1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1LimpiarProdMedActionPerformed"/>
                       </Events>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
@@ -471,7 +471,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="btnEliminarProdMed1">
+                    <Component class="javax.swing.JButton" name="btn1EliminarProdMed">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -485,10 +485,10 @@
                         <Property name="text" type="java.lang.String" value="Eliminar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarProdMed1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1EliminarProdMedActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="OrdenarQuickMedNom">
+                    <Component class="javax.swing.JButton" name="btn1OrdenarQuickMedNom">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -502,7 +502,7 @@
                         <Property name="text" type="java.lang.String" value="Ordenar Nom."/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrdenarQuickMedNomActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1OrdenarQuickMedNomActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="SpinnerStock1">
@@ -553,7 +553,7 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JButton" name="OrdenarQuickMedCod">
+                    <Component class="javax.swing.JButton" name="btn1OrdenarQuickMedCod">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -567,10 +567,10 @@
                         <Property name="text" type="java.lang.String" value="Ordenar Cod."/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrdenarQuickMedCodActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn1OrdenarQuickMedCodActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnVolver1">
+                    <Component class="javax.swing.JButton" name="btn1Volver">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -626,19 +626,19 @@
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="btnEliminarAdmin" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="btn2EliminarComes" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="btnVolver2" min="-2" pref="90" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="OrdenarQuickComesCod" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn2OrdenarQuickComesCod" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="OrdenarQuickComesNom" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn2OrdenarQuickComesNom" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jScrollPane1" alignment="1" pref="757" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="btnLimpiarAdmin" min="-2" pref="100" max="-2" attributes="0"/>
+                                  <Component id="btn2LimpiarComes" min="-2" pref="100" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="btnAgregarComesIni" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn2AgregarComes" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -719,16 +719,16 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnAgregarComesIni" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnLimpiarAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn2AgregarComes" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn2LimpiarComes" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" min="-2" pref="250" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="btnEliminarAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrdenarQuickComesNom" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="OrdenarQuickComesCod" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn2EliminarComes" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn2OrdenarQuickComesNom" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btn2OrdenarQuickComesCod" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnVolver2" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="28" max="32767" attributes="0"/>
@@ -866,7 +866,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt2Precio">
                 </Component>
-                <Component class="javax.swing.JButton" name="btnAgregarComesIni">
+                <Component class="javax.swing.JButton" name="btn2AgregarComes">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -880,10 +880,10 @@
                     <Property name="text" type="java.lang.String" value="Agregar"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarComesIniActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2AgregarComesActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="btnLimpiarAdmin">
+                <Component class="javax.swing.JButton" name="btn2LimpiarComes">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="66" type="rgb"/>
@@ -897,7 +897,7 @@
                     <Property name="text" type="java.lang.String" value="Limpiar"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarAdminActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2LimpiarComesActionPerformed"/>
                   </Events>
                 </Component>
                 <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -969,7 +969,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="btnEliminarAdmin">
+                <Component class="javax.swing.JButton" name="btn2EliminarComes">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="66" type="rgb"/>
@@ -983,10 +983,10 @@
                     <Property name="text" type="java.lang.String" value="Eliminar"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarAdminActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2EliminarComesActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="OrdenarQuickComesNom">
+                <Component class="javax.swing.JButton" name="btn2OrdenarQuickComesNom">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -1000,7 +1000,7 @@
                     <Property name="text" type="java.lang.String" value="Ordenar Nom."/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrdenarQuickComesNomActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2OrdenarQuickComesNomActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="SpinnerStock2">
@@ -1023,7 +1023,7 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt2Caducidad">
                 </Component>
-                <Component class="javax.swing.JButton" name="OrdenarQuickComesCod">
+                <Component class="javax.swing.JButton" name="btn2OrdenarQuickComesCod">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -1037,7 +1037,7 @@
                     <Property name="text" type="java.lang.String" value="Ordenar Cod."/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OrdenarQuickComesCodActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn2OrdenarQuickComesCodActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnVolver2">
@@ -1118,21 +1118,21 @@
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnEliminarCuid3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn3EliminarCuidIni" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnEliminarFin3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn3EliminarFin" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="btnVolver3" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnMostrarElementos" min="-2" pref="238" max="-2" attributes="0"/>
+                                      <Component id="btn3MostrarElementos" min="-2" pref="238" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane3" alignment="1" max="32767" attributes="0"/>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="btnLimpiarAdmin2" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="btn3LimpiarCuidPer" min="-2" pref="100" max="-2" attributes="0"/>
                                       <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="btnAgregarProdCuid1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn3AgregarProdCuidFin" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="btnAgregarProdCuid" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btn3AgregarProdCuidIni" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -1222,18 +1222,18 @@
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btnAgregarProdCuid" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnLimpiarAdmin2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnAgregarProdCuid1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn3AgregarProdCuidIni" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn3LimpiarCuidPer" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn3AgregarProdCuidFin" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jScrollPane3" min="-2" pref="250" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btnEliminarCuid3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn3EliminarCuidIni" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnVolver3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnEliminarFin3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="btnMostrarElementos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn3EliminarFin" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn3MostrarElementos" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="28" max="32767" attributes="0"/>
                           </Group>
@@ -1346,8 +1346,14 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt3Cod">
+                      <Events>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt3CodKeyTyped"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt3RUCPro">
+                      <Events>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt3RUCProKeyTyped"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt3NamePro">
                     </Component>
@@ -1368,7 +1374,7 @@
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt3Precio">
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnAgregarProdCuid">
+                    <Component class="javax.swing.JButton" name="btn3AgregarProdCuidIni">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -1382,10 +1388,10 @@
                         <Property name="text" type="java.lang.String" value="Agregar Inicio"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarProdCuidActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3AgregarProdCuidIniActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnLimpiarAdmin2">
+                    <Component class="javax.swing.JButton" name="btn3LimpiarCuidPer">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -1399,7 +1405,7 @@
                         <Property name="text" type="java.lang.String" value="Limpiar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarAdmin2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3LimpiarCuidPerActionPerformed"/>
                       </Events>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -1471,7 +1477,7 @@
                         </Component>
                       </SubComponents>
                     </Container>
-                    <Component class="javax.swing.JButton" name="btnEliminarCuid3">
+                    <Component class="javax.swing.JButton" name="btn3EliminarCuidIni">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -1485,7 +1491,7 @@
                         <Property name="text" type="java.lang.String" value="Eliminar Inicio"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarCuid3ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3EliminarCuidIniActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="SpinnerStock3">
@@ -1502,6 +1508,9 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="txt3contenido">
+                      <Events>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt3contenidoKeyTyped"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel27">
                       <Properties>
@@ -1534,7 +1543,7 @@
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnAgregarProdCuid1">
+                    <Component class="javax.swing.JButton" name="btn3AgregarProdCuidFin">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -1548,7 +1557,7 @@
                         <Property name="text" type="java.lang.String" value="Agregar Fin"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAgregarProdCuid1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3AgregarProdCuidFinActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnVolver3">
@@ -1565,7 +1574,7 @@
                         <Property name="text" type="java.lang.String" value="Volver"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnEliminarFin3">
+                    <Component class="javax.swing.JButton" name="btn3EliminarFin">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="66" type="rgb"/>
@@ -1579,10 +1588,10 @@
                         <Property name="text" type="java.lang.String" value="Eliminar Final"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEliminarFin3ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3EliminarFinActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnMostrarElementos">
+                    <Component class="javax.swing.JButton" name="btn3MostrarElementos">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="66" green="66" red="ff" type="rgb"/>
@@ -1596,7 +1605,7 @@
                         <Property name="text" type="java.lang.String" value="Mostrar Elementos"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMostrarElementosActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn3MostrarElementosActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>

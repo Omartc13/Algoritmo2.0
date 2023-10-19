@@ -865,7 +865,6 @@ public class RegistroProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_txtDNIinKeyTyped
 
     private void btnEliminarINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarINActionPerformed
-        
         if (tinterno.getRowCount()>0) {
             tinterno.removeRow(tinterno.getRowCount()-1);
             intList.QuitardelaCola();
