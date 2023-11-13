@@ -158,6 +158,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnVolver3 = new javax.swing.JButton();
         btn3EliminarFin = new javax.swing.JButton();
         btn3MostrarElementos = new javax.swing.JButton();
+        btn3AgregarProdCuidMed = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -815,6 +816,16 @@ public class RegistroProductos extends javax.swing.JFrame {
             }
         });
 
+        btn3AgregarProdCuidMed.setBackground(new java.awt.Color(255, 102, 102));
+        btn3AgregarProdCuidMed.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn3AgregarProdCuidMed.setForeground(new java.awt.Color(255, 255, 255));
+        btn3AgregarProdCuidMed.setText("Agregar Med");
+        btn3AgregarProdCuidMed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3AgregarProdCuidMedActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -835,6 +846,8 @@ public class RegistroProductos extends javax.swing.JFrame {
                         .addComponent(btn3LimpiarCuidPer, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn3AgregarProdCuidFin)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn3AgregarProdCuidMed)
                         .addGap(18, 18, 18)
                         .addComponent(btn3AgregarProdCuidIni))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
@@ -909,7 +922,8 @@ public class RegistroProductos extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn3AgregarProdCuidIni)
                     .addComponent(btn3LimpiarCuidPer)
-                    .addComponent(btn3AgregarProdCuidFin))
+                    .addComponent(btn3AgregarProdCuidFin)
+                    .addComponent(btn3AgregarProdCuidMed))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1305,6 +1319,40 @@ public class RegistroProductos extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt3contenidoKeyTyped
+
+    private void btn3AgregarProdCuidMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3AgregarProdCuidMedActionPerformed
+        
+        int codigo = Integer.parseInt(txt3Cod.getText());
+        Long RUCProv = Long.parseLong(txt3RUCPro.getText());
+        double precio = Double.parseDouble(txt3Precio.getText());
+        int stock = (int) SpinnerStock2.getValue();
+        String cmbtipo = cmb3Tipo.getSelectedItem().toString();
+        String nombreproducto = txt3NamePro.getText();
+        String UniMed = cmb3UMedida3.getSelectedItem().toString();
+        int contenido = Integer.parseInt(txt3contenido.getText());
+
+        //Usamos la calse generica
+        Generico1<Double, Integer> generico1 = new Generico1(precio, stock);
+        double resultado = generico1.multiplicar();
+
+        int tmdetabla= (tcuid.getRowCount()/2);
+//        int indice = Integer.parseInt(jTextField1.getText());
+        
+        ProdCuidadoPersonal cui = new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
+        cuidList.insertarmedio(cui,tmdetabla);
+        Object[] rowData = {
+            cui.getCodigo(),
+            cui.getNombre_producto(),
+            cui.getTipo(),
+            cui.getUnidadMed(),
+            cui.getContenido(),
+            cui.getPrecio(),
+            cui.getStock(),
+            cui.getRucProveedor(),
+            cui.getResult()
+        };
+        tcuid.insertRow(tmdetabla, rowData);
+    }//GEN-LAST:event_btn3AgregarProdCuidMedActionPerformed
    
     public static boolean validarLetras(String datos) {
         return datos.matches("[a-zA-Z ]*");
@@ -1336,6 +1384,7 @@ public class RegistroProductos extends javax.swing.JFrame {
     private javax.swing.JButton btn2OrdenarQuickComesNom;
     private javax.swing.JButton btn3AgregarProdCuidFin;
     private javax.swing.JButton btn3AgregarProdCuidIni;
+    private javax.swing.JButton btn3AgregarProdCuidMed;
     private javax.swing.JButton btn3EliminarCuidIni;
     private javax.swing.JButton btn3EliminarFin;
     private javax.swing.JButton btn3LimpiarCuidPer;

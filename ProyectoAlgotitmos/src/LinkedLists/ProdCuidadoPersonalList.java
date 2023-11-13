@@ -26,6 +26,27 @@ public class ProdCuidadoPersonalList {
         System.out.println("Elemento agregado al inicio de la lista: " + dato);
     }
     
+    public void insertarmedio(ProdCuidadoPersonal dato, int indice){
+        Nodo nuevonodo = new Nodo(dato);
+        if (nuevonodo==null) {
+            System.out.println("No se puede insertar datos vacios en el nodo");
+            return;
+        }
+        
+        Nodo nodoanterior= inicio;
+        Nodo nodoactual= inicio;
+        int i=0;
+        while (i<indice && nodoactual.getNextNodo()!=null) {            
+            i++;
+            nodoanterior= nodoactual;
+            nodoactual=nodoactual.getNextNodo();
+        }
+        
+        nuevonodo.setNextNodo(nodoactual);
+        nodoanterior.setNextNodo(nuevonodo);
+        System.out.println("Elemento agregado al medio de la lista: " + dato);
+    }
+    
     public void agregarFinal(ProdCuidadoPersonal dato) {
         if (estaVacio()) {
             inicio = fin = new Nodo(dato);
