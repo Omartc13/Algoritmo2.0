@@ -13,15 +13,15 @@ public class PanelFondo extends javax.swing.JPanel {
     
     public PanelFondo() {
         initComponents();
-        this.setSize(923,808);
-        this.rutaimg="/Imagenes/fondoasd.jpg";
+        //this.setSize(923,808);
+        //this.rutaimg="/main.resources.imagenes/fondoasd.jpg";
     }
 
     @Override
     public void paintComponent(Graphics g){
-        Dimension tam=getSize();
-        ImageIcon ImagenFondo = new ImageIcon(new ImageIcon(getClass().getResource(rutaimg)).getImage());
-        g.drawImage(ImagenFondo.getImage(), 0, 0, tam.width,tam.height,null);
+        //Dimension tam=getSize();
+        //ImageIcon ImagenFondo = new ImageIcon(new ImageIcon(getClass().getResource(rutaimg)).getImage());
+        //g.drawImage(ImagenFondo.getImage(), 0, 0, tam.width,tam.height,null);
         setOpaque(false);
         super.paintComponent(g);
     }
