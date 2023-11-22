@@ -102,7 +102,7 @@ public class Gui extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(900, 890));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Operaciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 10), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Operaciones", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel3.setOpaque(false);
 
         jScrollPane1.setOpaque(false);
@@ -128,10 +128,11 @@ public class Gui extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1))
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mejores Empleados", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 10), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mejores Empleados", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel7.setOpaque(false);
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
@@ -148,7 +149,7 @@ public class Gui extends javax.swing.JFrame {
         jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
         jInternalFrame2Layout.setHorizontalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 408, Short.MAX_VALUE)
+            .addGap(0, 418, Short.MAX_VALUE)
         );
         jInternalFrame2Layout.setVerticalGroup(
             jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,7 +157,7 @@ public class Gui extends javax.swing.JFrame {
         );
 
         jDesktopPane1.add(jInternalFrame2);
-        jInternalFrame2.setBounds(10, 0, 420, 340);
+        jInternalFrame2.setBounds(0, 0, 430, 340);
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -175,32 +176,39 @@ public class Gui extends javax.swing.JFrame {
                 .addContainerGap(8, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acciones", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 10), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Acciones", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
         jPanel4.setOpaque(false);
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Cantidad Nodos");
         jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
 
         lblCnodos.setEditable(false);
+        lblCnodos.setBackground(new java.awt.Color(255, 255, 255));
+        lblCnodos.setForeground(new java.awt.Color(0, 0, 0));
         jPanel4.add(lblCnodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 90, -1));
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Cantidad Hojas");
         jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 90, -1));
 
         lblChojas.setEditable(false);
+        lblChojas.setBackground(new java.awt.Color(255, 255, 255));
+        lblChojas.setForeground(new java.awt.Color(0, 0, 0));
         jPanel4.add(lblChojas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 90, -1));
 
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Valor Menor");
         jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 90, -1));
 
         lblVmenor.setEditable(false);
+        lblVmenor.setBackground(new java.awt.Color(255, 255, 255));
+        lblVmenor.setForeground(new java.awt.Color(0, 0, 0));
         lblVmenor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 lblVmenorActionPerformed(evt);
@@ -208,16 +216,19 @@ public class Gui extends javax.swing.JFrame {
         });
         jPanel4.add(lblVmenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 90, -1));
 
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Valor Mayor");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 90, 20));
 
         lblVmayor.setEditable(false);
+        lblVmayor.setBackground(new java.awt.Color(255, 255, 255));
+        lblVmayor.setForeground(new java.awt.Color(0, 0, 0));
         jPanel4.add(lblVmayor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 90, -1));
 
         botonBMayor.setBackground(new java.awt.Color(255, 255, 255));
         botonBMayor.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        botonBMayor.setForeground(new java.awt.Color(0, 0, 0));
         botonBMayor.setText("Borrar mayor");
         botonBMayor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -228,6 +239,7 @@ public class Gui extends javax.swing.JFrame {
 
         botonBMenor.setBackground(new java.awt.Color(255, 255, 255));
         botonBMenor.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        botonBMenor.setForeground(new java.awt.Color(0, 0, 0));
         botonBMenor.setText("Borrar menor");
         botonBMenor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -238,6 +250,7 @@ public class Gui extends javax.swing.JFrame {
 
         botonCambiarValores.setBackground(new java.awt.Color(255, 255, 255));
         botonCambiarValores.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        botonCambiarValores.setForeground(new java.awt.Color(0, 0, 0));
         botonCambiarValores.setText("Rama(s) Mayor");
         botonCambiarValores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,6 +261,7 @@ public class Gui extends javax.swing.JFrame {
 
         botonInsertar.setBackground(new java.awt.Color(255, 255, 255));
         botonInsertar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        botonInsertar.setForeground(new java.awt.Color(0, 0, 0));
         botonInsertar.setText("Insertar");
         botonInsertar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,7 +270,9 @@ public class Gui extends javax.swing.JFrame {
         });
         jPanel4.add(botonInsertar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
+        opciones.setBackground(new java.awt.Color(255, 255, 255));
         opciones.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        opciones.setForeground(new java.awt.Color(0, 0, 0));
         opciones.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ORDENAMIENTOS", "InOrden", "PreOrden", "PosOrden", "PorNiveles", "NivelOrdenado" }));
         opciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,6 +283,7 @@ public class Gui extends javax.swing.JFrame {
 
         cmdDarHojas.setBackground(new java.awt.Color(255, 255, 255));
         cmdDarHojas.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cmdDarHojas.setForeground(new java.awt.Color(0, 0, 0));
         cmdDarHojas.setText("Hojas");
         cmdDarHojas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,6 +294,7 @@ public class Gui extends javax.swing.JFrame {
 
         cmdBuscar.setBackground(new java.awt.Color(255, 255, 255));
         cmdBuscar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cmdBuscar.setForeground(new java.awt.Color(0, 0, 0));
         cmdBuscar.setText("Buscar");
         cmdBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,6 +305,7 @@ public class Gui extends javax.swing.JFrame {
 
         cmdBuscarPadre.setBackground(new java.awt.Color(255, 255, 255));
         cmdBuscarPadre.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        cmdBuscarPadre.setForeground(new java.awt.Color(0, 0, 0));
         cmdBuscarPadre.setText("Buscar Padre");
         cmdBuscarPadre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,6 +316,7 @@ public class Gui extends javax.swing.JFrame {
 
         botonBorrar.setBackground(new java.awt.Color(255, 255, 255));
         botonBorrar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        botonBorrar.setForeground(new java.awt.Color(0, 0, 0));
         botonBorrar.setText("Borrar");
         botonBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -307,6 +327,7 @@ public class Gui extends javax.swing.JFrame {
 
         botonPodar.setBackground(new java.awt.Color(255, 255, 255));
         botonPodar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        botonPodar.setForeground(new java.awt.Color(0, 0, 0));
         botonPodar.setText("Podar");
         botonPodar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -315,6 +336,8 @@ public class Gui extends javax.swing.JFrame {
         });
         jPanel4.add(botonPodar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 80, -1));
 
+        jTable1.setBackground(new java.awt.Color(255, 255, 255));
+        jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -361,12 +384,12 @@ public class Gui extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 730));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/resources/imagenes/fondoasd.jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/resources/imagenes/fond.png"))); // NOI18N
         jLabel5.setText("jLabel5");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 890, 750));
 
