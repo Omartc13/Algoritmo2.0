@@ -19,6 +19,7 @@ public class RegistroProductos extends javax.swing.JFrame {
 
     DefaultTableModel tmedico = new DefaultTableModel();
     AProdMedicos medicoArray = new AProdMedicos();
+    ProdMedicos mdi;
 
     DefaultTableModel tcomes = new DefaultTableModel();
     AProdComestible comesArray = new AProdComestible();
@@ -998,14 +999,17 @@ public class RegistroProductos extends javax.swing.JFrame {
         String cmbtipo = cmb1Tipo.getSelectedItem().toString();
         String nombreproducto = txt1NamePro.getText();
         String UniMed = cmb1UMedida.getSelectedItem().toString();
-
-        //Usamos la calse generica
-        Generico1<Double, Integer> generico1 = new Generico1(precio, stock);
-        double resultado = generico1.multiplicar();
-
+        
+        
+        mdi = new ProdMedicos(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, 0);
+        double desc=mdi.calcdescuentoRecursivo(precio, stock);
+        
+        
         tmedico.setRowCount(0);
-        ProdMedicos md = new ProdMedicos(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
+        ProdMedicos md = new ProdMedicos(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, desc);
         medicoArray.agregarProductoH(md);
+        
+        
         for (int o = 0; o < medicoArray.tamañoArreglo(); o++) {
             Object[] fila = {
                 medicoArray.obtener(o).getCodigo(),

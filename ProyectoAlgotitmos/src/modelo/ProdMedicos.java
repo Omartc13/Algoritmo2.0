@@ -14,7 +14,7 @@ public class ProdMedicos extends Productos{
         this.contenido = contenido;
         this.UniMed = UniMed;
     }
-
+       
     //Getters and Setters
     public double getContenido() {
         return contenido;
@@ -47,5 +47,23 @@ public class ProdMedicos extends Productos{
         this.UniMed = tipoFabricado;
     }
     
+    public double calcdescuentoRecursivo(double precio, int cantidad){
+        if (cantidad <=0) {
+            return precio*cantidad;
+        }
+        
+        double descuento=0;
+        
+        if (precio>50) {
+            descuento += 0.1*precio; //Aplica descuento del 10% si el precio es mayor a 50
+        }
+        
+        if (cantidad>5) {
+            descuento += 0.05*(precio*cantidad); //descuento del 5% si la cantidad es mayor a 5 
+        }else{
+            return precio*cantidad;
+        }
+        return descuento+calcdescuentoRecursivo(precio, cantidad-1);
+    }
     
 }
