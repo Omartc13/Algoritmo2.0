@@ -3,6 +3,7 @@ package Vistas;
 import SistemaCaja.ProductosComestibles;
 import SistemaCaja.ProductosCuidado;
 import SistemaCaja.ProductosMedicos;
+import java.awt.event.ActionEvent;
 
 import java.awt.event.ItemEvent;
 import javax.swing.DefaultComboBoxModel;
@@ -34,7 +35,10 @@ public class Caja extends javax.swing.JFrame {
         btnBoleta.setSelected(true);
         clickOnTextfield();
         btnVentaArtimetica.setEnabled(false);
-        
+        btnVentaCuadrado.setEnabled(false);
+        btnVentaMultiplicacion.setEnabled(false);
+        btnVentaPlegamiento.setEnabled(false);
+
         //Deshabilitamos los botones hasta que los campos estén completos
         btnAgregarACarrito.setEnabled(false);
         btnLimpiarCarrito.setEnabled(false);
@@ -95,12 +99,15 @@ public class Caja extends javax.swing.JFrame {
     }
 
     public void actualizarBoton() {
-            if(model.getRowCount()>0)
+        if (model.getRowCount() > 0) {
             btnVentaArtimetica.setEnabled(true);
-        } 
+        }
+        btnVentaCuadrado.setEnabled(true);
+        btnVentaMultiplicacion.setEnabled(true);
+        btnVentaPlegamiento.setEnabled(true);
+    }
 
-    
-    public void limpiarTodo () {
+    public void limpiarTodo() {
         txtNombreComprador.setText(null);
         txtNumeroDoc.setText(null);
         cboCategoria.setSelectedIndex(0);
@@ -115,9 +122,8 @@ public class Caja extends javax.swing.JFrame {
         txtImporte.setText(null);
         txtCambio.setText(null);
         model.setRowCount(0);
-        
-        
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -166,7 +172,7 @@ public class Caja extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         txtIDVenta = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        txtSucursal = new javax.swing.JTextField();
+        txtEstimado = new javax.swing.JTextField();
         Ok = new javax.swing.JButton();
         txtm = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -182,7 +188,7 @@ public class Caja extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtArea = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
+        btnCrearTabla = new javax.swing.JButton();
         txtamano = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -557,14 +563,15 @@ public class Caja extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel15.setText("Estimado");
 
+        txtIDVenta.setEditable(false);
         txtIDVenta.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         txtIDVenta.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         jLabel18.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel18.setText("Tamaño");
 
-        txtSucursal.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        txtSucursal.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+        txtEstimado.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        txtEstimado.setDisabledTextColor(new java.awt.Color(255, 255, 255));
 
         Ok.setText("Aceptar");
         Ok.addActionListener(new java.awt.event.ActionListener() {
@@ -573,6 +580,7 @@ public class Caja extends javax.swing.JFrame {
             }
         });
 
+        txtm.setEditable(false);
         txtm.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
 
         jLabel5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -586,7 +594,7 @@ public class Caja extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtSucursal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEstimado, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Ok)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -604,7 +612,7 @@ public class Caja extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(txtIDVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtSucursal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtEstimado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Ok)
                 .addComponent(txtm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -775,10 +783,10 @@ public class Caja extends javax.swing.JFrame {
         txtArea.setRows(5);
         jScrollPane2.setViewportView(txtArea);
 
-        jButton1.setText("Crear Tabla");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnCrearTabla.setText("Crear Tabla");
+        btnCrearTabla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnCrearTablaActionPerformed(evt);
             }
         });
 
@@ -793,7 +801,7 @@ public class Caja extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnCrearTabla)
                         .addGap(18, 18, 18)
                         .addComponent(txtamano, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -809,7 +817,7 @@ public class Caja extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(btnCrearTabla)
                     .addComponent(txtamano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -895,7 +903,7 @@ public class Caja extends javax.swing.JFrame {
         datos[3] = cantidad;
         datos[4] = total;
         model.addRow(datos);
-        
+
         actualizarBoton();
         limpiarCampos();
         calcularSuma();
@@ -940,7 +948,7 @@ public class Caja extends javax.swing.JFrame {
         if (model.getRowCount() > 0) {
             model.removeRow(model.getRowCount() - 1);
             calcularSuma();
-            
+
         } else
             JOptionPane.showMessageDialog(null, "No hay filas para eliminar");
     }//GEN-LAST:event_btnEliminarDeTablaActionPerformed
@@ -951,96 +959,101 @@ public class Caja extends javax.swing.JFrame {
         //limpiarTodo();
         int m = Integer.parseInt(txtamano.getText());
         int campoclave = Integer.parseInt(txtIDVenta.getText());
-        int posicion=campoclave%m;
+        int posicion = campoclave % m;
         txtArea.append("h(" + campoclave + ") = " + campoclave % m + "\n");
-        
+
         tabla[posicion] = campoclave;
         for (int i = 0; i < tabla.length; i++) {
             txtArea.append("Tabla (" + i + ") ---> " + tabla[i] + "\n");
         }
-        txtArea.append("Dato guardado en la posicion --> "+posicion);
-        
+        txtArea.append("Dato guardado en la posicion --> " + posicion);
+
     }//GEN-LAST:event_btnVentaArtimeticaActionPerformed
 
     private void btnEliminarDeTabla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarDeTabla1ActionPerformed
         // TODO add your handling code here:
-        
-        
+
+
     }//GEN-LAST:event_btnEliminarDeTabla1ActionPerformed
 
     private void OkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkActionPerformed
         txtArea.setText("");
-        int n = Integer.parseInt(txtSucursal.getText());
-        int xn=(int)(n*1.11);
-        
+        int n = Integer.parseInt(txtEstimado.getText());
+        int xn = (int) (n * 1.11);
+
         for (int i = n; i <= xn; i++) {
-            int d=0;
-            for (int j = 1; j <=i ; j++) {
-                if (i %j ==0) {
+            int d = 0;
+            for (int j = 1; j <= i; j++) {
+                if (i % j == 0) {
                     d++;
                 }
             }
-            if (d==2) {
-                txtSucursal.setText(i+"");
-                txtArea.append("--> "+i+"\n");
+            if (d == 2) {
+                txtm.setText(i + "");
             }
         }
-        
+
     }//GEN-LAST:event_OkActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    
+    private void btnCrearTablaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearTablaActionPerformed
+
         int tmtabla = Integer.parseInt(txtamano.getText());
-        tabla = new int [tmtabla];
+        tabla = new int[tmtabla];
         taba = new long[tmtabla];
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnCrearTablaActionPerformed
 
     private void btnVentaMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaMultiplicacionActionPerformed
-        
+
         txtArea.setText("");
-        int clave = Integer.parseInt(txtamano.getText());
-        double R = 0.6180334;
-        
-        double res1 = R*clave;
-        int parteEntera = (int) Math.floor(res1);
-        double d = (res1- parteEntera)*1000;
-        int pos= (int) Math.floor(d);
-        
-        tabla[pos]=clave;
+//limpiarTodo();
+
+        int n = Integer.parseInt(txtEstimado.getText());
+        int m = Integer.parseInt(txtamano.getText());
+        int campoclave = Integer.parseInt(txtIDVenta.getText());
+
+        double constanteR = (2 / (1 + Math.sqrt(5)));
+
+        int posicion = (int) (m * (campoclave * constanteR % 1));
+
+        txtArea.append("h(" + campoclave + ") = " + campoclave % m + "\n");
+
+        tabla[posicion] = campoclave;
         for (int i = 0; i < tabla.length; i++) {
-            txtArea.append("Tabla ("+i+") ---> "+ tabla[i]+"\n");
+            txtArea.append("Tabla (" + i + ") ---> " + tabla[i] + "\n");
         }
-        txtArea.append("Dato guardado en la posicion --> "+pos);
+        txtArea.append("Dato guardado en la posicion --> " + posicion);
         generarNuevoID();
+
     }//GEN-LAST:event_btnVentaMultiplicacionActionPerformed
 
     private void btnVentaPlegamientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaPlegamientoActionPerformed
-        
+
         txtArea.setText("");
-        int n= Integer.parseInt(txtSucursal.getText());
-        int m= Integer.parseInt(txtamano.getText());
+        int n = Integer.parseInt(txtEstimado.getText());
+        int m = Integer.parseInt(txtamano.getText());
         int clave = Integer.parseInt(txtIDVenta.getText());
-        
+
         txtArea.append("h(" + clave + ") = " + clave % m + "\n");
-        
-        int x1 = n/100;
-        int x2= n%m;
-        
-        int nueva = (x1+x2)%1000;
-        tabla[nueva]=clave;
-        
+
+        int x1 = n / 100;
+        int x2 = n % m;
+
+        int nueva = (x1 + x2) % 1000;
+        tabla[nueva] = clave;
+
         for (int i = 0; i < tabla.length; i++) {
             txtArea.append("Tabla (" + i + ") ---> " + tabla[i] + "\n");
-        }txtArea.append("Dato guardado en la posicion --> "+nueva);
+        }
+        txtArea.append("Dato guardado en la posicion --> " + nueva);
         generarNuevoID();
-        
+
     }//GEN-LAST:event_btnVentaPlegamientoActionPerformed
-    
+
     private void btnVentaCuadradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentaCuadradoActionPerformed
-       txtArea.setText("");
+        txtArea.setText("");
         long clave = Integer.parseInt(txtIDVenta.getText());
-        long cuad = clave*clave;
-        
+        long cuad = clave * clave;
+
         long a = (cuad % 1000000) / 100000;
         long b = (cuad % 100000) / 10000;
         long c = (cuad % 10000) / 1000;
@@ -1054,7 +1067,7 @@ public class Caja extends javax.swing.JFrame {
         }
         txtArea.append("Dato guradado en la posicion --> " + posi);
         generarNuevoID();
-        
+
     }//GEN-LAST:event_btnVentaCuadradoActionPerformed
 
     public static void main(String args[]) {
@@ -1096,6 +1109,7 @@ public class Caja extends javax.swing.JFrame {
     private javax.swing.JButton Ok;
     private javax.swing.JButton btnAgregarACarrito;
     private javax.swing.JRadioButton btnBoleta;
+    private javax.swing.JButton btnCrearTabla;
     private javax.swing.JButton btnEliminarDeTabla;
     private javax.swing.JButton btnEliminarDeTabla1;
     private javax.swing.JRadioButton btnFactura;
@@ -1107,7 +1121,6 @@ public class Caja extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cboCategoria;
     private javax.swing.JComboBox<String> cboProducto;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1144,13 +1157,13 @@ public class Caja extends javax.swing.JFrame {
     private javax.swing.JTextArea txtArea;
     private javax.swing.JTextField txtCambio;
     private javax.swing.JTextField txtDescuento;
+    private javax.swing.JTextField txtEstimado;
     private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtIDVenta;
     private javax.swing.JTextField txtImporte;
     private javax.swing.JTextField txtNombreComprador;
     private javax.swing.JTextField txtNumeroDoc;
     private javax.swing.JTextField txtPrecio;
-    private javax.swing.JTextField txtSucursal;
     private javax.swing.JTextField txtTotal;
     private javax.swing.JTextField txtValorVenta;
     private javax.swing.JTextField txtamano;

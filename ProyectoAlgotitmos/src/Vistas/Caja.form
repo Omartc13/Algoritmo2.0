@@ -836,7 +836,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="txtSucursal" min="-2" pref="80" max="-2" attributes="0"/>
+                      <Component id="txtEstimado" min="-2" pref="80" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="Ok" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
@@ -856,7 +856,7 @@
                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
                       <Component id="txtIDVenta" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel15" alignment="3" max="32767" attributes="0"/>
-                      <Component id="txtSucursal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtEstimado" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel18" alignment="3" max="32767" attributes="0"/>
                       <Component id="Ok" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtm" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -876,6 +876,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtIDVenta">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="14" style="0"/>
                 </Property>
@@ -892,7 +893,7 @@
                 <Property name="text" type="java.lang.String" value="Tama&#xf1;o"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtSucursal">
+            <Component class="javax.swing.JTextField" name="txtEstimado">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="14" style="0"/>
@@ -912,6 +913,7 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtm">
               <Properties>
+                <Property name="editable" type="boolean" value="false"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Roboto" size="14" style="0"/>
                 </Property>
@@ -1045,7 +1047,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jScrollPane2" alignment="0" pref="287" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnCrearTabla" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="txtamano" min="-2" pref="100" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1065,7 +1067,7 @@
                   <Component id="jScrollPane2" min="-2" pref="235" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnCrearTabla" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtamano" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -1138,12 +1140,12 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btnCrearTabla">
           <Properties>
             <Property name="text" type="java.lang.String" value="Crear Tabla"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearTablaActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtamano">
