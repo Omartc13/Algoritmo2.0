@@ -65,8 +65,15 @@ public class RegistroProductos extends javax.swing.JFrame {
         cuidList = new ProdCuidadoPersonalList();
 
         //Deshabilitamos los botones hata que los campos esten completos
-//        btn3AgregarProdCuidFin.setEnabled(false);
-//        btn3AgregarProdCuidIni.setEnabled(false);
+        btn1AgregarProdMed.setEnabled(false);
+        btn1LimpiarProdMed.setEnabled(false);
+
+        btn2AgregarComes.setEnabled(false);
+        btn2LimpiarComes.setEnabled(false);
+
+        btn3AgregarProdCuidFin.setEnabled(false);
+        btn3AgregarProdCuidIni.setEnabled(false);
+        btn3AgregarProdCuidMed.setEnabled(false);
     }
 
     @SuppressWarnings("unchecked")
@@ -210,7 +217,40 @@ public class RegistroProductos extends javax.swing.JFrame {
         jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Cont:");
 
+        txt1Cod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt1CodKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt1CodKeyTyped(evt);
+            }
+        });
+
+        txt1RUCPro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt1RUCProKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt1RUCProKeyTyped(evt);
+            }
+        });
+
+        txt1NamePro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt1NameProKeyReleased(evt);
+            }
+        });
+
         cmb1Tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Comprimidos", "Capsulas", "Liquidos", "Cremas", "Parches" }));
+
+        txt1Precio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt1PrecioKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt1PrecioKeyTyped(evt);
+            }
+        });
 
         btn1AgregarProdMed.setBackground(new java.awt.Color(255, 102, 102));
         btn1AgregarProdMed.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -269,11 +309,20 @@ public class RegistroProductos extends javax.swing.JFrame {
         jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Stock:");
 
+        txt1contenido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt1contenidoKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt1contenidoKeyTyped(evt);
+            }
+        });
+
         jLabel26.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(0, 0, 0));
         jLabel26.setText("U.Med:");
 
-        cmb1UMedida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selc.", "L", "ml", "Kg", "g", " " }));
+        cmb1UMedida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selc.", "L", "ml", "Kg", "g" }));
 
         btn1OrdenarQuickMedCod.setBackground(new java.awt.Color(255, 102, 102));
         btn1OrdenarQuickMedCod.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -481,7 +530,40 @@ public class RegistroProductos extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Cad:");
 
+        txt2Cod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt2CodKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt2CodKeyTyped(evt);
+            }
+        });
+
+        txt2RUCPro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt2RUCProKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt2RUCProKeyTyped(evt);
+            }
+        });
+
+        txt2NamePro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt2NameProKeyReleased(evt);
+            }
+        });
+
         cmb2Tipocomes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Fruta/Verdura", "Embutidos", "Otros", "Bebida", "Proteina" }));
+
+        txt2Precio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt2PrecioKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt2PrecioKeyTyped(evt);
+            }
+        });
 
         btn2AgregarComes.setBackground(new java.awt.Color(255, 102, 102));
         btn2AgregarComes.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -534,11 +616,17 @@ public class RegistroProductos extends javax.swing.JFrame {
             }
         });
 
-        SpinnerStock2.setModel(new javax.swing.SpinnerNumberModel(1, 0, null, 1));
+        SpinnerStock2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
         jLabel13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Stock:");
+
+        txt2Caducidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt2CaducidadKeyReleased(evt);
+            }
+        });
 
         btn2OrdenarQuickComesCod.setBackground(new java.awt.Color(255, 102, 102));
         btn2OrdenarQuickComesCod.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -710,18 +798,33 @@ public class RegistroProductos extends javax.swing.JFrame {
         jLabel24.setText("Cont:");
 
         txt3Cod.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt3CodKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt3CodKeyTyped(evt);
             }
         });
 
         txt3RUCPro.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt3RUCProKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt3RUCProKeyTyped(evt);
             }
         });
 
         cmb3Tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cabello", "Piel", "Higiene Bucal" }));
+
+        txt3Precio.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt3PrecioKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt3PrecioKeyTyped(evt);
+            }
+        });
 
         btn3AgregarProdCuidIni.setBackground(new java.awt.Color(255, 102, 102));
         btn3AgregarProdCuidIni.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -980,17 +1083,46 @@ public class RegistroProductos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-//    public void habilitarBotones() {
-//        if (txt3NamePro.getText().isEmpty()) {
-//            btn3AgregarProdCuidFin.setEnabled(false);
-//            btn3AgregarProdCuidIni.setEnabled(false);
-//        } else {
-//            btn3AgregarProdCuidIni.setEnabled(true);
-//            btn3AgregarProdCuidFin.setEnabled(true);
-//        }
-//    }
-    
+    //Metodos para que si los datos estan vacios los botones no se habiliten
+    public void habilitarbotones1() {
+        if (txt1Cod.getText().length() < 6 || txt1NamePro.getText().isEmpty() || txt1Precio.getText().isEmpty() || txt1RUCPro.getText().length() < 11
+                || txt1contenido.getText().isEmpty()) {
+            btn1AgregarProdMed.setEnabled(false);
+            btn1LimpiarProdMed.setEnabled(false);
+
+        } else {
+            btn1AgregarProdMed.setEnabled(true);
+            btn1LimpiarProdMed.setEnabled(true);
+        }
+    }
+
+    public void habilitarbotonoes2() {
+        if (txt2Cod.getText().length() < 6 || txt2NamePro.getText().isEmpty() || txt2RUCPro.getText().length() < 11 || txt2Precio.getText().isEmpty()
+                || txt2Caducidad.getText().isEmpty()) {
+
+            btn2AgregarComes.setEnabled(false);
+            btn2LimpiarComes.setEnabled(false);
+        } else {
+            btn2AgregarComes.setEnabled(true);
+            btn2LimpiarComes.setEnabled(true);
+        }
+    }
+
+    public void habilitarBotones3() {
+        if (txt3Cod.getText().length() < 6 || txt3NamePro.getText().isEmpty() || txt3RUCPro.getText().length() < 11 || txt3Precio.getText().isEmpty()
+                || txt3contenido.getText().isEmpty()) {
+            btn3AgregarProdCuidFin.setEnabled(false);
+            btn3AgregarProdCuidIni.setEnabled(false);
+            btn3AgregarProdCuidMed.setEnabled(false);
+        } else {
+            btn3AgregarProdCuidIni.setEnabled(true);
+            btn3AgregarProdCuidFin.setEnabled(true);
+            btn3AgregarProdCuidMed.setEnabled(true);
+        }
+    }
+
     private void btn1AgregarProdMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1AgregarProdMedActionPerformed
+
         int codigo = Integer.parseInt(txt1Cod.getText());
         Long RUCProv = Long.parseLong(txt1RUCPro.getText());
         double precio = Double.parseDouble(txt1Precio.getText());
@@ -999,32 +1131,36 @@ public class RegistroProductos extends javax.swing.JFrame {
         String cmbtipo = cmb1Tipo.getSelectedItem().toString();
         String nombreproducto = txt1NamePro.getText();
         String UniMed = cmb1UMedida.getSelectedItem().toString();
-        
-        
-        mdi = new ProdMedicos(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, 0);
-        double desc=mdi.calcdescuentoRecursivo(precio, stock);
-        
-        
-        tmedico.setRowCount(0);
-        ProdMedicos md = new ProdMedicos(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, desc);
-        medicoArray.agregarProductoH(md);
-        
-        
-        for (int o = 0; o < medicoArray.tamañoArreglo(); o++) {
-            Object[] fila = {
-                medicoArray.obtener(o).getCodigo(),
-                medicoArray.obtener(o).getNombre_producto(),
-                medicoArray.obtener(o).getTipo(),
-                medicoArray.obtener(o).getUniMed(),
-                medicoArray.obtener(o).getContenido(),
-                medicoArray.obtener(o).getPrecio(),
-                medicoArray.obtener(o).getStock(),
-                medicoArray.obtener(o).getRucProveedor(),
-                medicoArray.obtener(o).getResult()
-            };
-            tmedico.addRow(fila);
+
+        //Comprueba que se selcciono datos del Jcombo y Jspinner
+        if (cmb1Tipo.getSelectedIndex() == 0 || cmb1UMedida.getSelectedIndex() == 0 || stock == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Compruebe si los datos estan seleccionados");
+        } else {
+            //Si todos los datos estan llenos agrega el producto
+
+            mdi = new ProdMedicos(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, 0);
+            double desc = mdi.calcdescuentoRecursivo(precio, stock);
+
+            tmedico.setRowCount(0);
+            ProdMedicos md = new ProdMedicos(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, desc);
+            medicoArray.agregarProductoH(md);
+
+            for (int o = 0; o < medicoArray.tamañoArreglo(); o++) {
+                Object[] fila = {
+                    medicoArray.obtener(o).getCodigo(),
+                    medicoArray.obtener(o).getNombre_producto(),
+                    medicoArray.obtener(o).getTipo(),
+                    medicoArray.obtener(o).getUniMed(),
+                    medicoArray.obtener(o).getContenido(),
+                    medicoArray.obtener(o).getPrecio(),
+                    medicoArray.obtener(o).getStock(),
+                    medicoArray.obtener(o).getRucProveedor(),
+                    medicoArray.obtener(o).getResult()
+                };
+                tmedico.addRow(fila);
+            }
+            tblProdMedicos.setModel(tmedico);
         }
-        tblProdMedicos.setModel(tmedico);
     }//GEN-LAST:event_btn1AgregarProdMedActionPerformed
 
     private void btn1EliminarProdMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1EliminarProdMedActionPerformed
@@ -1040,44 +1176,53 @@ public class RegistroProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_btn1EliminarProdMedActionPerformed
 
     private void btn1OrdenarQuickMedNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1OrdenarQuickMedNomActionPerformed
-        tmedico.setRowCount(0);
-        medicoArray.mergeSortNom();
-        for (int o = 0; o < medicoArray.tamañoArreglo(); o++) {
-            Object[] fila = {
-                medicoArray.obtener(o).getCodigo(),
-                medicoArray.obtener(o).getNombre_producto(),
-                medicoArray.obtener(o).getTipo(),
-                medicoArray.obtener(o).getUniMed(),
-                medicoArray.obtener(o).getContenido(),
-                medicoArray.obtener(o).getPrecio(),
-                medicoArray.obtener(o).getStock(),
-                medicoArray.obtener(o).getRucProveedor(),
-                medicoArray.obtener(o).getResult()
-            };
-            tmedico.addRow(fila);
+        //verificar que haya por lo menos 2 datos para ordenar
+        if (tblProdMedicos.getRowCount() <= 1) {
+            JOptionPane.showMessageDialog(rootPane, "Deben haber por lo menos 2 productos registrados");
+        } else {
+            tmedico.setRowCount(0);
+            medicoArray.mergeSortNom();
+            for (int o = 0; o < medicoArray.tamañoArreglo(); o++) {
+                Object[] fila = {
+                    medicoArray.obtener(o).getCodigo(),
+                    medicoArray.obtener(o).getNombre_producto(),
+                    medicoArray.obtener(o).getTipo(),
+                    medicoArray.obtener(o).getUniMed(),
+                    medicoArray.obtener(o).getContenido(),
+                    medicoArray.obtener(o).getPrecio(),
+                    medicoArray.obtener(o).getStock(),
+                    medicoArray.obtener(o).getRucProveedor(),
+                    medicoArray.obtener(o).getResult()
+                };
+                tmedico.addRow(fila);
+            }
+            tblProdMedicos.setModel(tmedico);
         }
-        tblProdMedicos.setModel(tmedico);
     }//GEN-LAST:event_btn1OrdenarQuickMedNomActionPerformed
 
     private void btn1OrdenarQuickMedCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1OrdenarQuickMedCodActionPerformed
-
-        tmedico.setRowCount(0);
-        medicoArray.mergeSortCod();
-        for (int o = 0; o < medicoArray.tamañoArreglo(); o++) {
-            Object[] fila = {
-                medicoArray.obtener(o).getCodigo(),
-                medicoArray.obtener(o).getNombre_producto(),
-                medicoArray.obtener(o).getTipo(),
-                medicoArray.obtener(o).getUniMed(),
-                medicoArray.obtener(o).getContenido(),
-                medicoArray.obtener(o).getPrecio(),
-                medicoArray.obtener(o).getStock(),
-                medicoArray.obtener(o).getRucProveedor(),
-                medicoArray.obtener(o).getResult()
-            };
-            tmedico.addRow(fila);
+        //Verificar que haya 2 productos agregados para ordenar
+        if (tblProdMedicos.getRowCount() <= 1) {
+            JOptionPane.showMessageDialog(rootPane, "Deben haber por lo menos 2 productos registrados");
+        } else {
+            tmedico.setRowCount(0);
+            medicoArray.mergeSortCod();
+            for (int o = 0; o < medicoArray.tamañoArreglo(); o++) {
+                Object[] fila = {
+                    medicoArray.obtener(o).getCodigo(),
+                    medicoArray.obtener(o).getNombre_producto(),
+                    medicoArray.obtener(o).getTipo(),
+                    medicoArray.obtener(o).getUniMed(),
+                    medicoArray.obtener(o).getContenido(),
+                    medicoArray.obtener(o).getPrecio(),
+                    medicoArray.obtener(o).getStock(),
+                    medicoArray.obtener(o).getRucProveedor(),
+                    medicoArray.obtener(o).getResult()
+                };
+                tmedico.addRow(fila);
+            }
+            tblProdMedicos.setModel(tmedico);
         }
-        tblProdMedicos.setModel(tmedico);
     }//GEN-LAST:event_btn1OrdenarQuickMedCodActionPerformed
 
     private void btn2AgregarComesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2AgregarComesActionPerformed
@@ -1093,67 +1238,77 @@ public class RegistroProductos extends javax.swing.JFrame {
         Generico1<Double, Integer> generico1 = new Generico1(precio, stock);
         double resultado = generico1.multiplicar();
 
-        tcomes.setRowCount(0);
-        ProdComestibles comes = new ProdComestibles(caducidad, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
-        comesArray.agregarProductoC(comes);
-        for (int o = 0; o < comesArray.tamañoArreglo(); o++) {
-            Object[] fila = {
-                comesArray.obtener(o).getCodigo(),
-                comesArray.obtener(o).getNombre_producto(),
-                comesArray.obtener(o).getTipo(),
-                comesArray.obtener(o).getPrecio(),
-                comesArray.obtener(o).getStock(),
-                comesArray.obtener(o).getCaducidad(),
-                comesArray.obtener(o).getRucProveedor(),
-                comesArray.obtener(o).getResult()
-            };
-            tcomes.addRow(fila);
+        //Comprueba que el tipo de producto comestible este seleccionado y tenga stock, si no manda alerta
+        if (cmb2Tipocomes.getSelectedIndex() == 0 || stock == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Compruebe si los datos estan seleccionados");
+        } else {
+            tcomes.setRowCount(0);
+            ProdComestibles comes = new ProdComestibles(caducidad, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
+            comesArray.agregarProductoC(comes);
+            for (int o = 0; o < comesArray.tamañoArreglo(); o++) {
+                Object[] fila = {
+                    comesArray.obtener(o).getCodigo(),
+                    comesArray.obtener(o).getNombre_producto(),
+                    comesArray.obtener(o).getTipo(),
+                    comesArray.obtener(o).getPrecio(),
+                    comesArray.obtener(o).getStock(),
+                    comesArray.obtener(o).getCaducidad(),
+                    comesArray.obtener(o).getRucProveedor(),
+                    comesArray.obtener(o).getResult()
+                };
+                tcomes.addRow(fila);
+            }
+            tblProdComida.setModel(tcomes);
         }
-        tblProdComida.setModel(tcomes);
-
-
     }//GEN-LAST:event_btn2AgregarComesActionPerformed
 
     private void btn2OrdenarQuickComesNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2OrdenarQuickComesNomActionPerformed
 
-        tcomes.setRowCount(0);
-        comesArray.mergeSortNom();
-        for (int o = 0; o < comesArray.tamañoArreglo(); o++) {
-            Object[] fila = {
-                comesArray.obtener(o).getCodigo(),
-                comesArray.obtener(o).getNombre_producto(),
-                comesArray.obtener(o).getTipo(),
-                comesArray.obtener(o).getPrecio(),
-                comesArray.obtener(o).getStock(),
-                comesArray.obtener(o).getCaducidad(),
-                comesArray.obtener(o).getRucProveedor(),
-                comesArray.obtener(o).getResult()
-            };
-            tcomes.addRow(fila);
+        if (tblProdComida.getRowCount() <= 1) {
+            JOptionPane.showMessageDialog(rootPane, "Deben haber por lo menos 2 productos registrados");
+        } else {
+            tcomes.setRowCount(0);
+            comesArray.mergeSortNom();
+            for (int o = 0; o < comesArray.tamañoArreglo(); o++) {
+                Object[] fila = {
+                    comesArray.obtener(o).getCodigo(),
+                    comesArray.obtener(o).getNombre_producto(),
+                    comesArray.obtener(o).getTipo(),
+                    comesArray.obtener(o).getPrecio(),
+                    comesArray.obtener(o).getStock(),
+                    comesArray.obtener(o).getCaducidad(),
+                    comesArray.obtener(o).getRucProveedor(),
+                    comesArray.obtener(o).getResult()
+                };
+                tcomes.addRow(fila);
+            }
+            tblProdComida.setModel(tcomes);
         }
-        tblProdComida.setModel(tcomes);
 
     }//GEN-LAST:event_btn2OrdenarQuickComesNomActionPerformed
 
     private void btn2OrdenarQuickComesCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2OrdenarQuickComesCodActionPerformed
 
-        tcomes.setRowCount(0);
-        comesArray.mergeSortCod();
-        for (int o = 0; o < comesArray.tamañoArreglo(); o++) {
-            Object[] fila = {
-                comesArray.obtener(o).getCodigo(),
-                comesArray.obtener(o).getNombre_producto(),
-                comesArray.obtener(o).getTipo(),
-                comesArray.obtener(o).getPrecio(),
-                comesArray.obtener(o).getStock(),
-                comesArray.obtener(o).getCaducidad(),
-                comesArray.obtener(o).getRucProveedor(),
-                comesArray.obtener(o).getResult()
-            };
-            tcomes.addRow(fila);
+        if (tblProdComida.getRowCount() <= 1) {
+            JOptionPane.showMessageDialog(rootPane, "Deben haber por lo menos 2 productos registrados");
+        } else {
+            tcomes.setRowCount(0);
+            comesArray.mergeSortCod();
+            for (int o = 0; o < comesArray.tamañoArreglo(); o++) {
+                Object[] fila = {
+                    comesArray.obtener(o).getCodigo(),
+                    comesArray.obtener(o).getNombre_producto(),
+                    comesArray.obtener(o).getTipo(),
+                    comesArray.obtener(o).getPrecio(),
+                    comesArray.obtener(o).getStock(),
+                    comesArray.obtener(o).getCaducidad(),
+                    comesArray.obtener(o).getRucProveedor(),
+                    comesArray.obtener(o).getResult()
+                };
+                tcomes.addRow(fila);
+            }
+            tblProdComida.setModel(tcomes);
         }
-        tblProdComida.setModel(tcomes);
-
     }//GEN-LAST:event_btn2OrdenarQuickComesCodActionPerformed
 
     private void btn2EliminarComesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2EliminarComesActionPerformed
@@ -1193,7 +1348,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         int codigo = Integer.parseInt(txt3Cod.getText());
         Long RUCProv = Long.parseLong(txt3RUCPro.getText());
         double precio = Double.parseDouble(txt3Precio.getText());
-        int stock = (int) SpinnerStock2.getValue();
+        int stock = (int) SpinnerStock3.getValue();
         String cmbtipo = cmb3Tipo.getSelectedItem().toString();
         String nombreproducto = txt3NamePro.getText();
         String UniMed = cmb3UMedida3.getSelectedItem().toString();
@@ -1203,28 +1358,34 @@ public class RegistroProductos extends javax.swing.JFrame {
         Generico1<Double, Integer> generico1 = new Generico1(precio, stock);
         double resultado = generico1.multiplicar();
 
-        ProdCuidadoPersonal cui = new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
-        cuidList.agregarFinal(cui);
-        Object[] rowData = {
-            cui.getCodigo(),
-            cui.getNombre_producto(),
-            cui.getTipo(),
-            cui.getUnidadMed(),
-            cui.getContenido(),
-            cui.getPrecio(),
-            cui.getStock(),
-            cui.getRucProveedor(),
-            cui.getResult()
-        };
-        tcuid.addRow(rowData);
-
+        if (cmb3Tipo.getSelectedIndex() == 0 || cmb3UMedida3.getSelectedIndex() == 0 || stock == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Compruebe si los datos estan seleccionados");
+        } else {
+            ProdCuidadoPersonal cui = new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
+            cuidList.agregarFinal(cui);
+            Object[] rowData = {
+                cui.getCodigo(),
+                cui.getNombre_producto(),
+                cui.getTipo(),
+                cui.getUnidadMed(),
+                cui.getContenido(),
+                cui.getPrecio(),
+                cui.getStock(),
+                cui.getRucProveedor(),
+                cui.getResult()
+            };
+            tcuid.addRow(rowData);
+        }
 
     }//GEN-LAST:event_btn3AgregarProdCuidFinActionPerformed
 
     private void btn3EliminarCuidIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3EliminarCuidIniActionPerformed
+        if (tblCuidPer3.getRowCount()==0) {
+            JOptionPane.showMessageDialog(rootPane, "Lista vacia");
+        }else{
         cuidList.eliminarPrimero();
         tcuid.removeRow(0);
-
+        }
     }//GEN-LAST:event_btn3EliminarCuidIniActionPerformed
 
     private void btn3LimpiarCuidPerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3LimpiarCuidPerActionPerformed
@@ -1242,7 +1403,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         int codigo = Integer.parseInt(txt3Cod.getText());
         Long RUCProv = Long.parseLong(txt3RUCPro.getText());
         double precio = Double.parseDouble(txt3Precio.getText());
-        int stock = (int) SpinnerStock2.getValue();
+        int stock = (int) SpinnerStock3.getValue();
         String cmbtipo = cmb3Tipo.getSelectedItem().toString();
         String nombreproducto = txt3NamePro.getText();
         String UniMed = cmb3UMedida3.getSelectedItem().toString();
@@ -1252,27 +1413,35 @@ public class RegistroProductos extends javax.swing.JFrame {
         Generico1<Double, Integer> generico1 = new Generico1(precio, stock);
         double resultado = generico1.multiplicar();
 
-        ProdCuidadoPersonal cui = new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
-        cuidList.agregarInicio(cui);
-        Object[] rowData = {
-            cui.getCodigo(),
-            cui.getNombre_producto(),
-            cui.getTipo(),
-            cui.getUnidadMed(),
-            cui.getContenido(),
-            cui.getPrecio(),
-            cui.getStock(),
-            cui.getRucProveedor(),
-            cui.getResult()
-        };
-        tcuid.insertRow(0, rowData);
-
+        if (cmb3Tipo.getSelectedIndex() == 0 || cmb3UMedida3.getSelectedIndex() == 0 || stock == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Compruebe si los datos estan seleccionados");
+        } else {
+            ProdCuidadoPersonal cui = new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
+            cuidList.agregarInicio(cui);
+            Object[] rowData = {
+                cui.getCodigo(),
+                cui.getNombre_producto(),
+                cui.getTipo(),
+                cui.getUnidadMed(),
+                cui.getContenido(),
+                cui.getPrecio(),
+                cui.getStock(),
+                cui.getRucProveedor(),
+                cui.getResult()
+            };
+            tcuid.insertRow(0, rowData);
+        }
 
     }//GEN-LAST:event_btn3AgregarProdCuidIniActionPerformed
 
     private void btn3EliminarFinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3EliminarFinActionPerformed
-        cuidList.eliminarFin();
-
+        if (tblCuidPer3.getRowCount()==0) {
+            JOptionPane.showMessageDialog(rootPane, "Lista Vacia");
+        }else{
+            tcuid.removeRow(tcuid.getRowCount()-1);
+            cuidList.eliminarFin();
+        
+        }
     }//GEN-LAST:event_btn3EliminarFinActionPerformed
 
     private void btn3MostrarElementosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3MostrarElementosActionPerformed
@@ -1325,11 +1494,11 @@ public class RegistroProductos extends javax.swing.JFrame {
     }//GEN-LAST:event_txt3contenidoKeyTyped
 
     private void btn3AgregarProdCuidMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3AgregarProdCuidMedActionPerformed
-        
+
         int codigo = Integer.parseInt(txt3Cod.getText());
         Long RUCProv = Long.parseLong(txt3RUCPro.getText());
         double precio = Double.parseDouble(txt3Precio.getText());
-        int stock = (int) SpinnerStock2.getValue();
+        int stock = (int) SpinnerStock3.getValue();
         String cmbtipo = cmb3Tipo.getSelectedItem().toString();
         String nombreproducto = txt3NamePro.getText();
         String UniMed = cmb3UMedida3.getSelectedItem().toString();
@@ -1339,25 +1508,179 @@ public class RegistroProductos extends javax.swing.JFrame {
         Generico1<Double, Integer> generico1 = new Generico1(precio, stock);
         double resultado = generico1.multiplicar();
 
-        int tmdetabla= (tcuid.getRowCount()/2);
-//        int indice = Integer.parseInt(jTextField1.getText());
-        
-        ProdCuidadoPersonal cui = new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
-        cuidList.insertarmedio(cui,tmdetabla);
-        Object[] rowData = {
-            cui.getCodigo(),
-            cui.getNombre_producto(),
-            cui.getTipo(),
-            cui.getUnidadMed(),
-            cui.getContenido(),
-            cui.getPrecio(),
-            cui.getStock(),
-            cui.getRucProveedor(),
-            cui.getResult()
-        };
-        tcuid.insertRow(tmdetabla, rowData);
+        int tmdetabla = (tcuid.getRowCount() / 2);
+
+        if (cmb3Tipo.getSelectedIndex() == 0 || cmb3UMedida3.getSelectedIndex() == 0 || stock == 0) {
+            JOptionPane.showMessageDialog(rootPane, "Compruebe si los datos estan seleccionados");
+        } else {
+            ProdCuidadoPersonal cui = new ProdCuidadoPersonal(contenido, UniMed, nombreproducto, codigo, RUCProv, cmbtipo, precio, stock, resultado);
+            cuidList.insertarmedio(cui, tmdetabla);
+            Object[] rowData = {
+                cui.getCodigo(),
+                cui.getNombre_producto(),
+                cui.getTipo(),
+                cui.getUnidadMed(),
+                cui.getContenido(),
+                cui.getPrecio(),
+                cui.getStock(),
+                cui.getRucProveedor(),
+                cui.getResult()
+            };
+            tcuid.insertRow(tmdetabla, rowData);
+        }
     }//GEN-LAST:event_btn3AgregarProdCuidMedActionPerformed
-   
+
+    //------------------------- Productos Medicos -------------------------------------------------//
+    private void txt1CodKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1CodKeyTyped
+        //metodo para solo permitir el ingreso de numeros
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //permitir un maximo de 8 numeros
+        if (txt1Cod.getText().length() >= 6) {
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_txt1CodKeyTyped
+
+    private void txt1RUCProKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1RUCProKeyTyped
+        //metodo para solo permitir el ingreso de numeros
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //permitir un maximo de 11 numeros
+        if (txt1RUCPro.getText().length() >= 11) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt1RUCProKeyTyped
+
+    private void txt1PrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1PrecioKeyTyped
+        //metodo para solo permitir el ingreso de numeros
+        char key = evt.getKeyChar();
+        boolean numeros = (key >= '0' && key <= '9') || key == '.';
+        if (!numeros || (key == '.' && txt1Precio.getText().contains("."))) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt1PrecioKeyTyped
+
+    private void txt1contenidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1contenidoKeyTyped
+        char key = evt.getKeyChar();
+        boolean numeros = (key >= '0' && key <= '9') || key == '.';
+        if (!numeros || (key == '.' && txt1contenido.getText().contains("."))) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt1contenidoKeyTyped
+
+    private void txt1CodKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1CodKeyReleased
+        habilitarbotones1();
+    }//GEN-LAST:event_txt1CodKeyReleased
+
+    private void txt1RUCProKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1RUCProKeyReleased
+        habilitarbotones1();
+    }//GEN-LAST:event_txt1RUCProKeyReleased
+
+    private void txt1NameProKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1NameProKeyReleased
+        habilitarbotones1();
+    }//GEN-LAST:event_txt1NameProKeyReleased
+
+    private void txt1PrecioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1PrecioKeyReleased
+        habilitarbotones1();
+    }//GEN-LAST:event_txt1PrecioKeyReleased
+
+    private void txt1contenidoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt1contenidoKeyReleased
+        habilitarbotones1();
+    }//GEN-LAST:event_txt1contenidoKeyReleased
+
+    //------------------------- Productos Comestibles -------------------------------------------------//
+    private void txt2CodKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2CodKeyTyped
+        //metodo para solo permitir el ingreso de numeros
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //permitir un maximo de 6 numeros
+        if (txt2Cod.getText().length() >= 6) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt2CodKeyTyped
+
+    private void txt2RUCProKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2RUCProKeyTyped
+        //metodo para solo permitir el ingreso de numeros
+        int key = evt.getKeyChar();
+        boolean numeros = key >= 48 && key <= 57;
+        if (!numeros) {
+            evt.consume();
+        }
+
+        //permitir un maximo de 11 numeros
+        if (txt2RUCPro.getText().length() >= 11) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt2RUCProKeyTyped
+
+    private void txt2PrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2PrecioKeyTyped
+        //metodo para solo permitir el ingreso de numeros
+        char key = evt.getKeyChar();
+        boolean numeros = (key >= '0' && key <= '9') || key == '.';
+        if (!numeros || (key == '.' && txt2Precio.getText().contains("."))) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt2PrecioKeyTyped
+
+    private void txt2CodKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2CodKeyReleased
+        habilitarbotonoes2();
+    }//GEN-LAST:event_txt2CodKeyReleased
+
+    private void txt2RUCProKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2RUCProKeyReleased
+        habilitarbotonoes2();
+    }//GEN-LAST:event_txt2RUCProKeyReleased
+
+    private void txt2NameProKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2NameProKeyReleased
+        habilitarbotonoes2();
+    }//GEN-LAST:event_txt2NameProKeyReleased
+
+    private void txt2PrecioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2PrecioKeyReleased
+        habilitarbotonoes2();
+    }//GEN-LAST:event_txt2PrecioKeyReleased
+
+    private void txt2CaducidadKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt2CaducidadKeyReleased
+        habilitarbotonoes2();
+    }//GEN-LAST:event_txt2CaducidadKeyReleased
+
+    //------------------------- Productos Cuidado P. -------------------------------------------------//
+    private void txt3PrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt3PrecioKeyTyped
+        //metodo para solo permitir el ingreso de numeros
+        char key = evt.getKeyChar();
+        boolean numeros = (key >= '0' && key <= '9') || key == '.';
+        if (!numeros || (key == '.' && txt3Precio.getText().contains("."))) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt3PrecioKeyTyped
+
+    private void txt3CodKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt3CodKeyReleased
+        habilitarBotones3();
+    }//GEN-LAST:event_txt3CodKeyReleased
+
+    private void txt3RUCProKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt3RUCProKeyReleased
+        habilitarBotones3();
+    }//GEN-LAST:event_txt3RUCProKeyReleased
+
+    private void txt3PrecioKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt3PrecioKeyReleased
+        char key = evt.getKeyChar();
+        boolean numeros = (key >= '0' && key <= '9') || key == '.';
+        if (!numeros || (key == '.' && txt3Precio.getText().contains("."))) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt3PrecioKeyReleased
+
     public static boolean validarLetras(String datos) {
         return datos.matches("[a-zA-Z ]*");
     }

@@ -1,5 +1,6 @@
 package LinkedLists;
 
+import javax.swing.JOptionPane;
 import misCAbstractas.Nodo;
 import modelo.ProdCuidadoPersonal;
 
@@ -70,6 +71,7 @@ public class ProdCuidadoPersonalList {
             System.out.println("Elemento eliminado ---> "+c);
         }else{
             if (estaVacio()==true) {
+                JOptionPane.showMessageDialog(null, "La lista está vacia");
                 System.out.println("Lista vacia");
             }
         }
@@ -91,6 +93,7 @@ public class ProdCuidadoPersonalList {
             }
             System.out.println("Elemento eliminado al final de la lista");
         }else{
+            JOptionPane.showMessageDialog(null, "La lista está vacia");
             System.out.println("La lista está vacia");
         }
     }
