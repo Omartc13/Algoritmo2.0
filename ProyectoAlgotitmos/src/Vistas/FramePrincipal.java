@@ -14,7 +14,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     public FramePrincipal() {
         
         initComponents();
-        
+          setLocationRelativeTo(this);
         
     }
     
@@ -71,7 +71,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(255, 102, 102));
-        jButton1.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("  REGRISTRO EMPLEADOS");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -83,7 +83,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel8.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 220, 80));
 
         jButton2.setBackground(new java.awt.Color(255, 102, 102));
-        jButton2.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("  REGISTRO PRODUCTOS");
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -95,7 +95,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel8.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 220, 80));
 
         jButton3.setBackground(new java.awt.Color(255, 102, 102));
-        jButton3.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("  REGISTRO PROVEEDORES");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -107,7 +107,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel8.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 220, 80));
 
         jButton4.setBackground(new java.awt.Color(255, 102, 102));
-        jButton4.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("  REGISTRO SUCURSALES");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -120,14 +120,14 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField1.setFont(new java.awt.Font("Stencil", 2, 48)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Roboto", 0, 48)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(246, 241, 241));
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("Registros");
         jPanel8.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 70));
 
         jButton5.setBackground(new java.awt.Color(255, 102, 102));
-        jButton5.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton5.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("  MEJORES EMPLEADOS");
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -139,7 +139,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel8.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 220, 80));
 
         jButton6.setBackground(new java.awt.Color(255, 102, 102));
-        jButton6.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("RELACION PROD.");
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -151,7 +151,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jPanel8.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 220, 80));
 
         jButton7.setBackground(new java.awt.Color(255, 102, 102));
-        jButton7.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jButton7.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setText("CAJA");
         jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

@@ -1,5 +1,6 @@
 package grafosCodigoPatito;
 
+import Vistas.FramePrincipal;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
@@ -36,13 +37,13 @@ public class Vista extends javax.swing.JFrame {
         initComponents();
         h = this.getGraphics();
         setTitle("Grafos");
-        setLocationRelativeTo(null);
         setResizable(false);
         inicializa();
         Matriz.setEditable(false);
         btnLinea.setEnabled(false);
         btnAyacente.setEnabled(false);
         contador = 0;
+          setLocationRelativeTo(this);
     }
 
     public void inicializa() {
@@ -368,7 +369,9 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAyacenteActionPerformed
 
     private void btnSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalir1ActionPerformed
-        this.dispose();
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnSalir1ActionPerformed
 
     private void panelViewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelViewMouseClicked

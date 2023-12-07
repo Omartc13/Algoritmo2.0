@@ -35,6 +35,7 @@ public class Gui extends javax.swing.JFrame {
         tem.addColumn("Codigo");
         tem.addColumn("Nombre");
         jTable1.setModel(tem);
+          setLocationRelativeTo(this);
 
     }
 

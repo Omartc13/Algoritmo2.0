@@ -63,6 +63,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         tcuid.addColumn("COSTO TOTAL");
         tblCuidPer3.setModel(tcuid);
         cuidList = new ProdCuidadoPersonalList();
+          setLocationRelativeTo(this);
 
         //Deshabilitamos los botones hata que los campos esten completos
         btn1AgregarProdMed.setEnabled(false);
