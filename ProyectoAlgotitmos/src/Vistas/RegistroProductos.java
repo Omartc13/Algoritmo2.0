@@ -338,6 +338,11 @@ public class RegistroProductos extends javax.swing.JFrame {
         btn1Volver.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btn1Volver.setForeground(new java.awt.Color(255, 255, 255));
         btn1Volver.setText("Volver");
+        btn1Volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1VolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -642,6 +647,11 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnVolver2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnVolver2.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver2.setText("Volver");
+        btnVolver2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -899,6 +909,11 @@ public class RegistroProductos extends javax.swing.JFrame {
         btnVolver3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnVolver3.setForeground(new java.awt.Color(255, 255, 255));
         btnVolver3.setText("Volver");
+        btnVolver3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver3ActionPerformed(evt);
+            }
+        });
 
         btn3EliminarFin.setBackground(new java.awt.Color(102, 102, 102));
         btn3EliminarFin.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -1680,6 +1695,24 @@ public class RegistroProductos extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt3PrecioKeyReleased
+
+    private void btn1VolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1VolverActionPerformed
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btn1VolverActionPerformed
+
+    private void btnVolver2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver2ActionPerformed
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVolver2ActionPerformed
+
+    private void btnVolver3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver3ActionPerformed
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVolver3ActionPerformed
 
     public static boolean validarLetras(String datos) {
         return datos.matches("[a-zA-Z ]*");

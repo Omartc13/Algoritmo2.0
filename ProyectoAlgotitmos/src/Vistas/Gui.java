@@ -87,6 +87,7 @@ public class Gui extends javax.swing.JFrame {
         cmdBuscarPadre = new javax.swing.JButton();
         botonBorrar = new javax.swing.JButton();
         botonPodar = new javax.swing.JButton();
+        botonVolver = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
@@ -184,27 +185,27 @@ public class Gui extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Cantidad Nodos");
-        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, -1, -1));
+        jPanel4.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
 
         lblCnodos.setEditable(false);
         lblCnodos.setBackground(new java.awt.Color(255, 255, 255));
         lblCnodos.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel4.add(lblCnodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 90, -1));
+        jPanel4.add(lblCnodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 90, -1));
 
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Cantidad Hojas");
-        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 90, -1));
+        jPanel4.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 90, -1));
 
         lblChojas.setEditable(false);
         lblChojas.setBackground(new java.awt.Color(255, 255, 255));
         lblChojas.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel4.add(lblChojas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 90, -1));
+        jPanel4.add(lblChojas, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 90, -1));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Valor Menor");
-        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 90, -1));
+        jPanel4.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 130, 90, -1));
 
         lblVmenor.setEditable(false);
         lblVmenor.setBackground(new java.awt.Color(255, 255, 255));
@@ -214,17 +215,17 @@ public class Gui extends javax.swing.JFrame {
                 lblVmenorActionPerformed(evt);
             }
         });
-        jPanel4.add(lblVmenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 90, -1));
+        jPanel4.add(lblVmenor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 90, -1));
 
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Valor Mayor");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 90, 20));
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 90, 20));
 
         lblVmayor.setEditable(false);
         lblVmayor.setBackground(new java.awt.Color(255, 255, 255));
         lblVmayor.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel4.add(lblVmayor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 90, -1));
+        jPanel4.add(lblVmayor, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 210, 90, -1));
 
         botonBMayor.setBackground(new java.awt.Color(255, 255, 255));
         botonBMayor.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -335,6 +336,17 @@ public class Gui extends javax.swing.JFrame {
             }
         });
         jPanel4.add(botonPodar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 80, -1));
+
+        botonVolver.setBackground(new java.awt.Color(255, 255, 255));
+        botonVolver.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        botonVolver.setForeground(new java.awt.Color(0, 0, 0));
+        botonVolver.setText("Volver");
+        botonVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVolverActionPerformed(evt);
+            }
+        });
+        jPanel4.add(botonVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 80, -1));
 
         jTable1.setBackground(new java.awt.Color(255, 255, 255));
         jTable1.setForeground(new java.awt.Color(0, 0, 0));
@@ -553,6 +565,12 @@ public class Gui extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_lblVmenorActionPerformed
 
+    private void botonVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVolverActionPerformed
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_botonVolverActionPerformed
+
     private void repintarArbol() {
         this.jDesktopPane1.removeAll();
         Rectangle tamaño = this.jInternalFrame2.getBounds();
@@ -607,6 +625,7 @@ public class Gui extends javax.swing.JFrame {
     private javax.swing.JButton botonCambiarValores;
     private javax.swing.JButton botonInsertar;
     private javax.swing.JButton botonPodar;
+    private javax.swing.JButton botonVolver;
     private javax.swing.JButton cmdBuscar;
     private javax.swing.JButton cmdBuscarPadre;
     private javax.swing.JButton cmdDarHojas;

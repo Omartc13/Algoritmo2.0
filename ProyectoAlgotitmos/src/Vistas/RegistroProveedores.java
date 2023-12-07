@@ -718,7 +718,9 @@ public class RegistroProveedores extends javax.swing.JFrame {
         
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
         
-     
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnVolverActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -808,7 +810,9 @@ public class RegistroProveedores extends javax.swing.JFrame {
     }//GEN-LAST:event_TXTbuRUCKeyTyped
 
     private void volverINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverINActionPerformed
-        
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_volverINActionPerformed
 
     private void BTNagregarINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNagregarINActionPerformed

@@ -190,6 +190,7 @@ public class Caja extends javax.swing.JFrame {
         txtArea = new javax.swing.JTextArea();
         btnCrearTabla = new javax.swing.JButton();
         txtamano = new javax.swing.JTextField();
+        btnCrearTabla1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -790,6 +791,13 @@ public class Caja extends javax.swing.JFrame {
             }
         });
 
+        btnCrearTabla1.setText("Volver");
+        btnCrearTabla1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearTabla1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -801,7 +809,9 @@ public class Caja extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 287, Short.MAX_VALUE)
                     .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(btnCrearTabla)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnCrearTabla1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCrearTabla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(txtamano, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -819,7 +829,9 @@ public class Caja extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCrearTabla)
                     .addComponent(txtamano, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCrearTabla1)
+                .addGap(14, 14, 14))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1070,6 +1082,12 @@ public class Caja extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnVentaCuadradoActionPerformed
 
+    private void btnCrearTabla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearTabla1ActionPerformed
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnCrearTabla1ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1110,6 +1128,7 @@ public class Caja extends javax.swing.JFrame {
     private javax.swing.JButton btnAgregarACarrito;
     private javax.swing.JRadioButton btnBoleta;
     private javax.swing.JButton btnCrearTabla;
+    private javax.swing.JButton btnCrearTabla1;
     private javax.swing.JButton btnEliminarDeTabla;
     private javax.swing.JButton btnEliminarDeTabla1;
     private javax.swing.JRadioButton btnFactura;

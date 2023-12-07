@@ -89,6 +89,7 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         btnAgregarAlInicioAdmin = new javax.swing.JButton();
         btnMostrarElementos = new javax.swing.JButton();
         btnEliminarFinalAdmin = new javax.swing.JButton();
+        btnVolver1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -107,6 +108,7 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         tblEmpleado = new javax.swing.JTable();
         btnEliminarEmpleado = new javax.swing.JButton();
         OrdenarQuickEmpleado = new javax.swing.JButton();
+        btnVolver2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,7 +126,7 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(234, 234, 234)
-                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 306, Short.MAX_VALUE)
                 .addGap(200, 200, 200))
         );
         jPanel5Layout.setVerticalGroup(
@@ -281,6 +283,16 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
             }
         });
 
+        btnVolver1.setBackground(new java.awt.Color(102, 102, 102));
+        btnVolver1.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnVolver1.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver1.setText("Volver");
+        btnVolver1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -327,6 +339,8 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
                         .addComponent(btnEliminarInicioAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnEliminarFinalAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnVolver1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(33, 33, 33))
         );
@@ -364,8 +378,9 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEliminarInicioAdmin)
-                    .addComponent(btnEliminarFinalAdmin))
-                .addContainerGap(20, Short.MAX_VALUE))
+                    .addComponent(btnEliminarFinalAdmin)
+                    .addComponent(btnVolver1))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -455,6 +470,16 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         OrdenarQuickEmpleado.setForeground(new java.awt.Color(255, 255, 255));
         OrdenarQuickEmpleado.setText("Ordenar");
 
+        btnVolver2.setBackground(new java.awt.Color(102, 102, 102));
+        btnVolver2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btnVolver2.setForeground(new java.awt.Color(255, 255, 255));
+        btnVolver2.setText("Volver");
+        btnVolver2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolver2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -464,6 +489,8 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(btnEliminarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnVolver2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(OrdenarQuickEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
@@ -511,12 +538,13 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
                     .addComponent(btnAgregarEmpleado)
                     .addComponent(btnLimpEmpleado))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnEliminarEmpleado)
-                    .addComponent(OrdenarQuickEmpleado))
-                .addContainerGap(89, Short.MAX_VALUE))
+                    .addComponent(OrdenarQuickEmpleado)
+                    .addComponent(btnVolver2))
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -718,6 +746,18 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txtApellidosAdminKeyTyped
 
+    private void btnVolver1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver1ActionPerformed
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVolver1ActionPerformed
+
+    private void btnVolver2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolver2ActionPerformed
+        FramePrincipal reg = new FramePrincipal();
+        reg.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVolver2ActionPerformed
+
     public static void main(String args[]) {
 
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -761,6 +801,8 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpEmpleado;
     private javax.swing.JButton btnLimpiarAdmin;
     private javax.swing.JButton btnMostrarElementos;
+    private javax.swing.JButton btnVolver1;
+    private javax.swing.JButton btnVolver2;
     private javax.swing.JComboBox<String> cmbAfilAdmin;
     private javax.swing.JComboBox<String> cmbSueldoAdmin;
     private javax.swing.JComboBox<String> cmbTipoEmpleado;
