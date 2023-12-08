@@ -103,7 +103,7 @@ public class RegistroProductos extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         tblProdMedicos = new javax.swing.JTable();
         btn1EliminarProdMed = new javax.swing.JButton();
-        btn1OrdenarQuickMedNom = new javax.swing.JButton();
+        btn1OrdenarMergeNom = new javax.swing.JButton();
         SpinnerStock1 = new javax.swing.JSpinner();
         jLabel19 = new javax.swing.JLabel();
         txt1contenido = new javax.swing.JTextField();
@@ -195,27 +195,21 @@ public class RegistroProductos extends javax.swing.JFrame {
         );
 
         jLabel5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Codigo:");
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("RUC Prov:");
 
         jLabel15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Nombre Prod:");
 
         jLabel16.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Tipo:");
 
         jLabel17.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Precio:");
 
         jLabel18.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Cont:");
 
         txt1Cod.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -294,20 +288,19 @@ public class RegistroProductos extends javax.swing.JFrame {
             }
         });
 
-        btn1OrdenarQuickMedNom.setBackground(new java.awt.Color(255, 102, 102));
-        btn1OrdenarQuickMedNom.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        btn1OrdenarQuickMedNom.setForeground(new java.awt.Color(255, 255, 255));
-        btn1OrdenarQuickMedNom.setText("Ordenar Nom.");
-        btn1OrdenarQuickMedNom.addActionListener(new java.awt.event.ActionListener() {
+        btn1OrdenarMergeNom.setBackground(new java.awt.Color(255, 102, 102));
+        btn1OrdenarMergeNom.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
+        btn1OrdenarMergeNom.setForeground(new java.awt.Color(255, 255, 255));
+        btn1OrdenarMergeNom.setText("Ordenar Nom.");
+        btn1OrdenarMergeNom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1OrdenarQuickMedNomActionPerformed(evt);
+                btn1OrdenarMergeNomActionPerformed(evt);
             }
         });
 
         SpinnerStock1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
         jLabel19.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Stock:");
 
         txt1contenido.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -320,7 +313,6 @@ public class RegistroProductos extends javax.swing.JFrame {
         });
 
         jLabel26.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
         jLabel26.setText("U.Med:");
 
         cmb1UMedida.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selc.", "L", "ml", "Kg", "g" }));
@@ -359,7 +351,7 @@ public class RegistroProductos extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn1OrdenarQuickMedCod)
                         .addGap(36, 36, 36)
-                        .addComponent(btn1OrdenarQuickMedNom))
+                        .addComponent(btn1OrdenarMergeNom))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addComponent(btn1LimpiarProdMed, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -450,7 +442,7 @@ public class RegistroProductos extends javax.swing.JFrame {
                         .addComponent(btn1EliminarProdMed, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btn1Volver))
                     .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btn1OrdenarQuickMedNom)
+                        .addComponent(btn1OrdenarMergeNom)
                         .addComponent(btn1OrdenarQuickMedCod)))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
@@ -513,27 +505,21 @@ public class RegistroProductos extends javax.swing.JFrame {
         );
 
         jLabel2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Codigo:");
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("RUC Prov:");
 
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Nombre Prod:");
 
         jLabel10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Tipo:");
 
         jLabel11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Precio:");
 
         jLabel12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Cad:");
 
         txt2Cod.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -625,7 +611,6 @@ public class RegistroProductos extends javax.swing.JFrame {
         SpinnerStock2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
         jLabel13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Stock:");
 
         txt2Caducidad.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -785,27 +770,21 @@ public class RegistroProductos extends javax.swing.JFrame {
         );
 
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Codigo:");
 
         jLabel20.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("RUC Prov:");
 
         jLabel21.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setText("Nombre Prod:");
 
         jLabel22.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setText("Tipo:");
 
         jLabel23.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setText("Precio:");
 
         jLabel24.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setText("Cont:");
 
         txt3Cod.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -881,7 +860,6 @@ public class RegistroProductos extends javax.swing.JFrame {
         SpinnerStock3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
 
         jLabel25.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 0));
         jLabel25.setText("Stock:");
 
         txt3contenido.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -891,7 +869,6 @@ public class RegistroProductos extends javax.swing.JFrame {
         });
 
         jLabel27.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(0, 0, 0));
         jLabel27.setText("U.Med:");
 
         cmb3UMedida3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selc.", "Unidad", "Docena", "SixPack", "L", "ml", "Kg", "g", " " }));
@@ -1191,7 +1168,7 @@ public class RegistroProductos extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btn1EliminarProdMedActionPerformed
 
-    private void btn1OrdenarQuickMedNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1OrdenarQuickMedNomActionPerformed
+    private void btn1OrdenarMergeNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1OrdenarMergeNomActionPerformed
         //verificar que haya por lo menos 2 datos para ordenar
         if (tblProdMedicos.getRowCount() <= 1) {
             JOptionPane.showMessageDialog(rootPane, "Deben haber por lo menos 2 productos registrados");
@@ -1214,7 +1191,7 @@ public class RegistroProductos extends javax.swing.JFrame {
             }
             tblProdMedicos.setModel(tmedico);
         }
-    }//GEN-LAST:event_btn1OrdenarQuickMedNomActionPerformed
+    }//GEN-LAST:event_btn1OrdenarMergeNomActionPerformed
 
     private void btn1OrdenarQuickMedCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1OrdenarQuickMedCodActionPerformed
         //Verificar que haya 2 productos agregados para ordenar
@@ -1735,8 +1712,8 @@ public class RegistroProductos extends javax.swing.JFrame {
     private javax.swing.JButton btn1AgregarProdMed;
     private javax.swing.JButton btn1EliminarProdMed;
     private javax.swing.JButton btn1LimpiarProdMed;
+    private javax.swing.JButton btn1OrdenarMergeNom;
     private javax.swing.JButton btn1OrdenarQuickMedCod;
-    private javax.swing.JButton btn1OrdenarQuickMedNom;
     private javax.swing.JButton btn1Volver;
     private javax.swing.JButton btn2AgregarComes;
     private javax.swing.JButton btn2EliminarComes;

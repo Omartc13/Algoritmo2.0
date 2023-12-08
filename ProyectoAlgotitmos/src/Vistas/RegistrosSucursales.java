@@ -1,20 +1,26 @@
 
 package Vistas;
 
+import ArrayLists.ASucursalesProvincia;
 import LinkedLists.SucursalesList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Sucursales;
+import modelo.SucursalesProvincia;
 
 public class RegistrosSucursales extends javax.swing.JFrame {
     private final SucursalesList nuevaSucursal;
     DefaultTableModel model;
+    DefaultTableModel modelsucuprol;
 
-
+    ASucursalesProvincia ArraySucuPro = new ASucursalesProvincia();
+    
     public RegistrosSucursales() {
         initComponents();
+        
         nuevaSucursal = new SucursalesList();
         model = new DefaultTableModel();
+        
         setLocationRelativeTo(this);
         model.addColumn("Número de Sucursal");
         model.addColumn("Distrito");
@@ -24,6 +30,17 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         model.addColumn("DNI");
         tblSucursalesPrincipal.setModel(model);
         btnPush.setEnabled(false);
+        
+        modelsucuprol = new DefaultTableModel();
+        modelsucuprol.addColumn("N. Suc");
+        modelsucuprol.addColumn("Telefono");
+        modelsucuprol.addColumn("COd. Provincia");
+        modelsucuprol.addColumn("Provincia");
+        modelsucuprol.addColumn("Ciudad");
+        modelsucuprol.addColumn("Dirección");
+        modelsucuprol.addColumn("Encargado");
+        modelsucuprol.addColumn("DNI");
+        
     }
     
     public void limpiarCamposSucursalPrincipal() {
@@ -133,27 +150,21 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         );
 
         jLabel2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Número Sucursal :");
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Distrito:");
 
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Nombre del encargado :");
 
         jLabel10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Telefono :");
 
         jLabel11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Dirección :");
 
         jLabel12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("DNI :");
 
         txtNumPrincipal.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -374,25 +385,26 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         );
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Número Sucursal:");
 
         jLabel15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Código de Provincia:");
 
         jLabel16.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setText("Ciudad:");
 
         jLabel17.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("Telefono:");
 
         botonIngProv.setBackground(new java.awt.Color(255, 102, 102));
         botonIngProv.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         botonIngProv.setForeground(new java.awt.Color(255, 255, 255));
         botonIngProv.setText("Agregar");
+        botonIngProv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonIngProvActionPerformed(evt);
+            }
+        });
 
         botonLimProv.setBackground(new java.awt.Color(102, 102, 102));
         botonLimProv.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -419,21 +431,22 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Or.DNI");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel18.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setText("Nombre del encargado:");
 
         jLabel19.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setText("Provincia:");
 
         jLabel20.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Dirección:");
 
         jLabel21.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setText("DNI:");
 
         btnVolver1.setBackground(new java.awt.Color(102, 102, 102));
@@ -584,8 +597,9 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         int telefono =  Integer.parseInt(txtTlfPrincipal.getText());
         String direccion = txtDireccionPrincipal.getText();
         int  dni = Integer.parseInt(txtDniPrincipal.getText());
+        String ciudad="";
 
-        Sucursales sucursal = new Sucursales(numSucursal, distrito, encargado, telefono, direccion, dni);
+        Sucursales sucursal = new Sucursales(numSucursal, distrito, encargado, telefono, ciudad, direccion, dni);
         nuevaSucursal.insertarPila(sucursal);
 
         Object[] datos = new Object[6];
@@ -717,6 +731,56 @@ public class RegistrosSucursales extends javax.swing.JFrame {
         reg.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnVolver1ActionPerformed
+
+    private void botonIngProvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIngProvActionPerformed
+       
+        int numSuc= Integer.parseInt(txtnumsuc2.getText());
+        String ciudad= txtciudad2.getText();
+        String nomEnca= txtnombreenc2.getText();
+        int codprovincia= Integer.parseInt(txtcodprovi2.getText());
+        int dni= Integer.parseInt(txtdni2.getText());
+        int telefono= Integer.parseInt(txttelef2.getText());
+        String direccion= txtdirec2.getText();
+        String provincia= txtprovi2.getText();
+        
+        SucursalesProvincia sucpro = new SucursalesProvincia(provincia, codprovincia, numSuc, nomEnca, dni, telefono, ciudad, direccion);
+        ArraySucuPro.agregarSucursalPro(sucpro);
+        Object[] datos = new Object[8];
+        datos[0] = numSuc;
+        datos[1] = telefono;
+        datos[2] = codprovincia;
+        datos[3] = provincia;
+        datos[4]=  ciudad;
+        datos[5] = direccion;
+        datos[6] = nomEnca;
+        datos[7]= dni;
+        modelsucuprol.addRow(datos);
+        tblprovin.setModel(modelsucuprol);
+        
+        
+    }//GEN-LAST:event_botonIngProvActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+        modelsucuprol.setRowCount(0);
+        ArraySucuPro.ordenarPorDNISelec();
+        for (int o = 0; o < ArraySucuPro.tamañoArreglo(); o++) {
+                Object[] fila = {
+                    ArraySucuPro.obtener(o).getNumSucursal(),
+                    ArraySucuPro.obtener(o).getTelefono(),
+                    ArraySucuPro.obtener(o).getCodigoProvincia(),
+                    ArraySucuPro.obtener(o).getProvincia(),
+                    ArraySucuPro.obtener(o).getCiudad(),
+                    ArraySucuPro.obtener(o).getDirección(),
+                    ArraySucuPro.obtener(o).getEncargado(),
+                    ArraySucuPro.obtener(o).getDNI()
+                };
+                modelsucuprol.addRow(fila);
+                System.out.println("dni --->"+ArraySucuPro.obtener(o).getDNI()+"\n");
+            }
+            tblSucursalesPrincipal.setModel(modelsucuprol);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
  
     public static void main(String args[]) {

@@ -1,16 +1,20 @@
 package Vistas;
 
 import ArrayLists.AEmpleAdmin;
+import ArrayLists.AEmpleado;
 import LinkedLists.AdminList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Admin;
+import modelo.Empleado;
 
 public class RegistroAdminEmpleado extends javax.swing.JFrame {
 
     private final AdminList nuevoAdmin;
-    DefaultTableModel model;
+    DefaultTableModel model, modelemple;
 
+    AEmpleado empleadoArray= new AEmpleado();
+    
     public RegistroAdminEmpleado() {
         initComponents();
         nuevoAdmin = new AdminList();
@@ -24,6 +28,18 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         model.addColumn("Sueldo");
         model.addColumn("Sueldo Bruto");
         tblAdmin.setModel(model);
+        
+        modelemple = new DefaultTableModel();
+        setLocationRelativeTo(this);
+        modelemple.addColumn("Nombre");
+        modelemple.addColumn("Apellidos");
+        modelemple.addColumn("DNI");
+        modelemple.addColumn("Tipo T.");
+        modelemple.addColumn("Sueldo");
+        modelemple.addColumn("Sueldo Bruto");
+        tblEmpleado.setModel(model);
+        
+        
         
         //Deshabilitamos los botones hasta que los campos estén completos
         btnAgregarAlFinalAdmin.setEnabled(false);
@@ -138,27 +154,21 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         );
 
         jLabel2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nombre:");
 
         jLabel8.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Apellido:");
 
         jLabel9.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("DNI:");
 
         jLabel10.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Afiliación:");
 
         jLabel11.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Año de ingreso:");
 
         jLabel12.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Sueldo:");
 
         txtNombreAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -422,19 +432,15 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         );
 
         jLabel5.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Nombres:");
 
         jLabel13.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Apellidos:");
 
         jLabel14.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("DNI:");
 
         jLabel15.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Tipo de trabajador");
 
         cmbTipoEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Seleccionar--", "Cajero", "Limpieza", "Seguridad", "Asistente" }));
@@ -443,6 +449,11 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         btnAgregarEmpleado.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         btnAgregarEmpleado.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregarEmpleado.setText("Agregar");
+        btnAgregarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarEmpleadoActionPerformed(evt);
+            }
+        });
 
         btnLimpEmpleado.setBackground(new java.awt.Color(102, 102, 102));
         btnLimpEmpleado.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -469,6 +480,11 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         OrdenarQuickEmpleado.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         OrdenarQuickEmpleado.setForeground(new java.awt.Color(255, 255, 255));
         OrdenarQuickEmpleado.setText("Ordenar");
+        OrdenarQuickEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                OrdenarQuickEmpleadoActionPerformed(evt);
+            }
+        });
 
         btnVolver2.setBackground(new java.awt.Color(102, 102, 102));
         btnVolver2.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
@@ -757,6 +773,50 @@ public class RegistroAdminEmpleado extends javax.swing.JFrame {
         reg.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnVolver2ActionPerformed
+
+    private void btnAgregarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarEmpleadoActionPerformed
+
+    String nombre= txtNombreEmpleado.getText();
+    String apellido= txtApellidosEmpleado.getText();
+    int dni = Integer.parseInt(txtDNI1.getText());
+    String tipo = cmbTipoEmpleado.getSelectedItem().toString();
+    Empleado emp= new Empleado(tipo);
+    int sueldoini= emp.sueldoInicial();
+    double sueldob= emp.sueldoBruto();
+    Empleado emple= new Empleado(nombre, apellido, dni, tipo, sueldoini, sueldob);
+    empleadoArray.agregarEmpleado(emple);
+    Object[] datos = new Object[6];
+        datos[0] = nombre;
+        datos[1] = apellido;
+        datos[2] = dni;
+        datos[3] = tipo;
+        datos[4] = sueldoini;
+        datos[5] = sueldob;
+        modelemple.addRow(datos);
+        tblEmpleado.setModel(modelemple);
+    
+        
+    }//GEN-LAST:event_btnAgregarEmpleadoActionPerformed
+
+    private void OrdenarQuickEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OrdenarQuickEmpleadoActionPerformed
+
+        modelemple.setRowCount(0);
+        empleadoArray.QuickSort();
+        for (int o = 0; o < empleadoArray.tamañoArreglo(); o++) {
+                Object[] fila = {
+                    empleadoArray.obtener(o).getNombre(),
+                    empleadoArray.obtener(o).getApellido_Completo(),
+                    empleadoArray.obtener(o).getDNI(),
+                    empleadoArray.obtener(o).getTipo(),
+                    empleadoArray.obtener(o).getSueldoini(),
+                    empleadoArray.obtener(o).getSueldob()
+                };
+                modelemple.addRow(fila);
+            }
+            tblEmpleado.setModel(modelemple);
+        
+        
+    }//GEN-LAST:event_OrdenarQuickEmpleadoActionPerformed
 
     public static void main(String args[]) {
 

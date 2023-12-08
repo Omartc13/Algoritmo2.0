@@ -1,4 +1,4 @@
-package grafosCodigoPatito;
+package grafos;
 
 import Vistas.FramePrincipal;
 import java.awt.Color;

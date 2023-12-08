@@ -9,13 +9,15 @@ public class Sucursales {
     private int telefono;
     private String dirección;
     private int DNI;
+    private String ciudad;
 
-    public Sucursales(int numSucursal, String distrito, String encargado, int telefono, String dirección, int DNI) {
+    public Sucursales(int numSucursal, String distrito, String encargado, int telefono,String ciudad, String dirección, int DNI) {
         this.numSucursal = numSucursal;
         this.distrito = distrito;
         this.encargado = encargado;
         this.telefono = telefono;
         this.dirección = dirección;
+        this.ciudad=ciudad;
     }   
 
     public Sucursales() {
@@ -71,6 +73,15 @@ public class Sucursales {
     public void setDirección(String dirección) {
         this.dirección = dirección;
     }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
       
+    
     
 }
